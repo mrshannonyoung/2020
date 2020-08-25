@@ -1,0 +1,42 @@
+# //
+# // Functional links
+# //
+title: "S"
+# //
+# // Outputting
+# // 
+timezone: Europe/London
+permalink: pretty
+liquid:
+  error_mode: warn
+  strict_filters: true
+  strict_variables: false
+# //
+# // Where things are
+# //
+source: ./jekyll/
+destination: ./_site/
+# //
+# // Serving
+# //
+host: 0.0.0.0
+port: 6767
+markdown: kramdown
+
+keep_files: [ "assets", "js", "video" ]  
+
+collections_dir: collections
+
+collections:
+  notes:
+    output: true
+    permalink: /:collection/:title/
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      type: "posts"
+    values:
+      permalink: /:collection/:categories/:title/
+      layout: "post"    

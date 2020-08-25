@@ -1,0 +1,19 @@
+{
+  "name": "2020",
+  "version": "1.0.0",
+  "description": "Ⅲ",
+  "author": "Shannon Young <shannon@mark-making.com>",
+  "license": "MIT",
+  "scripts": {
+    "serve": "bundle exec jekyll s & gulp watch",
+    "serve--q": "bundle exec jekyll s --q & gulp watch"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-load-plugins": "^2.0.4",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}

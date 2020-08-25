@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{page.title}}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#CF0A2C">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% if page.noindex -%}
+  <meta name="robots" content="noindex">
+  {% endif -%}  
+  <meta name="description" content="{{ page.introduction }}">
+  <link href="/assets/css/main.css" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </noscript>
+</head>
+<body {%- if page.collection %} data-collection="{{page.collection}}"{% endif %} class="{{page.layout | replace: '/', '-'}}">
+  {% include /components/svg/logos/index.html %}
+  {% include /partials/header.html %}
+  <main role="main" id="content" aria-label="content">
+    <div class="envelop">
+      {{ content }}
+    </div>
+  </main>
+  {% include /partials/footer.html %}
+</body>
+</html>
