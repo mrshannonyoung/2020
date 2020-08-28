@@ -1,24 +1,38 @@
 header
-  background-color: var(--black)
+  padding: 5rem 0
+  .logo
+    grid-column: content-main-start/span 2
+    display: flex
+    align-items: center
 
-#spud *
-  fill: none
-  stroke: var(--white)
-  stroke-width: 3px
-  stroke-linecap: square
-  stroke-linejoin: round
-  stroke-miterlimit: 10
+symbol#spud
+  *
+    fill: none
+    stroke: var(--white)
+    stroke-width: var(--global-stroke)
+    stroke-linecap: square
+    stroke-linejoin: round
+    stroke-miterlimit: 10
+    transition: all .5s ease
+    transition-property: stroke
+  #logo-head
+    fill: transparent
+  &:hover, &:focus
+    #logo-eyes
+      stroke: var(--brand-secondary)
 
 #main-logo #planet
-  fill: none
+  fill: var(--black)
   stroke: var(--white)
   stroke-linecap: round
   stroke-linejoin: round
-  stroke-width: 3px  
+  stroke-width: var(--global-stroke)  
 
 #main-logo #inner
   fill: var(--brand-primary)
 
 #main-logo #ozone
   fill: var(--black)
-  
+
+
+        

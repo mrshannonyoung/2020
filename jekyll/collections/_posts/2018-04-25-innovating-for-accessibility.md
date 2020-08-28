@@ -7,6 +7,7 @@ url: /innovating-for-accessibility/
 featured_image: "2018/innovating-for-accessibility"
 categories: thoughts
 tags:
+  - a11y
   - accessibility
   - best practice
   - public transport

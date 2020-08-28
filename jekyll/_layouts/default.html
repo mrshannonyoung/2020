@@ -11,6 +11,7 @@
   {% endif -%}  
   <meta name="description" content="{{ page.introduction }}">
   <link href="/assets/css/main.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"> 
   <noscript>
     <link rel="stylesheet" href="/assets/css/main.css">
   </noscript>
@@ -19,9 +20,7 @@
   {% include /components/svg/logos/index.html %}
   {% include /partials/header.html %}
   <main role="main" id="content" aria-label="content">
-    <div class="envelop">
-      {{ content }}
-    </div>
+    {{ content }}
   </main>
   {% include /partials/footer.html %}
 </body>

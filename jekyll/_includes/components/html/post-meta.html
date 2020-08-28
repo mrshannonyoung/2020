@@ -1,0 +1,12 @@
+<div class="article-meta">	
+	<div>
+		<span class="sr-only">Published</span>
+		<time datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>		
+	</div>
+	{%- if page.categories -%}
+	<div>
+		<span class="sr-only">Filed under</span>
+		<a href="/category/{{page.categories}}/">{{page.categories}}</a>		
+	</div>
+	{%- endif -%}
+</div>

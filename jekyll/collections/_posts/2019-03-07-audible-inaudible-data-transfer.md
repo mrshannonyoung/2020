@@ -9,11 +9,14 @@ featured_image_alt: "The world’s most valuable resource is no longer oil, but 
 highlight: true
 categories: thoughts
 tags:
+  - SSG
   - Smart Speakers
   - technology
   - voice
 ---
-I can get behind the accessibility and practical benefits of voice-enabled smart technology. (I even [wrote about designing for Zero/Invisible UI][1]). However, I have reservations about owning smart speakers and smart home devices like Alexa, Google Home Hub, and Apple HomePod.
+I can get behind the accessibility and practical benefits of voice-enabled smart technology. (I even [wrote about designing for Zero/Invisible UI][1]).
+
+However, I have reservations about owning smart speakers and smart home devices like Alexa, Google Home Hub, and Apple HomePod.
 
 Unfortunately, not owning one doesn’t help me to avoid interacting with them. In the age of GDPR, a company has to get my explicit consent to use my data for marketing purposes &#8211; but can I insist that friends get my consent to turn the Alexa on? If I did, I’m sure jokes about lending me a tin foil hat would follow pretty quickly.
 

@@ -7,9 +7,9 @@ url: /schema-structured-data/
 featured_image: "2017/10/schema-1000.680.png"
 categories: projects
 ---
-<img class=" wp-image-12411" src="https://www.mark-making.com/wp-content/uploads/2017/10/schema-1000.680.png" alt=""  />
+As a brand, product, person or anything that lives on the internet, you are striving to make your content and purpose accessible and discoverable, however possible.
 
-**As a brand, product, person or anything that lives on the internet, you are striving to make your content and purpose accessible and discoverable, however possible.**
+![standalone image](https://www.mark-making.com/wp-content/uploads/2017/10/schema-1000.680.png){:standalone loading="lazy" rel="preload" as="image"}
 
 Hey wait, so are we!
 

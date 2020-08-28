@@ -1,38 +1,46 @@
 ---
 layout: default
 ---
-<section class="introduction">
-  <h1>
-    A dev with accessibility and inclusion at the forefront of everything I do.  
-  </h1>
-</section>
-<section class="topic-highlights">
-  <h2>Favourite topics</h2>
-  <nav>
-    <ul>
-      <li>
-        <a href="#">A11y</a>
-      </li>
-      <li>
-        <a href="#">CSS</a>
-      </li>
-      <li>
-        <a href="#">Inclusion</a>
-      </li>
-      <li>
-        <a href="#">SSG</a>
-      </li>      
-    </ul>
-    <a href="/blog/topics/" class="topic-select">See all topics</a>
-  </nav>
+{%- assign notes = site.notes -%}
+{%- assign posts = site.posts -%}
+
+<section class="introduction grid-me pad-me">
+  <div class="introduction-content">
+    <h1>I'm Shannon, a dev with accessibility and inclusion at the heart of everything I do.</h1>
+    <p>{{site.data.helpers.spinout}}</p>
+    <div class="hr-link">
+      <a href="/about/">My ethos</a>
+    </div>
+  </div>
 </section>
 
+<section class="topic-highlights grid-me">
+  <div class="topic-highlights-content">
+    <h2>Favourite topics</h2>
+    <p>I like to note down, and write about most topics, but these areas are what peak my interests most</p>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">A11y</a>
+        </li>
+        <li>
+          <a href="#">CSS</a>
+        </li>
+        <li>
+          <a href="#">Inclusion</a>
+        </li>
+        <li>
+          <a href="#">SSG</a>
+        </li>      
+      </ul>
+      <a href="/blog/topics/" class="topic-select">See all topics</a>
+    </nav>
+  </div>
+</section>
 
-{%- assign notes = site.notes | reverse -%}
-{%- assign posts = site.posts | reverse -%}
-<div class="content">
-  <h2>Recent notes</h2>  
-  <div>
+<section class="grid-me">
+  <div class="topic-highlights-content">
+    <h2>Recent notes</h2>
     <ul>
       {%- for note in notes %}
       <li>
@@ -40,26 +48,23 @@ layout: default
       </li>
       {%- endfor %}
     </ul>
-  </div>      
-  <h2>Recent articles</h2>  
-  <div> 
+    <h2>Recent articles</h2>  
     <ul>
       {%- for post in posts %}
       <li>
         <a href="{{ post.url }}">{{ post.title }}</a>
       </li>
       {%- endfor %}
-    </ul>
-    <ul>
-      {%- for post in posts -%}
-      {% if post.tags %}
-      {%- for tag in post.tags %}
-      <li>
-        <a href="/blog/topics/{{tag | slugify}}/">{{tag | slugify}}</a>
-      </li>
-      {%- endfor -%}
-      {% endif %}     
-      {%- endfor %}      
-    </ul>
+    </ul>    
+
+{% for tag in site.tags %}
+  <h3><a href="/tag/{{ tag[0] }}">{{ tag[0] }}</h3>
+  <ul>
+    {% for post in tag[1] %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+
   </div>
-</div>
+</section>

@@ -16,6 +16,8 @@ liquid:
 # //
 source: ./jekyll/
 destination: ./_site/
+plugins:
+  - jekyll-archives
 # //
 # // Serving
 # //
@@ -28,15 +30,22 @@ keep_files: [ "assets", "js", "video" ]
 collections_dir: collections
 
 collections:
-  notes:
-    output: true
-    permalink: /:collection/:title/
   posts:
     output: true
+
+jekyll-archives:
+  enabled: all
+  layout: archive
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
 
 defaults:
   - scope:
       type: "posts"
     values:
-      permalink: /:collection/:categories/:title/
-      layout: "post"    
+      permalink: /:categories/:title/
+      layout: "post"      

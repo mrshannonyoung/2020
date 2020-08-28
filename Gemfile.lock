@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/jekyll/jekyll.git
-  revision: 9a7955d9b3e85a78fa4876ccd98708fb2f762472
+  revision: badc9c2d30e6b34a97ccdb0f20b1635e1aea575d
   specs:
     jekyll (4.1.1)
       addressable (~> 2.4)
@@ -9,7 +9,7 @@ GIT
       i18n (~> 1.0)
       jekyll-sass-converter (~> 2.0)
       jekyll-watch (~> 2.0)
-      kramdown (~> 2.1)
+      kramdown (~> 2.3)
       kramdown-parser-gfm (~> 1.0)
       liquid (~> 4.0)
       mercenary (~> 0.4.0)
@@ -34,6 +34,8 @@ GEM
     http_parser.rb (0.6.0)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
+    jekyll-archives (2.2.1)
+      jekyll (>= 3.6, < 5.0)
     jekyll-sass-converter (2.1.0)
       sassc (> 2.0.1, < 3.0)
     jekyll-watch (2.2.1)
@@ -67,6 +69,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll!
+  jekyll-archives
 
 BUNDLED WITH
    2.1.4
