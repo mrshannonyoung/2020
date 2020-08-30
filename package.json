@@ -4,9 +4,13 @@
   "description": "Ⅲ",
   "author": "Shannon Young <shannon@mark-making.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrshannonyoung/2020"
+  },  
   "scripts": {
-    "serve": "bundle exec jekyll s & gulp watch",
-    "serve--q": "bundle exec jekyll s --q & gulp watch"
+    "serve": "bundle exec jekyll s & gulp dev",
+    "serve--q": "bundle exec jekyll s --q & gulp dev"
   },
   "dependencies": {
     "browser-sync": "^2.26.12",

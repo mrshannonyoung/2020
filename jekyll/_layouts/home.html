@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{%- assign notes = site.notes -%}
+{%- assign navigations = site.data.navigation -%}
 {%- assign posts = site.posts -%}
 
 <section class="introduction grid-me pad-me">
@@ -16,38 +16,30 @@ layout: default
 
 <section class="topic-highlights grid-me">
   <div class="topic-highlights-content">
-    <h2>Favourite topics</h2>
+    <h2>Favourite topics</h2>    
     <p>I like to note down, and write about most topics, but these areas are what peak my interests most</p>
-    <nav>
-      <ul>
-        <li>
-          <a href="#">A11y</a>
-        </li>
-        <li>
-          <a href="#">CSS</a>
-        </li>
-        <li>
-          <a href="#">Inclusion</a>
-        </li>
-        <li>
-          <a href="#">SSG</a>
-        </li>      
-      </ul>
-      <a href="/blog/topics/" class="topic-select">See all topics</a>
-    </nav>
+    {%- for menu in navigations -%}
+      {% if menu.name == 'header' %}
+        <nav id="topic-navigate" aria-label="topics">
+          <!-- Main navigation -->
+          <ul>
+            {%- for item in menu.items %}
+              <li>
+                <a href="topics/{{ item.label | prepend: '/' | append: '/' | replace: ' ', '-' | downcase }}">
+                  <span>{{- item.label |  replace: '-', ' ' -}}</span>
+                </a>
+              </li>           
+            {%- endfor %}
+          </ul>
+          <a href="/topics/" class="topic-select">See all topics</a>
+        </nav>
+      {% endif %}
+    {%- endfor -%}
   </div>
 </section>
 
 <section class="grid-me">
   <div class="topic-highlights-content">
-    <h2>Recent notes</h2>
-    <ul>
-      {%- for note in notes %}
-      <li>
-        <a href="{{ note.url }}">{{ note.title }}</a>
-      </li>
-      {%- endfor %}
-    </ul>
     <h2>Recent articles</h2>  
     <ul>
       {%- for post in posts %}
@@ -55,16 +47,6 @@ layout: default
         <a href="{{ post.url }}">{{ post.title }}</a>
       </li>
       {%- endfor %}
-    </ul>    
-
-{% for tag in site.tags %}
-  <h3><a href="/tag/{{ tag[0] }}">{{ tag[0] }}</h3>
-  <ul>
-    {% for post in tag[1] %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-{% endfor %}
-
+    </ul>
   </div>
 </section>

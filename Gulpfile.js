@@ -59,3 +59,8 @@ function watch() {
 
 exports.stylesDev = stylesDev;
 exports.watch = watch;
+
+const
+    dev = gulp.parallel(gulp.series(stylesDev), watch);
+
+gulp.task('dev', dev);

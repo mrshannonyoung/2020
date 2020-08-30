@@ -1,11 +1,9 @@
 ---
 title: Innovating for accessibility
-author:
-  - Shannon Young
 date: 2018-04-25T16:44:36+00:00
 url: /innovating-for-accessibility/
 featured_image: "2018/innovating-for-accessibility"
-categories: thoughts
+categories: accessibility
 tags:
   - a11y
   - accessibility
@@ -13,22 +11,25 @@ tags:
   - public transport
   - VR
   - wearables
+  - CSS
+  - inclusive
 ---
-## In a way, we’re all only “temporarily-abled”
+Both- on and offline, people with disabilities often get a raw deal, because accessibility isn’t baked into the process.
 
-<strong>Both- on and offline, people with disabilities often get a raw deal, because accessibility isn’t baked into the process. For example with web design, aesthetics often get prioritised and the needs of people with impairments can get lost in the process. Features to improve accessibility have been afterthoughts, resulting in awkward, ineffective, and even discriminatory results.</strong>
+For example with web design, aesthetics often get prioritised and the needs of people with impairments can get lost in the process. Features to improve accessibility have been afterthoughts, resulting in awkward, ineffective, and even discriminatory results.
+
+## In a way, we’re all only “temporarily-abled”
 
 While a small minority have championed an accessible design approach for decades, now there’s a more substantial shift going on. No matter where you look, it feels like there’s a greater collective awareness of the need to make changes so that people with different abilities can move through physical and virtual spaces as easily as anyone else.
 
 There are also a lot of things that desperately need improving. In this article, I’m going to have a look at some new and not-so-new advancements in technology that could and do make fashion, culture, and the window on the world that is the internet more accessible &#8211; to everyone.
 
-**In 2016, almost _1 in 5_ people (19%) in the UK had a disability. That’s a lot of people. A lot of service users if you’re a public organisation, a lot of customers if you’re a business.**
+In 2016, almost 1 in 5 people (19%) in the UK had a disability. That’s a lot of people. A lot of service users if you’re a public organisation, a lot of customers if you’re a business.
 
 **But only 17% of those individuals were born with their disability &#8211; most people who will have one develop it later in life.**
 
 > Someone once shared with me this apt perspective, that we are all just ‘temporarily-abled’, someday you or I could need assistive software or hardware to consume information.
-  
-[Andrew Soderberg][1]
+> [Andrew Soderberg][1]
 
 Some impairments are simply situational, like finding it difficult to hear in a crowded room or struggling to see because of bright sunlight. Others are temporary, like reduced sight after surgery or limited movement while recovering from an injury.
 
@@ -36,17 +37,17 @@ It might seem obvious, but if you live with an impairment, whether it’s tempor
 
 While things definitely aren’t perfect yet, some people have been and are doing some really innovative, creative work to make the world a more accessible place.
 
-_We’ve gathered some favourite and important examples of innovation for accessibility and tagged them up to indicate which impairments they cater to first and foremost &#8211; there’s a key at the bottom of this post if you’d like to read more about each one._
+We’ve gathered some favourite and important examples of innovation for accessibility and tagged them up to indicate which impairments they cater to first and foremost &#8211; there’s a key at the bottom of this post if you’d like to read more about each one.
 
 ## Ideas to make the world &#8211; and the web &#8211; more inclusive
 
-### **Fashion**
+### Fashion
 
-**Functional clothes (all abilities)**
+Functional clothes (all abilities)
 
-**<img class=" wp-image-13132" src="https://www.mark-making.com/wp-content/uploads/2018/04/1000x400_OpenStyleLab.jpg" alt=""  />
+<img class=" wp-image-13132" src="https://www.mark-making.com/wp-content/uploads/2018/04/1000x400_OpenStyleLab.jpg" alt=""  />
   
-** Your [average hoodie][2] doesn’t fasten at the back, and your [average t-shirt][3] can’t take much twisting, pulling force. That’s why [Open Style Lab][4] create technology-driven clothes designs for people of all abilities. They have three basic principles:
+Your [average hoodie][2] doesn’t fasten at the back, and your [average t-shirt][3] can’t take much twisting, pulling force. That’s why [Open Style Lab][4] create technology-driven clothes designs for people of all abilities. They have three basic principles:
 
   1. Increase awareness about the importance of clothing accessibility for people with disabilities.
   2. Equipping our community with the skills to create accessible clothing.
@@ -54,7 +55,7 @@ _We’ve gathered some favourite and important examples of innovation for access
 
 And they run competitions every summer, challenging designers, occupational therapists and engineers to push the boundaries for people with all kinds of impairments.
 
-**The Vision Suit (visual)
+** The Vision Suit (visual) **
   
 ** Back in 1997, the MIT Media Laboratory hosted [Beauty and the Bits][5], a wearable computing fashion show.
   

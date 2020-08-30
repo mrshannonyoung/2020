@@ -10,13 +10,19 @@ layout: default
     {{content}}
   </div>
   <footer>
-	{%- if page.tags -%}		
 	<div>
+		<span class="sr-only">Updated</span>
+		<time datetime="{{ 'now' | date: '%Y-%m-%d %H:%M' }}">{{ "now" | date_to_string }}</time>		
+	</div>    
+	{%- if page.tags -%}		
+	<ul id="post-tags">
 		<span class="sr-only">Tagged with</span>
 		{% for tag in page.tags %}
+    <li>
 		<a href="/tag/{{ tag | slugify }}/">{{ tag }}</a>
+    </li>
 		{% endfor %}	
-	</div>
+	</ul>
 	{%- endif -%}    
   </footer>
 </article>

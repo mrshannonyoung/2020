@@ -25,7 +25,9 @@ host: 0.0.0.0
 port: 6767
 markdown: kramdown
 
-keep_files: [ "assets", "js", "video" ]  
+keep_files: [ "assets", "js", "video" ]
+
+include: [ _headers, humans.txt, robots.txt, sitemap.xml ]
 
 collections_dir: collections
 
@@ -40,7 +42,7 @@ jekyll-archives:
     year: '/:year/'
     month: '/:year/:month/'
     day: '/:year/:month/:day/'
-    tag: '/tag/:name/'
+    tag: '/topics/:name/'
     category: '/category/:name/'
 
 defaults:
@@ -48,4 +50,7 @@ defaults:
       type: "posts"
     values:
       permalink: /:categories/:title/
-      layout: "post"      
+      layout: "post"
+      author: "Shannon Young"
+
+repository: "https://github.com/mrshannonyoung/2020/"

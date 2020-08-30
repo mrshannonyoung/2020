@@ -6,7 +6,6 @@ date: 2019-01-18T08:48:51+00:00
 url: /digital-dopamine/
 featured_image: "2019/digital-dopamine"
 featured_image_alt: "Restaurant view of xxX"
-highlight: true
 categories: design-culture
 tags:
   - digital
@@ -15,8 +14,7 @@ tags:
 
 Shannon explores the digital interactions that are set up to get our brains to produce dopamine, which keeps us spending time on apps and websites, from Facebook reaction buttons to stock level indicators.
 
-> The thought process was: ‘How do we consume as much of your time and conscious attention as possible?’
-> We… give you a little dopamine hit.
+> The thought process was: ‘How do we consume as much of your time and conscious attention as possible?’ We… give you a little dopamine hit.
 > &#8211; [Sean Parker, founding President of Facebook until 2005][1]
 
 ## What does dopamine do?

@@ -1,30 +1,10 @@
-:root
-  //# COLORS
-
-  // Vanity
-  --rebecca:  rgb(102, 51, 153)
-  // Named
-  --black:        rgb(25, 25, 25)
-  --black-light:  rgb(28, 28, 28)
-  --white:        rgb(210, 210, 210)
-  --tomato:       rgb(255, 99, 71)
-  --hot-pink:     rgb(255, 120, 254)
-  // 'Brand'
-  --brand-primary:    var(--rebecca)
-  --brand-secondary:  var(--tomato)
-
-  //# UNITS
-  --grid-gap: 1.45rem
-  --grid--width-max: 75rem
-  // 16 × 75 = 1,200
-  --grid-layout: [perimeter-start] calc( 50vw - (var(--grid--width-max) / 2) ) [content-main-start] repeat(10, 1fr) [content-main-end] calc( 50vw - (var(--grid--width-max) / 2) ) [perimeter-end]
-  --global-stroke: 3px
-
 @mixin direction($dir)
   background: linear-gradient(to #{$dir}, var(--brand-primary) min(20vw, 45%), var(--brand-secondary))
 
 *
   box-sizing: border-box
+  &:target
+    border-top: solid 3px var(--brand-primary)
 
 .grid-me
   display: grid
@@ -58,7 +38,7 @@ svg:not(:root):not([hidden])
 body
   @supports (scroll-behavior: smooth)
     @media (prefers-reduced-motion: no-preference)
-      scroll-behavior: smooth  
+      scroll-behavior: smooth
   margin: 0 auto
   padding: 0
   font-size: 1.125em
@@ -68,7 +48,7 @@ body
   a
     color: inherit
     text-decoration: none
-    &:hover
+    &:hover, &:focus
       text-decoration: underline
 
 pre
@@ -76,7 +56,7 @@ pre
   padding-bottom: 1rem
   margin: 0
   scrollbar-color: var(--white) transparent
-  scrollbar-width: thin  
+  scrollbar-width: thin
   &::-webkit-scrollbar
     width: 20px
     height: 5px
@@ -90,10 +70,16 @@ pre
 q, blockquote
   position: relative
   quotes: '“' '”' "‘" "’"
+  &::before, &::after
+    color: var(--brand-secondary)
+    font-family: serif
+    position: absolute
+    font-size: 2.5em
   &::before
     left: calc(-1 * var(--grid-gap))
-    position: absolute
     content: open-quote
+  &::after
+    content: close-quote
 
 h1
   grid-column: 2/content-main-end
@@ -111,12 +97,32 @@ h1
   @media screen and (min-width: 768px)
     font-variation-settings: 'wght' 450
 
+#current
+  display: none
+
+.hr-link
+  display: flex
+  align-items: center
+  &::before
+    content: ""
+    width: 25%
+    height: var(--global-stroke)
+    border-radius: 6px
+    margin-right: 1rem
+    background-color: var(--brand-primary)
+    @include direction(right)
+    transition: background 1s ease
+  a
+    color: inherit
+    display: inline-block
+    width: auto
+
 .introduction
   grid-row-gap: 2rem
   &-content
     display: contents
     p, .hr-link
-      grid-column: content-main-start/content-main-end
+      grid-column: var(--content-span)
       @media screen and (min-width: 768px)
         grid-column: 7/content-main-end
     p
@@ -128,30 +134,35 @@ h1
       --maxFontSize: 2rem
       --scaler: 1.2vw
       font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize))
-    .hr-link
-      display: flex
-      align-items: center
-      &::before
-        content: ""
-        width: 25%
-        height: var(--global-stroke)
-        border-radius: 6px
-        background-color: var(--brand-primary)
-        transition: background 1s ease
-        @include direction(right)
-        margin-right: 1rem
-      a
-        color: inherit
-        display: inline-block
-        width: auto
 
 .topic-select
   font-variation-settings: 'wght' 350
 
+nav
+  &[aria-label="page"]
+    position: absolute
+    writing-mode: vertical-lr
+    left: -100vw
+    top: 10vh
+    height: 100vh
+    a[href]
+      display: inline-block
+      background-color: var(--white)
+      color: var(--brand-secondary)
+      padding: 1rem 0.25rem
+      transition: 150ms
+      text:
+        transform: capitalize
+        decoration: none
+      z-index: 1
+      &:focus
+        // @extend %a11y-outline
+        transform: translate(100vw)
+
 .topic-highlights
   background-color: var(--black-light)
   &-content
-    grid-column: content-main-start/content-main-end
+    grid-column: var(--content-span)
     margin: 96px 0 144px 0
     nav
       display: flex
@@ -191,30 +202,33 @@ h1
 
 main
   article
+    header, footer
+      grid-column: 2/content-main-end
     header
       @media screen and (max-width: 768px)
         padding: 5rem 0 var(--grid-gap)
-      grid-column: 2/content-main-end
       h1
         margin: 0
         font-variation-settings: "wght" 350
     .article-meta
       div
-        padding: var(--grid-gap)
+        padding: 0
         font-weight: 300
         font-style: normal
         font-size: 1.2em
         line-height: 1
-        letter-spacing: 3px        
+        letter-spacing: 3px
         color: rgba(255, 255, 255, 0.6)
         text-transform: uppercase
-        font-family: Courier New, Courier, monospace        
+        font-family: Courier New, Courier, monospace
+        @media screen and (min-width: 768px)
+          padding: var(--grid-gap) 0
       &::before
         content: ""
+        @include direction(right)
         width: calc(var(--grid-gap) * 4)
         height: var(--global-stroke)
-        @include direction(right)
-        margin: 0 var(--grid-gap) 0 0
+        margin: 0
         border-radius: 6px
         background-color: var(--brand-primary)
         transition: background 1s ease
@@ -223,11 +237,12 @@ main
           height: calc(var(--grid-gap) * 4)
           @include direction(bottom)
           margin: 0 0 var(--grid-gap)
-      grid-column: content-main-start / content-main-end
+      grid-column: var(--content-span)
       display: flex
       align-items: center
-      padding: 0 0 calc(var(--grid-gap) * 2) 0 
+      flex-direction: column
       @media screen and (min-width: 768px)
+        flex-direction: initial
         grid-column: content-main-start / span 1
         grid-row: 2/10
         writing-mode: vertical-rl
@@ -236,24 +251,29 @@ main
       grid-column: 3/content-main-end
       display: contents
       blockquote
-        grid-column: content-main-start/content-main-end
+        position: relative
+        grid-column: var(--content-span)
         padding: var(--grid-gap)
         margin: 0 0 var(--grid-gap) var(--grid-gap)
         border-radius: var(--global-stroke)
-        background: var(--black-light)
         font-size: 1.3em
         font-variation-settings: 'wght' 250
         @media screen and (min-width: 768px)
           grid-column: 3/span 7
         > p:first-of-type
+            text-indent: 0
             margin: 0
         cite
-          display: block  
+          display: block
       figure
         figcaption
           text-align: center
+      p
+        text-indent: calc(var(--grid-gap) * 1.5)
       > p:first-of-type
-        font-size: 1.5em
+        font-size: 1.6em
+        font-variation-settings: "wght" 350
+        text-indent: 0
         @media screen and (min-width: 768px)
           grid-column: 3/span 7
       *

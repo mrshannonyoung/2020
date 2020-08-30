@@ -1,0 +1,20 @@
+:root
+  //# COLORS
+  // Vanity
+  --rebecca:  rgb(102, 51, 153)
+  // Named
+  --black:        rgb(25, 25, 25)
+  --black-light:  rgb(28, 28, 28)
+  --white:        rgb(210, 210, 210)
+  --tomato:       rgb(255, 99, 71)
+  --hot-pink:     rgb(255, 120, 254)
+  // 'Brand'
+  --brand-primary:    var(--rebecca)
+  --brand-secondary:  var(--tomato)
+  //# GRID
+  --grid-gap: 1.45rem
+  --grid--width-max: 75rem
+  --content-span: content-main-start / content-main-end
+  // 16 × 75 = 1,200
+  --grid-layout: [perimeter-start] calc( 50vw - (var(--grid--width-max) / 2) ) [content-main-start] repeat(10, 1fr) [content-main-end] calc( 50vw - (var(--grid--width-max) / 2) ) [perimeter-end]
+  --global-stroke: 3px

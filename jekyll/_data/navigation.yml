@@ -1,0 +1,15 @@
+- name: "jump"
+  items:
+    - label: content
+    - label: topics
+    - label: footer
+
+- name: "header"
+  items:
+    - label: a11y
+    - label: CSS
+    - label: inclusive
+
+- name: "footer"
+  items:
+    - label: colophon
