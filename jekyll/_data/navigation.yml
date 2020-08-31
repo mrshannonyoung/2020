@@ -4,7 +4,7 @@
     - label: topics
     - label: footer
 
-- name: "header"
+- name: "topics"
   items:
     - label: a11y
     - label: CSS

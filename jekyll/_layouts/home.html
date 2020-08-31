@@ -19,13 +19,13 @@ layout: default
     <h2>Favourite topics</h2>    
     <p>I like to note down, and write about most topics, but these areas are what peak my interests most</p>
     {%- for menu in navigations -%}
-      {% if menu.name == 'header' %}
-        <nav id="topic-navigate" aria-label="topics">
+      {% if menu.name == 'topics' %}
+        <nav id="topics" aria-label="topics">
           <!-- Main navigation -->
           <ul>
             {%- for item in menu.items %}
               <li>
-                <a href="topics/{{ item.label | prepend: '/' | append: '/' | replace: ' ', '-' | downcase }}">
+                <a href="/topics/{{ item.label | replace: ' ', '-' }}">
                   <span>{{- item.label |  replace: '-', ' ' -}}</span>
                 </a>
               </li>           
