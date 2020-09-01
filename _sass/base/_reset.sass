@@ -1,0 +1,89 @@
+@use '../utility/_mixins'
+
+*
+  box-sizing: border-box
+  // &:target
+  //   border-top: solid 3px var(--brand-primary)
+
+body
+  @supports (scroll-behavior: smooth)
+    @media (prefers-reduced-motion: no-preference)
+      scroll-behavior: smooth
+  margin: 0 auto
+  padding: 0
+  font-size: 1.125em
+  background-color: var(--black)
+  color: var(--white)
+  font-variant-ligatures: none    
+
+img
+  display: block
+  max-width: 100%
+  width: 100%
+  height: auto
+
+svg:not(:root):not([hidden])
+  overflow: hidden
+  display: block
+
+[hidden], #current
+  display: none
+
+.sr-only:not(:focus):not(:active)
+  clip: rect(0 0 0 0)
+  clip-path: inset(100%)
+  height: 1px
+  overflow: hidden
+  position: absolute
+  white-space: nowrap
+  width: 1px
+
+a
+  color: inherit
+  text-decoration: none
+  &:hover, &:focus
+    text-decoration: underline
+
+pre
+  overflow-x: auto
+  padding-bottom: 1rem
+  margin: 0
+  scrollbar-color: var(--white) transparent
+  scrollbar-width: thin
+  &::-webkit-scrollbar
+    width: 20px
+    height: 5px
+  &::-webkit-scrollbar-track
+    border-radius: 1rem
+    border: transparent
+  &::-webkit-scrollbar-thumb
+    background-color: var(--white)
+    border-radius: 1rem
+
+q, blockquote
+  position: relative
+  quotes: '“' '”' "‘" "’"
+  &::before, &::after
+    // color: vars.$red
+    // color: var(--brand-secondary)
+    font-family: serif
+    position: absolute
+    font-size: 2.5em
+  &::before
+    left: calc(-1 * var(--grid-gap))
+    content: open-quote
+  &::after
+    content: close-quote
+
+.hr-link
+  display: flex
+  align-items: center
+  &::before
+    content: ""
+    width: 25%
+    height: var(--global-stroke)
+    border-radius: 6px
+    margin-right: 1rem
+    background-color: var(--brand-primary)
+    @include mixins.direction(right)
+    transition: background 1s ease    

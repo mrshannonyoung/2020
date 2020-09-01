@@ -1,0 +1,59 @@
+@use '../utility/_mixins'
+
+nav
+  &[aria-label="page"]
+    position: absolute
+    writing-mode: vertical-lr
+    left: -100vw
+    top: 10vh
+    height: 100vh
+    a[href]
+      display: inline-block
+      background-color: var(--white)
+      color: var(--brand-secondary)
+      padding: 1rem 0.25rem
+      transition: 150ms
+      text:
+        transform: capitalize
+        decoration: none
+      z-index: 1
+      &:focus
+        // @extend %a11y-outline
+        transform: translate(100vw)
+  &[aria-label="topics"]
+    display: flex
+    align-items: center
+    margin: 48px 0 0
+    ul
+      padding: 0
+      margin: 0
+      display: flex
+      flex-wrap: wrap
+      flex: 1
+      align-items: center
+      &::after
+        content: ""
+        flex: 1
+        height: var(--global-stroke)
+        border-radius: 6px
+        background-color: var(--brand-primary)
+        transition: background 1s ease
+        @include mixins.direction(right)
+        margin: 0 1rem
+      li
+        font-size: 22px
+        display: flex
+        a
+          &:hover, &:focus
+            color: var(--brand-secondary)
+            outline-offset: 2px
+            outline-color: var(--white)
+            text-decoration: none
+            span
+              text-decoration: underline
+            &::before
+              color: var(--brand-primary)
+          &::before
+            content: '#'
+        &:not(:last-of-type)
+          margin-right: 28px    

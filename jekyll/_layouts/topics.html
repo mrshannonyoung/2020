@@ -4,7 +4,7 @@ layout: default
 <section class="grid-me">
   <div class="topic-highlights-content">  
     {% for tag in site.tags %}
-      <h3><a href="/topics/{{ tag[0] | slugify }}">{{ tag[0] }}({{ tag[1].size }})</h3>
+      <h3><a href="/topics/{{ tag[0] | slugify }}">{{ tag[0] }}({{ tag[1].size }})</a></h3>
     {% endfor %}
   </div>
 </section>

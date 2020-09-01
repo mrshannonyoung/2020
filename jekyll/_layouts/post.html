@@ -18,9 +18,7 @@ layout: default
 	<ul id="post-tags">
 		<span class="sr-only">Tagged with</span>
 		{% for tag in page.tags %}
-    <li>
-		<a href="/tag/{{ tag | slugify }}/">{{ tag }}</a>
-    </li>
+    <li><a href="/topics/{{ tag | slugify }}/">{{ tag }}</a></li>
 		{% endfor %}	
 	</ul>
 	{%- endif -%}    

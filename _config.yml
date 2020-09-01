@@ -39,11 +39,11 @@ jekyll-archives:
   enabled: all
   layout: archive
   permalinks:
-    year: '/:year/'
+    year: '/archive/:year/'
     month: '/:year/:month/'
     day: '/:year/:month/:day/'
     tag: '/topics/:name/'
-    category: '/category/:name/'
+    category: '/categories/:name/'
 
 defaults:
   - scope:
@@ -52,5 +52,6 @@ defaults:
       permalink: /:categories/:title/
       layout: "post"
       author: "Shannon Young"
+      post: true
 
 repository: "https://github.com/mrshannonyoung/2020/"

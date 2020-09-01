@@ -14,7 +14,7 @@ layout: default
   </div>
 </section>
 
-<section class="topic-highlights grid-me">
+<section class="topic-highlights grid-me pad-me">
   <div class="topic-highlights-content">
     <h2>Favourite topics</h2>    
     <p>I like to note down, and write about most topics, but these areas are what peak my interests most</p>
@@ -23,13 +23,11 @@ layout: default
         <nav id="topics" aria-label="topics">
           <!-- Main navigation -->
           <ul>
-            {%- for item in menu.items %}
+            {%- for item in menu.items -%}
               <li>
-                <a href="/topics/{{ item.label | replace: ' ', '-' }}">
-                  <span>{{- item.label |  replace: '-', ' ' -}}</span>
-                </a>
+                <a href="/topics/{{ item.label | replace: ' ', '-' }}"><span>{{- item.label |  replace: '-', ' ' -}}</span></a>
               </li>           
-            {%- endfor %}
+            {%- endfor -%}
           </ul>
           <a href="/topics/" class="topic-select">See all topics</a>
         </nav>
@@ -38,15 +36,31 @@ layout: default
   </div>
 </section>
 
-<section class="grid-me">
-  <div class="topic-highlights-content">
+<section class="article-listing grid-me pad-me">
+  <div class="article-listing-content">
     <h2>Recent articles</h2>  
-    <ul>
-      {%- for post in posts %}
+    <ol class="posts-list">
+      {%- for post in posts | limit: 4 %}
       <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
+        <article>
+          <header class="post-title">
+            <h3>
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </h3>
+            <time datetime="{{ post.date }}">{{ post.date | date_to_long_string }}</time>
+            {{post.categories}}
+          </header>
+          <div>
+            {{ post.excerpt | truncatewords: 3 }}
+          </div>
+          <footer>
+            {% for tag in post.tags %}
+              <a href="/topics/{{ tag | slugify }}">{{tag}}</a>
+            {% endfor %}
+          </footer>          
+        </article>
       </li>
       {%- endfor %}
-    </ul>
+    </ol>
   </div>
 </section>

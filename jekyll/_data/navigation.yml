@@ -6,7 +6,7 @@
 
 - name: "topics"
   items:
-    - label: a11y
+    - label: accessibility
     - label: CSS
     - label: inclusive
 

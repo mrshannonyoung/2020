@@ -12,6 +12,7 @@ tags:
   - SSG
   - Smart Speakers
   - technology
+  - digital
   - voice
 ---
 I can get behind the accessibility and practical benefits of voice-enabled smart technology. (I even [wrote about designing for Zero/Invisible UI][1]).

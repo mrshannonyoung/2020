@@ -1,0 +1,87 @@
+@use '../utility/_mixins'
+
+.article-meta
+  font-size: 1.2em
+  line-height: 1
+  letter-spacing: 3px
+  color: rgba(255, 255, 255, 0.6)
+  text-transform: uppercase
+  font-family: Courier New, Courier, monospace
+
+body.post
+  article
+    header
+      grid-column: 2/content-main-end
+      padding: calc(var(--grid-gap) * 3) 0 var(--grid-gap)
+      h1
+        font-variation-settings: "wght" 350
+    .article-meta
+      div
+        padding: 0
+        @media screen and (min-width: 768px)
+          padding: var(--grid-gap) 0
+      &::before
+        content: ""
+        @include mixins.direction(right)
+        width: calc(var(--grid-gap) * 4)
+        height: var(--global-stroke)
+        margin: 0
+        border-radius: 6px
+        background-color: var(--brand-primary)
+        transition: background 1s ease
+        @media screen and (min-width: 768px)
+          width: var(--global-stroke)
+          height: calc(var(--grid-gap) * 4)
+          @include mixins.direction(bottom)
+          margin: 0 0 var(--grid-gap)
+      grid-column: var(--content-span)
+      display: flex
+      align-items: center
+      flex-direction: column
+      @media screen and (min-width: 768px)
+        flex-direction: initial
+        grid-column: content-main-start / span 1
+        grid-row: 2/100
+        writing-mode: vertical-rl
+        padding: 0
+    .article-content
+      grid-column: 3/content-main-end
+      display: contents
+      blockquote
+        grid-column: var(--content-span)
+        @media screen and (min-width: 768px)
+          grid-column: 3/span 7
+        cite
+          display: block
+      figure
+        figcaption
+          text-align: center
+      p
+        text-indent: calc(var(--grid-gap) * 1.5)
+      > p:first-of-type
+        font-size: 1.6em
+        font-variation-settings: "wght" 350
+        text-indent: 0
+        @media screen and (min-width: 768px)
+          grid-column: 3/span 7
+      *
+        margin: 0 0 var(--grid-gap)
+        grid-column: 2/content-main-end
+        @media screen and (min-width: 768px)
+          grid-column: 3/content-main-end
+    footer
+      display: contents
+      grid-column: perimeter-start/content-main-end
+      > div
+        grid-column: var(--content-span)
+      #post-tags
+        font-size: 0.8em
+        grid-column: var(--content-span)
+        padding: 0
+        margin: 0
+        list-style: none
+        li
+          font-size: inherit
+          &::before
+            content: '#'
+            position: static

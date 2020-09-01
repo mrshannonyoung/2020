@@ -1,0 +1,19 @@
+.introduction
+  grid-row-gap: 2rem
+  &-content
+    display: contents
+    h1
+      grid-column: 2/content-main-end
+    p, .hr-link
+      grid-column: var(--content-span)
+      @media screen and (min-width: 768px)
+        grid-column: 7/content-main-end
+    p
+      margin: 0
+      padding: 2rem 0 0
+      color: rgba(255,255,255,.6)
+      font-variation-settings: 'wght' 350
+      --minFontSize: 1.2rem
+      --maxFontSize: 2rem
+      --scaler: 1.2vw
+      font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize))

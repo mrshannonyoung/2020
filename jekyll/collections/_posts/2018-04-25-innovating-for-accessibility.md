@@ -11,6 +11,7 @@ tags:
   - public transport
   - VR
   - wearables
+  - digital
   - CSS
   - inclusive
 ---
