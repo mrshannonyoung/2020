@@ -15,7 +15,10 @@ tags:
   - digital
   - voice
 ---
-I can get behind the accessibility and practical benefits of voice-enabled smart technology. (I even [wrote about designing for Zero/Invisible UI][1]).
+I can get behind the accessibility and practical benefits of voice-enabled smart technology.
+<!--more-->
+
+(I even [wrote about designing for Zero/Invisible UI][1]).
 
 However, I have reservations about owning smart speakers and smart home devices like Alexa, Google Home Hub, and Apple HomePod.
 

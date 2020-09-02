@@ -16,6 +16,7 @@ tags:
   - inclusive
 ---
 Both- on and offline, people with disabilities often get a raw deal, because accessibility isn’t baked into the process.
+<!--more-->
 
 For example with web design, aesthetics often get prioritised and the needs of people with impairments can get lost in the process. Features to improve accessibility have been afterthoughts, resulting in awkward, ineffective, and even discriminatory results.
 

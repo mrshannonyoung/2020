@@ -8,6 +8,7 @@ featured_image: "2017/10/schema-1000.680.png"
 categories: projects
 ---
 As a brand, product, person or anything that lives on the internet, you are striving to make your content and purpose accessible and discoverable, however possible.
+<!--more-->
 
 ![standalone image](https://www.mark-making.com/wp-content/uploads/2017/10/schema-1000.680.png){:standalone loading="lazy" rel="preload" as="image"}
 

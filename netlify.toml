@@ -1,0 +1,26 @@
+[Settings]
+
+ID = "217a2fa5-3d65-416c-afe7-e1137687af31"
+
+[build]
+
+  base = ""
+  publish = "_site/"
+  command = "yarn run build"
+
+[build.environment]
+
+  NODE_VERSION = "12.16.1"
+  RUBY_VERSION = "2.7.1"
+  YARN_VERSION = "1.22.5"
+  YARN_FLAGS = "--ignore-engines"
+
+[context.production]
+
+[[headers]]
+
+  for = "/*"
+
+  [headers.values]
+    X-XSS-Protection = "1; mode=block"
+    Content-Security-Policy = "base-uri 'self'; frame-ancestors 'self'; default-src 'self' https://cloudinary.com https://api.github.com; img-src 'self' data: https://res.cloudinary.com *.mark-making.com; object-src 'self' *.cloudinary.com; media-src 'self' *.cloudinary.com; script-src 'unsafe-inline' 'unsafe-eval' 'self' *.netlify.com *.cloudinary.com *.api.github.com https://unpkg.com; style-src 'self' 'unsafe-inline' *.netlify.com;"

@@ -10,7 +10,8 @@
   },  
   "scripts": {
     "serve": "bundle exec jekyll s & gulp dev",
-    "serve--q": "bundle exec jekyll s --q & gulp dev"
+    "serve--q": "bundle exec jekyll s --q & gulp dev",
+    "build": "bundle exec jekyll clean && bundle exec jekyll b && gulp"
   },
   "dependencies": {
     "browser-sync": "^2.26.12",

@@ -27,7 +27,7 @@ markdown: kramdown
 
 keep_files: [ "assets", "js", "video" ]
 
-include: [ _headers, humans.txt, robots.txt, sitemap.xml ]
+include: [ _headers, humans.txt, robots.txt ]
 
 collections_dir: collections
 
@@ -53,5 +53,6 @@ defaults:
       layout: "post"
       author: "Shannon Young"
       post: true
+      excerpt_separator: <!--more-->
 
 repository: "https://github.com/mrshannonyoung/2020/"

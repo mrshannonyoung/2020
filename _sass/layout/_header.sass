@@ -1,9 +1,10 @@
 header[role="banner"]
   padding: 5rem 0
-  .logo
+  div
     grid-column: content-main-start/span 2
-    display: flex
-    align-items: center
+    .logo
+      display: inline-block
+      width: auto
 
 symbol#spud
   *
@@ -17,8 +18,15 @@ symbol#spud
     transition-property: stroke
   #logo-head
     fill: transparent
-  &:hover, &:focus
-    #logo-eyes
+  #logo-eyes-crossed
+    display: none
+  &.errors
+    #logo-eyes-open
+      display: none
+    #logo-eyes-crossed
+      display: block
+  &:hover, &:focus, &:active
+    path[id^="logo-eyes-"]
       stroke: var(--brand-secondary)
 
 #main-logo #planet

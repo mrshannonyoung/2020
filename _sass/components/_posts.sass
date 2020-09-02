@@ -1,14 +1,20 @@
 .article-listing-content
   grid-column: var(--content-span)
   .posts-list
-    margin: 0
     padding: 0
     list-style: none
     li
+      &:not(:last-of-type)
+        margin-bottom: var(--grid-gap)
       article
         display: grid
         column-gap: var(--grid-gap)        
         grid-template-columns: repeat(4, 1fr)
-      .post-title
-        margin-top: 0
-        grid-column: 1/-1
+        *
+          grid-column: 1/-1
+        footer
+          text-transform: uppercase
+          font-family: var(--mono-font-stack)         
+          margin-top: calc(var(--grid-gap) / 2)
+          align-self: end
+          text-align: right

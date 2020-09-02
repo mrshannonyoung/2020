@@ -1,11 +1,16 @@
 .grid-me
-  display: grid
-  grid-template-columns: var(--grid-layout)
-  column-gap: var(--grid-gap)
+  @supports (display: grid) and (--prop: value)
+    display: grid
+    grid-template-columns: var(--grid-layout)
+    column-gap: var(--grid-gap)
   &.pad-me
     padding: 5rem 0
 
 .posts-list
-  display: grid
-  grid-template-columns: var(--post-layout)
-  column-gap: var(--grid-gap)
+  @supports (display: grid) and (--prop: value)
+    @media screen and (min-width: 768px)
+      display: grid
+      grid-template-columns: var(--post-layout)
+      grid-template-rows: var(--post-layout)
+      column-gap: calc(var(--grid-gap) * 2)
+      row-gap: var(--grid-gap)

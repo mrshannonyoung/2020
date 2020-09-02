@@ -10,25 +10,4 @@
 			<a href="{{ site.repository }}">GitHub</a>
 		</li>
 	</ul>	
-{%- unless page.url=='/' -%}
-  <nav aria-label="breadcrumb"> 
-    <!-- Breadcrumb navigation -->
-    <ol>
-      <li>
-        <a href="/">Home</a>
-      </li>
-			{%- assign crumbs = page.url | remove:'/index.html' | split: '/' -%}
-      {%- for crumb in crumbs offset: 1 -%}
-      <li>
-          <span aria-hidden="true">&nbsp;&#8594;</span>      
-          {%- if forloop.last -%}
-          &nbsp;<a href="{{ page.url }}" aria-current="page">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
-          {%- else -%}
-          &nbsp;<a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{{ crumb | remove:'.html' | capitalize | url_decode | replace: '-', ' ' }}</a>
-          {%- endif -%}
-        </li>
-      {%- endfor -%}
-    </ol>
-  </nav>
-{%- endunless -%}	
 </footer>

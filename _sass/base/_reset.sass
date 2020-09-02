@@ -2,6 +2,7 @@
 
 *
   box-sizing: border-box
+  margin: 0
   // &:target
   //   border-top: solid 3px var(--brand-primary)
 
@@ -39,9 +40,11 @@ svg:not(:root):not([hidden])
   width: 1px
 
 a
-  color: inherit
+  color: var(--brand-secondary)
   text-decoration: none
+  transition: color 0.15s linear
   &:hover, &:focus
+    color: var(--white)
     text-decoration: underline
 
 pre
@@ -59,21 +62,6 @@ pre
   &::-webkit-scrollbar-thumb
     background-color: var(--white)
     border-radius: 1rem
-
-q, blockquote
-  position: relative
-  quotes: '“' '”' "‘" "’"
-  &::before, &::after
-    // color: vars.$red
-    // color: var(--brand-secondary)
-    font-family: serif
-    position: absolute
-    font-size: 2.5em
-  &::before
-    left: calc(-1 * var(--grid-gap))
-    content: open-quote
-  &::after
-    content: close-quote
 
 .hr-link
   display: flex

@@ -12,7 +12,10 @@ tags:
   - technology
 ---
 
-Shannon explores the digital interactions that are set up to get our brains to produce dopamine, which keeps us spending time on apps and websites, from Facebook reaction buttons to stock level indicators.
+I explore the digital interactions that are set up to get our brains to produce dopamine.
+<!--more-->
+
+Dopamine keeps us spending time on apps and websites, from Facebook reactions to stock level indicators.
 
 > The thought process was: ‘How do we consume as much of your time and conscious attention as possible?’ We… give you a little dopamine hit.
 > &#8211; [Sean Parker, founding President of Facebook until 2005][1]
@@ -20,7 +23,7 @@ Shannon explores the digital interactions that are set up to get our brains to p
 ## What does dopamine do?
 
 > It can make a person feel good.
-– Simple English Wikipedia
+> &#8211; [Simple English Wikipedia][2]
 
 > Within the brain, dopamine functions partly as a global reward signal.
 – Wikipedia
@@ -163,3 +166,4 @@ It’s a mechanism that can be used for good as well as evil. As ethics become a
   * <a href="https://www.smashingmagazine.com/2018/06/ethics-of-persuasion/" target="_blank" rel="noopener">Smashing Magazine &#8211; The ethics of persuasion</a>
 
 [1]: http://www.quotedb.com/quotes/2112
+[2]: http://www.quotedb.com/quotes/2112
