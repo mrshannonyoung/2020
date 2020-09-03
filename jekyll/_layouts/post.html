@@ -10,28 +10,25 @@ layout: default
     {{content}}
   </div>
   <footer>
+    {%- if page.post -%}
+    <a href="{{ site.repository }}edit/master/jekyll/collections/{{ page.path }}">Edit this post on GitHub</a>
+    {%- endif -%}    
 	<div>
 		<span>Updated</span>
-		<time datetime="{{ 'now' | date: '%Y-%m-%d %H:%M' }}">{{ "now" | date_to_string }}</time>		
+		<time datetime="{{ 'now' | date: '%Y-%m-%d %H:%M' }}">{{ "now" | date_to_string }}</time>
 	</div>    
-	{%- if page.tags -%}		
-	<ul id="post-tags">
-		<span class="sr-only">Tagged with</span>
-		{% for tag in page.tags %}
-    <li><a href="/topics/{{ tag | slugify }}/">{{ tag }}</a></li>
-		{% endfor %}	
-	</ul>
+	{%- if page.tags -%}
+  <div>
+    <span class="sr-only" id="post-tags-heading">Tagged with</span>
+    <ul id="post-tags" aria-describedby="post-tags-heading">
+      {% for tag in page.tags %}
+      <li><a rel="tag" href="/topics/{{ tag | slugify }}/">{{ tag }}</a></li>
+      {% endfor %}	
+    </ul>
+  </div>
 	{%- endif -%}
-
-
-<div class="PageNavigation">
-  {% if page.previous.url %}
-    <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
-  {% endif %}
-  {% if page.next.url %}
-    <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
-  {% endif %}
-</div>
-
+  {% if page.previous.url or page.next.url %}
+  {% include /components/html/adjacent-posts.html %}
+  {%- endif -%}
   </footer>
 </article>

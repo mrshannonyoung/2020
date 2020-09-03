@@ -1,8 +1,13 @@
 @use '../utility/_mixins'
 
+::selection
+  color: var(--white)
+  background: var(--brand-primary)
+
 *
   box-sizing: border-box
   margin: 0
+  font-weight: initial
   // &:target
   //   border-top: solid 3px var(--brand-primary)
 
@@ -15,8 +20,20 @@ body
   font-size: 1.125em
   background-color: var(--black)
   color: var(--white)
-  font-variant-ligatures: none    
+  font-variant-ligatures: none
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-decoration-skip-ink: auto
+  text-rendering: optimizeLegibility  
 
+hr
+  outline: none
+  border: none
+  height: 1px
+  background-color: #282828
+  margin: 1rem
+  padding: 0  
+  
 img
   display: block
   max-width: 100%

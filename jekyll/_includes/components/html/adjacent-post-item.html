@@ -1,0 +1,14 @@
+{% if page.[include.direction].url %}
+<li class="adjacent-post-{{include.rel}}">
+  <a rel="{{include.rel}}" href="{{page.[include.direction].url | append: '#content'}}">
+    <span class="adjacent-label">{{include.direction}}</span>
+    <strong class="adjacent-title">{{page.[include.direction].title}}</strong>
+    <p class="adjacent-excerpt">{{page.[include.direction].excerpt | strip_html }}</p>
+  </a>
+</li>
+{% else %}
+<li class="adjacent-post-{{include.rel}} eol" role="presentation">
+  <span class="adjacent-label">End of line</span>
+  <span class="sr-only">There are no more posts.</span>
+</li>      
+{% endif %}

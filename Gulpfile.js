@@ -16,8 +16,8 @@ const gulp              = require('gulp'),
 
 let paths = {
   styles: {
-    src: '_sass/**/*.{sass,scss}',
-    dest: '_site/assets/css'
+    src:    '_sass/**/*.{sass,scss}',
+    dest:   '_site/assets/css'
   },
   html: {
     src: '_site/**/*.html'
@@ -59,7 +59,7 @@ function reloadSite() {
             // of the stack after Browsersync is running
             bs.addMiddleware("*", function (req, res) {
                 res.writeHead(302, {
-                    location: "404.html"
+                    location: "/404.html"
                 });
                 res.end("Redirecting!");
             });
@@ -80,5 +80,5 @@ const
     dev = gulp.parallel(gulp.series(stylesDev), watch),
     dist = gulp.parallel(stylesDev);
 
-gulp.task('dev', dev);
+gulp.task('dev', dev),
 gulp.task('default', dist);

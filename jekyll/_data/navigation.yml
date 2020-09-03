@@ -1,7 +1,6 @@
 - name: "jump"
   items:
     - label: content
-    - label: topics
     - label: footer
 
 - name: "topics"

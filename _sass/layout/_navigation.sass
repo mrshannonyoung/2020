@@ -1,5 +1,10 @@
 @use '../utility/_mixins'
 
+@keyframes tron
+  0%, 100%
+    background: var(--tron)
+  50%
+    background: none
 nav
   &[aria-label="page"]
     position: absolute
@@ -56,4 +61,81 @@ nav
           &::before
             content: '#'
         &:not(:last-of-type)
-          margin-right: 28px    
+          margin-right: 28px
+  &.adjacent-posts
+    margin: calc(var(--grid-gap) * 2) 0 0
+    border-top: var(--global-stroke) solid var(--black-light)
+    grid-column: perimeter-start/perimeter-end
+    .adjacent-posts-list
+      @media screen and (min-width: 514px)
+        display: flex
+      padding: calc(var(--grid-gap) * 2) 0
+      list-style: none
+      li
+        flex: 1
+        display: flex
+        padding: var(--grid-gap) calc(var(--grid-gap) * 2)
+        &.eol
+          span
+            &:first-of-type
+              &::selection
+                color: var(--black)
+                background: var(--tron)                
+              color: var(--tron)
+              margin: 0
+              &::after
+                content: ""
+                margin: 0 0.5rem
+                display: inline-block
+                width: 10px
+                height: 20px
+                animation: tron .85s linear infinite alternate
+        a[rel="next"], a[rel="prev"]
+          max-width: 30rem
+          display: block
+          &:hover, &:focus
+            text-decoration: none
+            .adjacent-title
+              text-decoration: underline
+            .adjacent-label
+              color: var(--white-light)
+        @media screen and (min-width: 768px)
+          a[rel="next"]
+            > span
+              justify-content: flex-end              
+            &:hover, &:focus, &:active
+              .adjacent-label
+                transform: translateX(1rem)
+          a[rel="prev"]
+            > span
+              justify-content: flex-start             
+            &:hover, &:focus, &:active
+              .adjacent-label
+                transform: translateX(-1rem)
+        .adjacent-label
+          display: flex
+          align-items: center
+          font-family: var(--mono-font-stack)
+          font-weight: 400
+          text-transform: uppercase
+          color: var(--white-lighter)
+          margin: 0 0 calc(var(--grid-gap) / 1) 0
+          transition: all .5s cubic-bezier(0.35, 1.55, 0.65, 1)
+          transition-property: transform
+        .adjacent-title
+          display: block
+          font-variation-settings: 'wght' 580
+          font-size: 1.3rem
+          margin: 0 0 calc(var(--grid-gap) / 5) 0
+        .adjacent-excerpt
+          display: inline-block
+          color: var(--white-light)
+          font-size: 1rem
+          max-width: inherit
+        &.adjacent-post-prev
+          text-align: left
+          justify-content: flex-start
+        &.adjacent-post-next
+          @media screen and (min-width: 768px)
+            text-align: right
+            justify-content: flex-end

@@ -1,11 +1,13 @@
 <footer role="contentinfo" id="footer" class="grid-me">
 	<a href="#top">Top</a>
+
+ <address>For more details, contact
+  <a href="mailto:js@example.com">{{site.title}}</a>.
+ </address>
+
+ <p><small>© copyright 2038 Example Corp.</small></p>
+
 	<ul>
-    {%- if page.post -%}
-		<li>
-			<a href="{{ site.repository }}blob/master/{{ page.path }}">Edit this post on GitHub</a>
-		</li>      
-    {%- endif -%}
 		<li>
 			<a href="{{ site.repository }}">GitHub</a>
 		</li>

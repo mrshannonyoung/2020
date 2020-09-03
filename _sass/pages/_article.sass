@@ -79,15 +79,24 @@ body.post
       display: contents
       grid-column: perimeter-start/content-main-end
       > div
-        grid-column: var(--content-span)
+        grid-column: 3/span content-main-end
       #post-tags
-        font-size: 0.8em
         grid-column: var(--content-span)
         padding: 0
         margin: 0
         list-style: none
-        li
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-start
+        li  
           font-size: inherit
-          &::before
+          color: var(--brand-primary)
+          text-transform: uppercase
+          padding: calc(var(--grid-gap) / 2) calc(var(--grid-gap) / 1)
+          display: flex
+          align-items: center
+          a
+            font-family: var(--mono-font-stack)
+          &::before          
             content: '#'
             position: static

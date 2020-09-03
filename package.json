@@ -7,7 +7,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/mrshannonyoung/2020"
-  },  
+  },
   "scripts": {
     "serve": "bundle exec jekyll s & gulp dev",
     "serve--q": "bundle exec jekyll s --q & gulp dev",

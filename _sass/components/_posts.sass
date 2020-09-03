@@ -4,17 +4,18 @@
     padding: 0
     list-style: none
     li
+      display: flex
       &:not(:last-of-type)
         margin-bottom: var(--grid-gap)
+        @media screen and (min-width: 768px)
+          margin: initial
       article
-        display: grid
-        column-gap: var(--grid-gap)        
-        grid-template-columns: repeat(4, 1fr)
+        display: grid     
+        grid-template-rows: [title] auto [excerpt] auto [footer] 1fr
         *
           grid-column: 1/-1
         footer
           text-transform: uppercase
           font-family: var(--mono-font-stack)         
           margin-top: calc(var(--grid-gap) / 2)
-          align-self: end
-          text-align: right
+          align-self: flex-end

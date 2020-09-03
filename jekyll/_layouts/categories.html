@@ -3,6 +3,7 @@ layout: default
 ---
 <section class="grid-me">
   <div class="topic-highlights-content">  
+    {{site.categories.size}}
     {% for cat in site.categories %}
       <h3><a href="/categories/{{ cat[0] | slugify }}">{{ cat[0] }}({{ cat[1].size }})</a></h3>
     {% endfor %}
