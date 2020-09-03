@@ -1,28 +1,28 @@
 ---
 layout: default
 ---
-<article class="grid-me" aria-describedby="article-title">
+<article class="grid-me h-entry" aria-describedby="article-title">
   <header>
-    <h1 id="article-title">{{page.title}}</h1>
+    <h1 class="p-name" id="article-title">{{page.title}}</h1>
   </header>
   {% include /components/html/post-meta.html %}
-  <div class="article-content">
+  <div class="article-content e-content">
     {{content}}
   </div>
-  <footer>
-    {%- if page.post -%}
-    <a href="{{ site.repository }}edit/master/jekyll/collections/{{ page.path }}">Edit this post on GitHub</a>
-    {%- endif -%}    
 	<div>
 		<span>Updated</span>
-		<time datetime="{{ 'now' | date: '%Y-%m-%d %H:%M' }}">{{ "now" | date_to_string }}</time>
-	</div>    
+		<time datetime="{{ 'now' | date_to_xmlschema }}">{{ "now" | date_to_string }}</time>
+	</div> 
+  <footer>
+  {%- if page.post -%}
+    <a href="{{ site.repository }}edit/master/jekyll/collections/{{ page.path }}">Edit this post on GitHub</a>
+  {%- endif -%}       
 	{%- if page.tags -%}
   <div>
     <span class="sr-only" id="post-tags-heading">Tagged with</span>
     <ul id="post-tags" aria-describedby="post-tags-heading">
       {% for tag in page.tags %}
-      <li><a rel="tag" href="/topics/{{ tag | slugify }}/">{{ tag }}</a></li>
+      <li><a href="/topics/{{ tag | slugify }}/" class="p-category" rel="tag">{{ tag }}</a></li>
       {% endfor %}	
     </ul>
   </div>

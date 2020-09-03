@@ -1,15 +1,23 @@
 <footer role="contentinfo" id="footer" class="grid-me">
-	<a href="#top">Top</a>
-
- <address>For more details, contact
-  <a href="mailto:js@example.com">{{site.title}}</a>.
- </address>
-
- <p><small>© copyright 2038 Example Corp.</small></p>
-
-	<ul>
-		<li>
-			<a href="{{ site.repository }}">GitHub</a>
-		</li>
-	</ul>	
+  <section>
+    <div class="fake-id">
+      <address class="h-card">For more details, contact
+        <a href="mailto:js@example.com" class="u-email p-name">{{site.title}}</a>
+        <picture>
+          <source srcset="/images/photo-600.webp 600w, /images/photo-300.webp 300w, /images/photo-150.jpg 150w" sizes="150px" type="image/webp">
+          <source srcset="/images/photo-600.jpg 600w, /images/photo-300.jpg 300w, /images/photo-150.jpg 150w" sizes="150px" type="image/jpeg">
+          <img loading="eager" class="u-photo" src="/images/photo-150.jpg" alt="{{site.title}}" importance="high">
+        </picture>        
+      </address>
+    </div>
+  </section>
+  <div>
+    <ul>
+      <li>
+        <a href="{{ site.repository }}">GitHub</a>
+      </li>
+    </ul>
+    <a href="#top">Top</a>
+    <p><small>All Rights Reserved &copy; {{ site.time | date: '%Y' }}</small></p>  
+  </div>
 </footer>

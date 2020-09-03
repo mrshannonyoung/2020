@@ -45,7 +45,7 @@ body.post
         writing-mode: vertical-rl
         padding: 0
     .article-content
-      grid-column: 3/content-main-end
+      grid-column: 3/span 8
       display: contents
       p
         text-indent: calc(var(--grid-gap) * 1.5)      
@@ -72,9 +72,9 @@ body.post
           grid-column: 3/span 7
       *
         margin: 0 0 var(--grid-gap)
-        grid-column: 2/content-main-end
+        grid-column: 2/span 8
         @media screen and (min-width: 768px)
-          grid-column: 3/content-main-end
+          grid-column: 3/span 8
     footer
       display: contents
       grid-column: perimeter-start/content-main-end
@@ -88,13 +88,14 @@ body.post
         display: flex
         flex-wrap: wrap
         justify-content: flex-start
-        li  
+        li
           font-size: inherit
           color: var(--brand-primary)
           text-transform: uppercase
-          padding: calc(var(--grid-gap) / 2) calc(var(--grid-gap) / 1)
           display: flex
           align-items: center
+          &:not(:last-of-type)
+            margin-right: calc(var(--grid-gap) / 2)
           a
             font-family: var(--mono-font-stack)
           &::before          

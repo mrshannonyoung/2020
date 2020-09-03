@@ -42,15 +42,15 @@ layout: default
     <ol class="posts-list">
       {%- for post in posts limit: 4 %}
       <li>
-        <article>
-          <h3>
+        <article aria-describedby="post-{{ post.title | slugify }}">
+          <h3 id="post-{{ post.title | slugify }}">
             <a href="{{ post.url }}">{{ post.title }}</a>
           </h3>
           <div>
             {{ post.excerpt }}
           </div>
           <footer>
-            <time datetime="{{ post.date }}">{{ post.date | date_to_long_string }}</time>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string }}</time>
           </footer>          
         </article>
       </li>

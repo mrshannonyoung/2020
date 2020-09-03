@@ -40,11 +40,11 @@ img
   width: 100%
   height: auto
 
-svg:not(:root):not([hidden])
+svg
   overflow: hidden
   display: block
 
-[hidden], #current
+[hidden], [aria-hidden="true"], #current
   display: none
 
 .sr-only:not(:focus):not(:active)

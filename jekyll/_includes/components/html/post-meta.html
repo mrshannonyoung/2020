@@ -1,7 +1,7 @@
 <div class="article-meta">	
 	<div>
 		<span class="sr-only">Published</span>
-		<time datetime="{{ page.date }}">
+		<time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">
 			<a href="/archive/{{ page.date | date: '%Y' }}/">
 				{{ page.date | date_to_long_string }}
 			</a>
@@ -10,7 +10,7 @@
 	{%- if page.categories -%}
 	<div>
 		<span class="sr-only">Filed under</span>
-		<a href="/categories/{{page.categories}}/">{{page.categories}}</a>		
+		<a href="/categories/{{page.categories}}/" class="p-category">{{page.categories}}</a>		
 	</div>
 	{%- endif -%}
 </div>
