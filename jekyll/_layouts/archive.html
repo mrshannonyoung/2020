@@ -5,7 +5,7 @@ title: "Archive"
 <section class="grid-me">
 
   <header>
-    <h1>{{ page.type | prepend: 'type:' }} {{ page.title | prepend: 'title:' }} {{ page.date | date: '%Y' }}</h1>
+    <h1>{{ page.type | capitalize }} '{{ page.title }}' {{ page.date | date: '%Y' }}</h1>
   </header>
 
   <ul class="posts">

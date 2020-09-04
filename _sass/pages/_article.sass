@@ -12,9 +12,10 @@ body.post
   article
     header
       grid-column: 2/content-main-end
-      padding: calc(var(--grid-gap) * 3) 0 var(--grid-gap)
+      padding: 0 0 calc(var(--grid-gap) * 3)
       h1
-        font-variation-settings: "wght" 350
+        font-variation-settings: "wght" 650
+        letter-spacing: 0.1rem
     .article-meta
       div
         padding: 0
@@ -68,6 +69,8 @@ body.post
         font-variation-settings: "wght" 350
         text-indent: 0
         margin-bottom: calc(var(--grid-gap) * 2)
+        + p
+          text-indent: 0
         @media screen and (min-width: 768px)
           grid-column: 3/span 7
       *

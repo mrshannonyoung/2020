@@ -11,7 +11,7 @@ symbol#spud
     fill: none
     stroke: var(--white)
     stroke-width: var(--global-stroke)
-    stroke-linecap: square
+    stroke-linecap: round
     stroke-linejoin: round
     stroke-miterlimit: 10
     transition: all .5s ease
@@ -20,10 +20,17 @@ symbol#spud
     fill: transparent
   #logo-eyes-crossed
     display: none
+  #logo-eyes-humble
+    display: none
   &.errors
     #logo-eyes-open
       display: none
     #logo-eyes-crossed
+      display: block
+  &.about
+    #logo-eyes-open
+      display: none
+    #logo-eyes-humble
       display: block
   &:hover, &:focus, &:active
     path[id^="logo-eyes-"]

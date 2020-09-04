@@ -10,7 +10,7 @@ nav
     position: absolute
     writing-mode: vertical-lr
     left: -100vw
-    top: 10vh
+    top: var(--grid-gap)
     height: 100vh
     a[href]
       display: inline-block
@@ -81,15 +81,22 @@ nav
               &::selection
                 color: var(--black)
                 background: var(--tron)                
+              &:hover
+                &::after
+                  animation-play-state: paused
               color: var(--tron)
               margin: 0
+              position: relative
+              letter-spacing: 0.15rem
+              cursor: text
+              text-shadow: 0 0 5px var(--zx-spectrum)         
               &::after
                 content: ""
-                margin: 0 0.5rem
+                margin-left: 0.5rem
                 display: inline-block
                 width: 10px
                 height: 20px
-                animation: tron .85s linear infinite alternate
+                animation: tron .85s infinite linear alternate
         a[rel="next"], a[rel="prev"]
           max-width: 30rem
           display: block
