@@ -14,19 +14,20 @@ body.post
       grid-column: 2/content-main-end
       padding: 0 0 calc(var(--grid-gap) * 3)
       h1
-        font-variation-settings: "wght" 650
+        // Variable font weight
+        @include mixins.fw(650)
         letter-spacing: 0.1rem
     .article-meta
       div
         padding: 0
         @media screen and (min-width: 768px)
-          padding: var(--grid-gap) 0
+          &:not(:last-of-type)
+            padding: var(--grid-gap) 0
       &::before
         content: ""
         @include mixins.direction(right)
         width: calc(var(--grid-gap) * 4)
         height: var(--global-stroke)
-        margin: 0
         border-radius: 6px
         background-color: var(--brand-primary)
         transition: background 1s ease
@@ -34,7 +35,6 @@ body.post
           width: var(--global-stroke)
           height: calc(var(--grid-gap) * 4)
           @include mixins.direction(bottom)
-          margin: 0 0 var(--grid-gap)
       grid-column: var(--content-span)
       display: flex
       align-items: center

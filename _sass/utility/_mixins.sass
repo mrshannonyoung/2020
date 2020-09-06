@@ -1,2 +1,6 @@
 @mixin direction($dir, $start: 'brand-primary' , $end: 'brand-secondary')
   background: linear-gradient(to #{$dir}, var(--#{$start}) min(20vw, 45%), var(--#{$end}))
+
+@mixin fw($wght: 400)
+  font-weight: 400
+  font-variation-settings: "wght" #{$wght}

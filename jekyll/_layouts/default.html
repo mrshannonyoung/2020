@@ -12,17 +12,17 @@
   <meta name="description" content="{{ page.introduction }}">
   <meta name="generator" content="{{ jekyll.version | prepend: 'Jekyll ' }}">
   <link href="/assets/css/main.css" rel="stylesheet">
+  <link href="{{page.url | absolute_url}}" rel="canonical">
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Cool Stuff Blog">
   <noscript>
     <link rel="stylesheet" href="/assets/css/main.css">
   </noscript>
 </head>
-<body {%- if page.collection %} data-collection="{{page.collection}}"{% endif %} class="{{page.layout}}">
+<body {%- if page.collection %} data-collection="{{page.collection}}"{% endif %} class="{{page.layout | slugify}}">
   {% include /components/svg/logos/index.html %}
-  {% include /partials/skip.html %}
+  {% include /partials/navigations/skip.html %}
   {% include /partials/header.html %}
-  <main role="main" id="content" aria-label="content">
-    {{ content }}
-  </main>
+  {% include /partials/main.html %}
   {% include /partials/footer.html %}
   <div id="current">Current page</div>
   <script>

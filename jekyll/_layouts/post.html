@@ -17,18 +17,7 @@ layout: default
   {%- if page.post -%}
     <a href="{{ site.repository }}edit/master/jekyll/collections/{{ page.path }}">Edit this post on GitHub</a>
   {%- endif -%}       
-	{%- if page.tags -%}
-  <div>
-    <span class="sr-only" id="post-tags-heading">Tagged with</span>
-    <ul id="post-tags" aria-describedby="post-tags-heading">
-      {% for tag in page.tags %}
-      <li><a href="/topics/{{ tag | slugify }}/" class="p-category" rel="tag">{{ tag }}</a></li>
-      {% endfor %}	
-    </ul>
-  </div>
-	{%- endif -%}
-  {% if page.previous.url or page.next.url %}
+  {% include /components/html/post-tags.html %}
   {% include /components/html/adjacent-posts.html %}
-  {%- endif -%}
   </footer>
 </article>

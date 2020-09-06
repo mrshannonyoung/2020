@@ -1,5 +1,6 @@
 - name: "jump"
   items:
+    - label: header
     - label: content
     - label: footer
 

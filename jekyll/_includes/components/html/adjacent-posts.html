@@ -1,3 +1,4 @@
+{% if page.previous.url or page.next.url %}
 <nav class="adjacent-posts" aria-labelledby="adjacent-posts-heading">
   <h2 id="adjacent-posts-heading" class="sr-only">More posts</h2>
   <ul class="adjacent-posts-list">
@@ -5,3 +6,4 @@
     {% include /components/html/adjacent-post-item.html rel="next" direction="next" %}
   </ul>
 </nav>
+{%- endif -%}
