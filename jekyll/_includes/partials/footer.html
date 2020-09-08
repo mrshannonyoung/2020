@@ -1,35 +1,21 @@
 <footer role="contentinfo" id="footer" class="grid-me">
-  <section>
-    <div class="fake-id">
-      <address class="h-card">For more details, contact
+  <section class="more-about">
+    <address class="h-card">
+      <p>For more details, contact:<br>
         <a href="mailto:js@example.com" class="u-email p-name">{{site.title}}</a>
+      </p>
+      <a href="/" class="u-url">
         <picture>
-          <source srcset="/images/photo-600.webp 600w, /images/photo-300.webp 300w, /images/photo-150.jpg 150w" sizes="150px" type="image/webp">
-          <source srcset="/images/photo-600.jpg 600w, /images/photo-300.jpg 300w, /images/photo-150.jpg 150w" sizes="150px" type="image/jpeg">
-          <img loading="eager" class="u-photo" src="/images/photo-150.jpg" alt="{{site.title}}" importance="high">
-        </picture>        
-      </address>
-    </div>
+          <source srcset="/assets/img/shannon-young.png 600w, /assets/img/shannon-young.png 300w, /assets/img/shannon-young.png 150w" sizes="150px" type="image/jpeg">
+          <img loading="eager" class="u-photo" src="/assets/img/shannon-young.png" width="100px" height="100px" alt="A much younger version of my actual face" importance="high">
+        </picture>
+      </a>       
+    </address>
+    {% include /partials/navigations/footer.html %}
   </section>
-  <section>
-    <ul>
-      <li>
-        <a href="{{ site.repository }}">About</a>
-      </li>
-      <li>
-        <a href="{{ site.repository }}">GitHub</a>
-      </li>
-      <li>
-        <a href="{{ site.repository }}">Archives</a>
-      </li>
-      <li>
-        <a href="{{ site.repository }}">Tags</a>
-      </li>
-      <li>
-        <a href="{{ site.repository }}" title="https://aworkinglibrary.com/colophon/">Colophon</a>
-      </li>
-    </ul>
-    <a href="#top">Top</a>
-    <p><small>All Rights Reserved &copy; {{ site.time | date: '%Y' }}</small></p>  
+  <section class="legal-stuff">
+    <p>
+      <small>{{ site.time | date: '%Y' }} – <a href="/legal/" rel="noindex">Legal</a></small>
+    </p>
   </section>
 </footer>

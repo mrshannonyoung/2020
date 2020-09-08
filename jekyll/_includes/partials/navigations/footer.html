@@ -1,0 +1,11 @@
+{%- for menu in site.data.navigation -%}
+  {% if menu.name == 'footer' %}
+  <ul>
+    {%- for item in menu.items -%}
+      <li {% if active contains item.label %}aria-describedby="current-page"{% endif %}>
+        <a href="/{{ item.label }}/" {% if item.data %}data-supplementary="{{site.[item.data].size}}"{% endif %} {% if active contains item.label %} aria-current="page"{% endif %}>{{ item.label | capitalize }}</a>
+      </li>           
+    {%- endfor -%}
+  </ul>
+  {% endif %}
+{%- endfor -%}  

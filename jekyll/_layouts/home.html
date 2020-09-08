@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-{%- assign navigations = site.data.navigation -%}
 {%- assign posts = site.posts -%}
 
 <section class="introduction grid-me pad-me">
@@ -18,21 +17,7 @@ layout: default
   <div class="topic-highlights-content">
     <h2>Favourite topics</h2>    
     <p>I like to note down, and write about most topics, but these areas are what peak my interests most</p>
-    {%- for menu in navigations -%}
-      {% if menu.name == 'topics' %}
-        <nav id="topics" aria-label="topics">
-          <!-- Main navigation -->
-          <ul>
-            {%- for item in menu.items -%}
-              <li>
-                <a href="/topics/{{ item.label | replace: ' ', '-' }}"><span>{{- item.label |  replace: '-', ' ' -}}</span></a>
-              </li>           
-            {%- endfor -%}
-          </ul>
-          <a href="/topics/" class="topic-select">See all topics</a>
-        </nav>
-      {% endif %}
-    {%- endfor -%}
+    {% include /partials/navigations/topics.html %}
   </div>
 </section>
 

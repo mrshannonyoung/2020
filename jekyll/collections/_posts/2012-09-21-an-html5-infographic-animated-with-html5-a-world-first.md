@@ -8,6 +8,7 @@ featured_image: "2012/09/HTML5-infographic.jpg"
 categories: projects
 ---
 This infographic, or animographic (as we've just coined it), summarises the need-to-know facts about HTML5 and brings them to life with animation produced using HTML5.
+<!--more-->
 
 As a creative agency we love to put our grey matter to the test. With already plenty of infographics out there on the subject of HTML5, our self-imposed challenge was to try and do something that would stand out. The big idea?
 

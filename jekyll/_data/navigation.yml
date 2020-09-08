@@ -12,4 +12,11 @@
 
 - name: "footer"
   items:
+    - label: about
     - label: colophon
+    - label: blog
+      data: posts
+    - label: categories
+      data: categories
+    - label: topics
+      data: tags

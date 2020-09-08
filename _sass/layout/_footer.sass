@@ -1,8 +1,81 @@
-footer[role="contentinfo"]
+@use '../utility/_mixins'
+
+[aria-current]
+  @include mixins.fw(650)
   color: var(--white)
-  padding: calc(var(--grid-gap) * 5) 0
+
+[data-supplementary]
+  position: relative
+  @media screen and (min-width: 768px)
+    &:hover, &:focus
+      &::after
+        border-color: var(--white)
+        transform: translateY(-5px)
+  &::after
+    @include mixins.fw(750)
+    transition: all .2s linear
+    transition-property: border, transform    
+    padding: 0.3rem
+    margin-left: 0.3rem
+    font-size: 60%
+    content: attr(data-supplementary)
+    position: absolute
+    @media screen and (min-width: 768px)
+      margin: 0
+      top: -10px
+    border-radius: 1rem
+    line-height: 1
+    color: var(--white-light)
+    min-width: 1rem
+    text-align: center
+    border: solid var(--global-stroke) var(--black-lighter)
+
+footer[role="contentinfo"]
+  align-items: center
+  color: var(--white)
+  padding: calc(var(--grid-gap) * 2) 0
   border-top: var(--global-stroke) solid var(--black-lighter)
-  background-color: var(--black-lighter)
-  // background: radial-gradient(at bottom right, var(--brand-secondary), transparent), radial-gradient(circle at bottom left,var(--zx-spectrum), var(--brand-primary))
-  > section
-    grid-column: content-main-start/span 4
+  .legal-stuff
+    color: var(--white-light)
+    margin-top: calc(var(--grid-gap) * 2)
+    grid-column: var(--content-span)
+  .more-about
+    display: contents
+    address
+      grid-column: var(--content-span)
+      @media screen and (min-width: 768px)
+        grid-column: content-main-start/span 4
+    ul
+      grid-column: var(--content-span)
+      display: flex
+      flex-direction: column
+      list-style: none
+      padding: 0
+      justify-content: space-between
+      @media screen and (min-width: 768px)
+        flex-direction: row
+        grid-column: 6/span content-main-end
+  address
+    font-style: normal
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    column-gap: var(--grid-gap)
+    align-items: center
+    justify-items: center
+    border-radius: 6px
+    p
+      text-align: left
+      grid-column: 1/span 2
+    a
+      grid-column: 3/-1
+      img
+        font-size: 60%
+        text-align: center
+        border: solid var(--global-stroke) var(--brand-primary)
+        border-radius: 50%
+        box-shadow: 0 0 0 calc(var(--global-stroke) * 2) var(--black), 0 0 0 calc(var(--global-stroke) * 3) var(--black-lighter)
+        transition: all .5s linear
+        transition-property: filter
+        @include mixins.direction(bottom)
+        &:hover
+          filter: drop-shadow(0 0 10px var(--brand-primary))

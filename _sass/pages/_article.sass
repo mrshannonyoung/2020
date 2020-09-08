@@ -51,7 +51,6 @@ body.post
       p
         text-indent: calc(var(--grid-gap) * 1.5)      
       blockquote
-        box-shadow: inset 0 0 var(--grid-gap) var(--black-dark)
         grid-column: var(--content-span)
         @media screen and (min-width: 768px)
           grid-column: 3/span 7
@@ -59,9 +58,12 @@ body.post
           margin: 0
         p
           text-indent: 0
-          a
-            font-size: .8em
+      img
+        max-width: 100%
       figure
+        grid-column: 3/span content-main-end
+        img
+          width: 100%
         figcaption
           text-align: center
       > p:first-of-type

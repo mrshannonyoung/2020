@@ -11,9 +11,11 @@ tags:
   - cookies
   - privacy
 ---
+Let me explain that for you in real speak. A cookie is a text file that is saved onto your computer when you visit a website that will store certain information about your visit.
+<!--more--> 
 ## Computers + Cookies = what are they talking about?
 
-Let me explain that for you in real speak. A cookie is a text file that is saved onto your computer when you visit a website that will store certain information about your visit. Why they are actually called a cookie is beyond me, I can only think of crumbs being left behind, which seems to describe them quite well.
+Why they are actually called a cookie is beyond me, I can only think of crumbs being left behind, which seems to describe them quite well.
 
 There are two types of cookies: (let me just head over to WikiPedia)
 

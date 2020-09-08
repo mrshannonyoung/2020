@@ -8,8 +8,8 @@ featured_image: "2013/07/ios7_mini.jpg"
 categories: thoughts
 noindex: true
 ---
-
 All the big companies like Apple, Google, and Microsoft are doing it, so you should be too right, right?
+<!--more--> 
 
 Flat design, summarised into one paragraph is this:
 

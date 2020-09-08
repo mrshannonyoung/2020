@@ -8,8 +8,7 @@ featured_image: "2013/05/shannon@responsiveconference.jpg"
 categories: design-culture
 ---
 This blog post is the first part of a series of posts that go through what I learnt and absorbed from <a href="https://responsiveconf.com/" target="_blank">Responsive Day Out &#8211; Brighton</a>, 2013, hosted by <a href="https://adactio.com/" target="_blank">Jeremy Keith</a> (who was fantastic), author of <a href="https://html5forwebdesigners.com/" target="_blank">HTML5 For Web Designers</a>.
-
-
+<!--more-->
 
 My first post will speak about ideas and methodologies on responsive design, highlighted by the last speaker, <a href="https://www.markboulton.co.uk/ " target="_blank">Mark Boulton</a>, but also mentioned by other speakers on the day, and which are hot topics in the industry.
 

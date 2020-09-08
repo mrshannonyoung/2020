@@ -1,0 +1,15 @@
+{%- for menu in site.data.navigation -%}
+  {% if menu.name == 'topics' %}
+    <nav id="topics" aria-label="topics">
+      <!-- Main navigation -->
+      <ul>
+        {%- for topic in menu.items -%}
+          <li>
+            <a href="/topics/{{ item.label | replace: ' ', '-' }}"><span>{{- topic.label |  replace: '-', ' ' -}}</span></a>
+          </li>           
+        {%- endfor -%}
+      </ul>
+      <a href="/topics/" class="topic-select">See all topics</a>
+    </nav>
+  {% endif %}
+{%- endfor -%}

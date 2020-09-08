@@ -1,0 +1,68 @@
+---
+layout: default
+---
+<div class="grid-me">
+  <div class="generic-content">
+    <h1>Colophon</h1>
+    <h2>Typography</h2>
+    <div class="type-grid">
+      <div class="specimen body-font">
+        <div tabindex="0">
+          <h3>Manrope</h3>
+          <ul>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>W</li>
+            <li>X</li>
+            <li>Y</li>
+            <li>Z</li>
+          </ul>
+        </div>
+        <p>General type is set in the sans-serif font-face <a href="https://fonts.google.com/specimen/Manrope">Manrope, by Mikhail Sharanda</a> which is a variable font.</p>    
+      </div>
+      <div class="specimen monospace-font">
+        <div tabindex="0">
+          <h3>Cutive Mono</h3>
+          <ul>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>W</li>
+            <li>X</li>
+            <li>Y</li>
+            <li>Z</li>
+          </ul>
+        </div>
+        <p>The Monospace font-face is <a href="https://fonts.google.com/specimen/Cutive+Mono">Cutive Mono, by Vernon Adams</a>. Vernon Adams <a href="https://www.youtube.com/watch?v=Ywj8b589zR8">passed away</a> in 2016 at the age of 49 due to complications after a scooter accident in 2014.</p>
+      </div>
+    </div>
+    <h2>Stack</h2>
+    <div class="type-grid">
+    <p>Friends who have helped me over the years</p> 
+    </div>
+    <h2>Tools</h2>
+    <p>Friends who have helped me over the years</p> 
+    <h2>Friends</h2>
+    <p>Friends who have helped me over the years</p>
+    <ul>
+    {% for friend in site.data.knows %}
+      <li>
+      {% if friend.url %} <a href="{{ friend.url }}">{{ friend.name }}</a> {%else%} {{ friend.name }} {% endif %}
+      <ul>
+      {% for social in friend.social %}
+        <li>
+        <a href="{{social.url}}">{{social.platform}}</a>
+        </li>
+      {% endfor %} 
+      </ul>
+      </li>
+    {% endfor %}    
+    </ul>
+    <h2>Peers</h2>
+    
+    {{content}}
+  </div>
+</div>

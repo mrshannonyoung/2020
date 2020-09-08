@@ -8,6 +8,7 @@
   box-sizing: border-box
   margin: 0
   font-weight: initial
+  outline-offset: 0
   // &:target
   //   border-top: solid 3px var(--brand-primary)
 
@@ -35,17 +36,15 @@ hr
   margin: 1rem
   padding: 0  
   
-img
+img, picture
   display: block
-  max-width: 100%
-  width: 100%
   height: auto
 
 svg
   overflow: hidden
   display: block
 
-[hidden], [aria-hidden="true"], #current
+[hidden], [aria-hidden="true"], #current-page
   display: none
 
 .sr-only:not(:focus):not(:active)

@@ -10,7 +10,7 @@
   @supports (display: grid) and (--prop: value)
     @media screen and (min-width: 768px)
       display: grid
-      grid-template-columns: var(--post-layout)
-      grid-template-rows: var(--post-layout)
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(2, min-content)
       column-gap: var(--grid-gap)
       row-gap: var(--grid-gap)

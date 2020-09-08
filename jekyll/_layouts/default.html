@@ -13,18 +13,19 @@
   <meta name="generator" content="{{ jekyll.version | prepend: 'Jekyll ' }}">
   <link href="/assets/css/main.css" rel="stylesheet">
   <link href="{{page.url | absolute_url}}" rel="canonical">
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Cool Stuff Blog">
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Blog posts">
   <noscript>
     <link rel="stylesheet" href="/assets/css/main.css">
   </noscript>
 </head>
 <body {%- if page.collection %} data-collection="{{page.collection}}"{% endif %} class="{{page.layout | slugify}}">
+  {%- assign active = page.url | remove:'.html' -%}
   {% include /components/svg/logos/index.html %}
   {% include /partials/navigations/skip.html %}
   {% include /partials/header.html %}
   {% include /partials/main.html %}
   {% include /partials/footer.html %}
-  <div id="current">Current page</div>
+  <div id="current-page">Current page</div>
   <script>
     if(navigator.doNotTrack != 0) {
       document.querySelector("html").setAttribute("data-dnt", "true");
