@@ -1,0 +1,25 @@
+@use '../utility/_mixins'
+  
+@keyframes tron
+  0%, 100%
+    background: var(--tron)
+  50%
+    background: none
+
+@keyframes variable-showcase
+  0%, 100%
+    @include mixins.fw(350)
+    transform: scale(1) 
+  25%
+    @include mixins.fw(650)
+    transform: scale(1.6)
+  50%
+    @include mixins.fw(950)
+    // transform: rotate3d( <x> , <y> , <z> , <angle> );
+    transform: scale(2.6)
+
+
+// @media (prefers-reduced-motion: reduce)
+//   *
+//     animation-duration: 0s !important
+//     transition-duration: 0s !important

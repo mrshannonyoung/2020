@@ -1,3 +1,6 @@
+@use '../utility/_mixins'
+@use '../utility/_extends'
+
 .generic-content
   grid-column: var(--content-span)
   .type-grid
@@ -13,10 +16,19 @@
       display: contents
       h3
         font-size: 2rem
+      ul
+        font-size: 1.5rem
       &.body-font
         > div
           grid-column: 1/span 4
           grid-row: 1/span 3
+          &:hover, &:focus
+            li
+              perspective: 800px
+              animation: variable-showcase 1s linear forwards
+              @for $i from 0 through 8
+                &:nth-child(#{$i + 1})
+                  animation-delay: .1s * $i
           + p
             align-self: flex-end
             grid-column: 5/span 3
@@ -30,6 +42,7 @@
             grid-column: 6/span 3
             grid-row: 4/span 1     
       > div
+        outline: none
         display: flex
         border-radius: var(--global-stroke)
         flex-direction: column
@@ -53,4 +66,82 @@
           li
             padding: 1rem
             text-align: center
-            flex-basis: 25%
+            flex: 1 0 25%
+  .roadmap
+    @extend %list-to-flex
+    align-items: flex-start
+    margin: calc(var(--grid-gap) * 1) 0
+    li
+      padding: calc(var(--grid-gap) / 2) calc(var(--grid-gap) * 1)
+      position: relative
+      transition: all .5s ease
+      transition-property: background, transform, border
+      border: solid var(--global-stroke) var(--black-lighter)
+      flex: 1
+      &:not(:last-of-type)
+        margin-right: 1rem
+      @for $i from 0 through 200
+        @media screen and (min-width: 768px)
+          &:nth-child(#{$i + 1})
+            --h: #{270 + ($i * 5)}
+            --s: #{50 + ($i * 2)}%
+            --l: #{40 + ($i * 2)}%
+            margin-top: #{$i * 1.5}vw
+            transition-delay: .1s * $i
+      color: var(--white)
+      border-radius: calc(var(--global-stroke) * 2)
+      a
+        display: block
+        color: inherit
+        @include mixins.fw(750)
+        margin-bottom: calc(var(--grid-gap) / 3)
+      &::after
+        content: ''
+      p
+        font-size: .95em
+        padding: 0 calc(var(--grid-gap) * 2) 0 0
+    &:hover, &:focus
+      li
+        border: solid var(--global-stroke) var(--white)
+        @for $i from 0 through 200
+          @media screen and (min-width: 768px)
+            &:nth-child(#{$i + 1})
+              background-color: hsl(var(--h), var(--s), var(--l))
+       
+  .friends
+    @extend %list-to-flex
+    justify-content: space-between
+    position: relative
+  .peers
+    list-style: none
+    padding: 0
+    margin: var(--grid-gap) 0
+    display: grid
+    column-gap: var(--grid-gap)
+    row-gap: var(--grid-gap) 
+    grid-template-columns: repeat(6, minmax(min-content, 300px))
+    > li
+      padding: 2rem 0
+      border: solid 1px red
+    li
+      text-align: center
+      align-items: center
+      display: flex
+      flex-direction: column
+      svg
+        display: inline-block
+        fill: var(--twitter)
+      *
+        padding: 0
+        list-style: none
+      img
+        font-size: 60%
+        text-align: center
+        border: solid var(--global-stroke) var(--brand-primary)
+        border-radius: 50%
+        box-shadow: 0 0 0 calc(var(--global-stroke) * 2) var(--black), 0 0 0 calc(var(--global-stroke) * 3) var(--black-lighter)
+        transition: all .5s linear
+        transition-property: filter
+        @include mixins.direction(bottom)
+        &:hover
+          filter: drop-shadow(0 0 10px var(--brand-primary))        

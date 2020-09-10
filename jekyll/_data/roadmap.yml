@@ -1,0 +1,14 @@
+- name: Indieweb
+  description: The IndieWeb is a people-focused alternative to the 'corporate web'.
+  url: https://indieweb.org/
+  priority: 3
+
+- name: Indieweb – POSSE
+  description: POSSE is an abbreviation for Publish (on your) Own Site, Syndicate Elsewhere.
+  url: https://indieweb.org/POSSE
+  priority: 2
+
+- name: Notes collection
+  description: Addition of short post format for notes.
+  url: https://jekyllrb.com/docs/collections/
+  priority: 1

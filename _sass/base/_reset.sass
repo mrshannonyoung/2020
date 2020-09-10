@@ -21,7 +21,6 @@ body
   font-size: 1.125em
   background-color: var(--black)
   color: var(--white)
-  font-variant-ligatures: none
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   text-decoration-skip-ink: auto
@@ -47,6 +46,9 @@ svg
 [hidden], [aria-hidden="true"], #current-page
   display: none
 
+::-webkit-details-marker
+  display: none
+
 .sr-only:not(:focus):not(:active)
   clip: rect(0 0 0 0)
   clip-path: inset(100%)
@@ -59,10 +61,16 @@ svg
 a
   color: var(--brand-secondary)
   text-decoration: none
+  text-decoration-thickness: 2px!important
+  *
+    text-decoration-thickness: 2px!important
   transition: color 0.15s linear
   &:hover, &:focus
     color: var(--white)
     text-decoration: underline
+  &:active
+    box-shadow: 0
+    outline: 0
 
 pre
   overflow-x: auto
@@ -91,4 +99,4 @@ pre
     margin-right: 1rem
     background-color: var(--brand-primary)
     @include mixins.direction(right)
-    transition: background 1s ease    
+    transition: background 1s ease  

@@ -3,7 +3,10 @@
   <ul>
     {%- for item in menu.items -%}
       <li {% if active contains item.label %}aria-describedby="current-page"{% endif %}>
-        <a href="/{{ item.label }}/" {% if item.data %}data-supplementary="{{site.[item.data].size}}"{% endif %} {% if active contains item.label %} aria-current="page"{% endif %}>{{ item.label | capitalize }}</a>
+        <a href="/{{ item.label }}/" title="{{ item.label | capitalize }}" {% if active contains item.label %}aria-current="page"{% endif %}>
+          <span>{{ item.label | capitalize }}</span>
+          {% if item.data %}<em>{{site.[item.data].size}}</em>{% endif %}
+        </a>
       </li>           
     {%- endfor -%}
   </ul>

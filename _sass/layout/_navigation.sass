@@ -1,10 +1,5 @@
 @use '../utility/_mixins'
 
-@keyframes tron
-  0%, 100%
-    background: var(--tron)
-  50%
-    background: none
 nav
   &[aria-label="page"]
     position: absolute
@@ -60,7 +55,7 @@ nav
               color: var(--brand-primary)
           &::before
             content: '#'
-        &:not(:last-of-type)
+        &::not(:last-of-type)
           margin-right: 28px
   &.adjacent-posts
     margin: calc(var(--grid-gap) * 2) 0 0

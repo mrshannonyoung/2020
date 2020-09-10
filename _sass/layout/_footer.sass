@@ -1,44 +1,47 @@
 @use '../utility/_mixins'
+@use '../utility/_extends'
 
 [aria-current]
   @include mixins.fw(650)
   color: var(--white)
-
-[data-supplementary]
-  position: relative
-  @media screen and (min-width: 768px)
-    &:hover, &:focus
-      &::after
-        border-color: var(--white)
-        transform: translateY(-5px)
-  &::after
-    @include mixins.fw(750)
-    transition: all .2s linear
-    transition-property: border, transform    
-    padding: 0.3rem
-    margin-left: 0.3rem
-    font-size: 60%
-    content: attr(data-supplementary)
-    position: absolute
-    @media screen and (min-width: 768px)
-      margin: 0
-      top: -10px
-    border-radius: 1rem
-    line-height: 1
-    color: var(--white-light)
-    min-width: 1rem
-    text-align: center
-    border: solid var(--global-stroke) var(--black-lighter)
 
 footer[role="contentinfo"]
   align-items: center
   color: var(--white)
   padding: calc(var(--grid-gap) * 2) 0
   border-top: var(--global-stroke) solid var(--black-lighter)
+  svg
+    display: inline-block
+    fill: var(--white)
   .legal-stuff
+    *:not(:last-child)
+      margin-right: var(--grid-gap)
     color: var(--white-light)
-    margin-top: calc(var(--grid-gap) * 2)
     grid-column: var(--content-span)
+    display: flex
+    margin-top: calc(var(--grid-gap) * 2)
+    align-items: center
+    justify-content: flex-start
+    ul
+      @extend %list-to-flex
+      font-size: smaller
+      li a
+        display: flex
+        align-items: center
+      [href="/accessibility/"]
+        @include mixins.fw(550)
+        text-decoration: none
+        color: var(--white)
+        padding: calc(var(--grid-gap) / 4) calc(var(--grid-gap) / 2)
+        border-radius: 6rem
+        border: solid var(--global-stroke) var(--black-lighter)
+        transition: all .2s linear
+        transition-property: border, background        
+        svg
+          margin-left: calc(var(--grid-gap) / 4)
+        &:hover, &:focus
+          border-color: var(--white)
+          background-color: var(--zx-spectrum)
   .more-about
     display: contents
     address
@@ -46,15 +49,38 @@ footer[role="contentinfo"]
       @media screen and (min-width: 768px)
         grid-column: content-main-start/span 4
     ul
+      @extend %list-to-flex
       grid-column: var(--content-span)
-      display: flex
       flex-direction: column
-      list-style: none
-      padding: 0
       justify-content: space-between
       @media screen and (min-width: 768px)
         flex-direction: row
         grid-column: 6/span content-main-end
+      li
+        position: relative
+        a
+          &:hover, &:focus
+            span
+              text-decoration: underline
+            em
+              border-color: var(--white)
+              transform: translateY(-5px)          
+          text-decoration: none
+          display: flex
+          em
+            @include mixins.fw(750)
+            font-style: normal
+            transition: all .2s linear
+            transition-property: border, transform    
+            padding: 0.3rem
+            margin-left: 0.3rem
+            font-size: 60%
+            border-radius: 1rem
+            line-height: 1
+            color: var(--white-light)
+            min-width: 1.7rem
+            text-align: center
+            border: solid var(--global-stroke) var(--black-lighter)          
   address
     font-style: normal
     display: grid

@@ -1,0 +1,53 @@
+- name: "Jeremy Keith"
+  gender: "male"
+  url: "https://adactio.com/"
+  description: "Adactio is the online home of Jeremy Keith, a web developer and author living and working in Brighton, England."
+  seen:
+    - event-title: "Responsive day out"
+      event-url: "https://www"
+      notes: "An entertaining host to the event."
+  social:
+    - platform: Twitter
+      handle: adactio    
+
+- name: "Eric Meyer"
+  gender: "male"
+  url: "https://meyerweb.com/"
+  social:
+    - platform: Twitter
+      handle: meyerweb
+
+- name: "Ethan Marcotte"
+  gender: "male"
+  url: "https://ethanmarcotte.com/"
+  social:
+    - platform: Twitter
+      handle: beep
+
+- name: "Brad Frost"
+  gender: "male"
+  url: "https://bradfrost.com/"
+  social:
+    - platform: Twitter
+      handle: brad_frost
+
+- name: "Heydon Pickering"
+  gender: "male"
+  url: "https://heydonworks.com/"
+  social:
+    - platform: Twitter
+      handle: heydonworks
+
+- name: "Sara Soueidan"
+  gender: "female"
+  url: "https://www.sarasoueidan.com/"
+  social:
+    - platform: Twitter
+      handle: SaraSoueidan
+
+- name: "Lea Verou"
+  gender: "female"
+  url: "https://lea.verou.me/"
+  social:
+    - platform: Twitter
+      handle: LeaVerou
