@@ -5,7 +5,7 @@ layout: default
   {% assign currentdate = post.date | date: "%Y" %}
   {% if currentdate != date %}
     {% unless forloop.first %}</ul>{% endunless %}
-    <h1 id="y{{post.date | date: '%Y'}}"><a href="/archive/{{ currentdate | append: '/' }}">{{ currentdate }}</a></h1>
+    <h1 id="{{post.date | date: '%Y'}}"><a href="/archive/{{ currentdate | append: '/' }}">{{ currentdate }}</a></h1>
     <ul>
     {% assign date = currentdate %}
   {% endif %}
