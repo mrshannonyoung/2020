@@ -1,0 +1,16 @@
+<h2>Friends</h2>
+<p>Friends who have helped me over the years</p>
+<ul class="friends">
+{% for friend in site.data.friends %}
+  <li>
+  {% if friend.url %} <a href="{{ friend.url }}" rel="noopener" target="_blank">{{ friend.name }}</a> {%else%} {{ friend.name }} {% endif %}
+  <ul>
+  {% for social in friend.social %}
+    <li>
+      <a href="{{social.url}}" rel="noreferrer noopener" target="_blank">{{social.platform}}</a>
+    </li>
+  {% endfor %} 
+  </ul>
+  </li>
+{% endfor %}   
+</ul>

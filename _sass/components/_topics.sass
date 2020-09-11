@@ -9,4 +9,11 @@
       margin: 0
       padding: 0
       align-items: center
-      justify-content: space-between
+      // justify-content: space-between
+      li
+        margin: 1rem 0
+        a
+          font-size: calc(1rem * (var(--tag-count) / 2))
+          font-variation-settings: "wght" calc(400 * (var(--tag-count) /4))
+        &:not(:last-child)
+          margin-right: var(--grid-gap)        

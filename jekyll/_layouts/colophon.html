@@ -4,101 +4,13 @@ layout: default
 <div class="grid-me">
   <div class="generic-content">
     <h1>Colophon</h1>
-    <h2>Typography</h2>
-    <div class="type-grid">
-      <div class="specimen body-font">
-        <div tabindex="0">
-          <h3>Manrope</h3>
-          <ul role="presentation">
-            <li>A</li>
-            <li>B</li>
-            <li>C</li>
-            <li>D</li>
-            <li>W</li>
-            <li>X</li>
-            <li>Y</li>
-            <li>Z</li>
-          </ul>
-        </div>
-        <p>General type is set in the sans-serif font-face <a href="https://fonts.google.com/specimen/Manrope">Manrope, by Mikhail Sharanda</a> which is a variable font (hence the animation).</p>    
-      </div>
-      <div class="specimen monospace-font">
-        <div tabindex="0">
-          <h3>Cutive Mono</h3>
-          <ul role="presentation">
-            <li>A</li>
-            <li>B</li>
-            <li>C</li>
-            <li>D</li>
-            <li>W</li>
-            <li>X</li>
-            <li>Y</li>
-            <li>Z</li>
-          </ul>
-        </div>
-        <p>The Monospace font-face is <a href="https://fonts.google.com/specimen/Cutive+Mono">Cutive Mono, by Vernon Adams</a>. Vernon Adams <a href="https://www.youtube.com/watch?v=Ywj8b589zR8">passed away</a> in 2016 at the age of 49 due to complications after a scooter accident in 2014.</p>
-      </div>
-    </div>
-    <h2>Stack</h2>
-    <div>
-    <p>What the site was built with and what keeps it online.</p> 
-    </div>
-    <h2>Tools</h2>
-    <p>Source of this page is version controlled using Git repository and stored on GitHub</p> 
-    <h2>Friends</h2>
-    <p>Friends who have helped me over the years</p>
-    <ul class="friends">
-    {% for friend in site.data.friends %}
-      <li>
-      {% if friend.url %} <a href="{{ friend.url }}" rel="noopener" target="_blank">{{ friend.name }}</a> {%else%} {{ friend.name }} {% endif %}
-      <ul>
-      {% for social in friend.social %}
-        <li>
-          <a href="{{social.url}}" rel="noreferrer noopener" target="_blank">{{social.platform}}</a>
-        </li>
-      {% endfor %} 
-      </ul>
-      </li>
-    {% endfor %}   
-    </ul>
-    <h2>Peers</h2>
-    <p>People who I have seen talk at conferences, or general inspiration.</p>
-    <div>
-    <ul class="peers">
-    {% for peer in site.data.peers %}
-      <li>
-        <ul>
-          <li>
-            {% if peer.url %}<a href="{{ peer.url }}" rel="noopener" target="_blank">{{ peer.name }}</a>{%else%}{{ peer.name }}{% endif %}
-          </li>
-          {% for social in peer.social %}
-          <li>
-            <img src="{{social.handle | prepend:'https://unavatar.now.sh/twitter/'}}" loading="lazy" importance="low" width="80" height"80" alt="{{ peer.name }}">
-            <a href="{{social.handle | prepend:'https://twitter.com/'}}" rel="noreferrer noopener" target="_blank">
-            {{social.platform}}
-            <svg aria-hidden="true" focusable="false" width="16" height="13"><title>{{social.platform}} icon</title><use xlink:href="#icon-twitter"></use></svg>
-            </a>
-          </li>
-          {% endfor %} 
-        </ul>
-      </li>
-    {% endfor %}
-    </ul>
-    </div>
-    <h2>Roadmap</h2>
-    <p>Features to come at later dates</p>
-    <ul class="roadmap">
-      {% assign sorted = site.data.roadmap | sort: 'priority' %}
-      {% for goal in sorted %}
-      <li data-priority="{{goal.priority}}">
-        {% if goal.url %}
-          <a href="{{ goal.url }}" rel="noopener" target="_blank">{{ goal.name }}</a>
-        {%else%}
-          <p>{{ goal.name }}</p>
-        {% endif %}
-        <p>{{goal.description}}</p>
-      </li>
-      {% endfor %}
-    </ul>
+    {% include /components/html/typography.html %}
+    {% include /components/html/stack.html %}
+    <!-- {% include /components/html/tools.html %}
+    {% include /components/html/friends.html %}   
+    {% include /components/html/peers.html %}   
+    {%- if site.data.roadmap -%}
+    {% include /components/html/roadmap.html %}
+    {%- endif -%} -->
   </div>
 </div>

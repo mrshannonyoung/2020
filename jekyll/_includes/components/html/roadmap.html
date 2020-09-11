@@ -1,0 +1,15 @@
+<h2>Roadmap</h2>
+<p>Features to come at later dates</p>
+<ol class="roadmap">
+  {% assign sorted = site.data.roadmap | sort: 'priority' %}
+  {% for goal in sorted %}
+  <li>
+    {% if goal.url %}
+      <a href="{{ goal.url }}" rel="noopener" target="_blank">{{ goal.name }}</a>
+    {%else%}
+      <p>{{ goal.name }}</p>
+    {% endif %}
+    <p>{{goal.description}}</p>
+  </li>
+  {% endfor %}
+</ol>

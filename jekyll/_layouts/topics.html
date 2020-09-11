@@ -8,7 +8,7 @@ layout: default
     <ul>
     {% for tag in site.tags %}
       <li>
-        <a href="/topics/{{ tag[0] | slugify }}" {%- if tag[1].size > 1 -%}style='font-size: calc(1rem * ({{ tag[1].size }} / 2));'{%- endif -%}>{{ tag[0] }}({{ tag[1].size }})</a>
+        <a href="/topics/{{ tag[0] | slugify }}" {%- if tag[1].size > 1 -%}style='--tag-count: {{ tag[1].size }};'{%- endif -%}>{{ tag[0] }}({{ tag[1].size }})</a>
       </li>
     {% endfor %}
     </ul>

@@ -9,39 +9,46 @@
     column-gap: var(--grid-gap)
     row-gap: var(--grid-gap)    
     grid-template-columns: repeat(8, 1fr)
-    grid-template-rows: repeat(5, 1fr)
-    h2
-      grid-column: 1/-1
+    @media screen and (min-width: 768px)
+      grid-template-rows: repeat(5, 1fr)   
     .specimen
       display: contents
       h3
         font-size: 2rem
       ul
         font-size: 1.5rem
+      p
+        grid-column: 1/-1
       &.body-font
         > div
-          grid-column: 1/span 4
-          grid-row: 1/span 3
+          @media screen and (min-width: 768px)
+            grid-column: 1/span 4
+            grid-row: 1/span 3
           &:hover, &:focus
             li
-              perspective: 800px
               animation: variable-showcase 1s linear forwards
               @for $i from 0 through 8
                 &:nth-child(#{$i + 1})
                   animation-delay: .1s * $i
-          + p
-            align-self: flex-end
-            grid-column: 5/span 3
-            grid-row: 3/span 1                 
+          @media screen and (min-width: 768px)
+            + p
+              align-self: flex-end
+              grid-column: 5/span 3
+              grid-row: 3/span 1 
       &.monospace-font
         > div
           font-family: var(--mono-font-stack)
-          grid-column: 3/span 3
-          grid-row: 4/span 2
-          + p
-            grid-column: 6/span 3
-            grid-row: 4/span 1     
+          @media screen and (min-width: 768px)
+            grid-column: 3/span 3
+            grid-row: 4/span 2
+            + p
+              grid-column: 6/span 3
+              grid-row: 4/span 1
       > div
+        grid-column: 1/-1
+        padding: var(--grid-gap)
+        @media screen and (min-width: 768px)
+          padding: 0
         outline: none
         display: flex
         border-radius: var(--global-stroke)
@@ -67,6 +74,35 @@
             padding: 1rem
             text-align: center
             flex: 1 0 25%
+  .stack
+    @extend %list-to-flex
+    align-items: flex-start
+    > div
+      flex: 1
+      padding: var(--grid-gap)
+      display: grid
+      a
+        display: flex
+        position: relative
+        min-height: 55px
+        align-items: center        
+      dd
+        display: flex     
+        margin-top: calc(var(--grid-gap) * 1.5) 
+      svg
+        display: block
+        fill: var(--white)
+        position: absolute
+        bottom: 0        
+      b
+        @include mixins.fw(750)
+        color: var(--white-light)
+        display: block
+        margin: 0 0 calc(var(--grid-gap) * 1.5) calc(-1 * var(--grid-gap))
+        letter-spacing: 0.05em
+        font-size: 0.7em
+        text-transform: uppercase
+
   .roadmap
     @extend %list-to-flex
     align-items: flex-start
@@ -95,11 +131,8 @@
         color: inherit
         @include mixins.fw(750)
         margin-bottom: calc(var(--grid-gap) / 3)
-      &::after
-        content: ''
       p
         font-size: .95em
-        padding: 0 calc(var(--grid-gap) * 2) 0 0
     &:hover, &:focus
       li
         border: solid var(--global-stroke) var(--white)
