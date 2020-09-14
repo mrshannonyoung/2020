@@ -1,13 +1,16 @@
-- name: Netlify
-  width: 200
-  height: 53
-  function: Hosted with
-  description: "A web developer platform that multiplies productivity.By unifying the elements of the modern decoupled web, from local development to advanced edge logic, Netlify enables a 10x faster path to much more performant, secure, and scalable websites and apps."
-  url: https://www.netlify.com/
-
 - name: Jekyll
+  url: https://jekyllrb.com/
   width: 200
   height: 80
   function: Built with
-  description: POSSE is an abbreviation for Publish (on your) Own Site, Syndicate Elsewhere.
-  url: https://jekyllrb.com/
+  description: |-
+    Jekyll does what you tell it to do — no more, no less. It doesn't try to outsmart users by making bold assumptions, nor does it burden them with needless complexity and configuration. Put simply, Jekyll gets out of your way and allows you to concentrate on what truly matters: your content.
+
+- name: Netlify
+  url: https://www.netlify.com/
+  width: 200
+  height: 53
+  function: Hosted with
+  description: |-
+    A web developer platform that multiplies productivity.
+    By unifying the elements of the modern decoupled web, from local development to advanced edge logic, Netlify enables a 10x faster path to much more performant, secure, and scalable websites and apps."

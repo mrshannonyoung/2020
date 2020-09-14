@@ -1,10 +1,14 @@
 <h2>Tools</h2>
-<dl>
-  <dt>Firefox</dt>
-  <dd>
-    A free, open source, cross-platform,
-    graphical web browser developed by the
-    Mozilla Corporation and hundreds of
-    volunteers.
-  </dd>
-</dl>
+<ul class="toolset">
+  {% for item in site.data.tools %}
+  <li>
+    <a href="{{item.url}}" rel="noreferrer noopener" target="_blank">
+      <svg focusable="false" class="icon-{{item.name | slugify}}" aria-hidden="true" width="{{item.width | default: '16'}}" height="{{item.height | default: '16'}}">
+        <title>{{item.name}} icon</title>
+        <use xlink:href="#icon-{{item.name | slugify}}"></use>
+      </svg>
+      <span class="sr-only">{{item.name}}</span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

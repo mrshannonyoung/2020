@@ -1,5 +1,4 @@
 <h2>Stack</h2>
-<div>
 <dl class="stack">
   {% for item in site.data.stack %}
   <div>
@@ -14,9 +13,8 @@
       </a>        
     </dt>
     <dd>
-      {{item.description}}
+      {{item.description | newline_to_br}}
     </dd>
   </div>
   {% endfor %}
-</dl>    
-</div>
+</dl>

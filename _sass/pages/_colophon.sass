@@ -4,12 +4,12 @@
 .generic-content
   grid-column: var(--content-span)
   .type-grid
-    margin: var(--grid-gap) 0
     display: grid
+    margin: var(--grid-gap) 0
     column-gap: var(--grid-gap)
     row-gap: var(--grid-gap)    
-    grid-template-columns: repeat(8, 1fr)
     @media screen and (min-width: 768px)
+      grid-template-columns: repeat(8, 1fr)
       grid-template-rows: repeat(5, 1fr)   
     .specimen
       display: contents
@@ -76,16 +76,18 @@
             flex: 1 0 25%
   .stack
     @extend %list-to-flex
-    align-items: flex-start
     > div
       flex: 1
       padding: var(--grid-gap)
-      display: grid
       a
         display: flex
         position: relative
         min-height: 55px
-        align-items: center        
+        align-items: center
+        outline: none
+        // &:focus:not(:hover)
+        //   outline: solid 2px green
+          
       dd
         display: flex     
         margin-top: calc(var(--grid-gap) * 1.5) 
@@ -102,7 +104,6 @@
         letter-spacing: 0.05em
         font-size: 0.7em
         text-transform: uppercase
-
   .roadmap
     @extend %list-to-flex
     align-items: flex-start
@@ -139,8 +140,7 @@
         @for $i from 0 through 200
           @media screen and (min-width: 768px)
             &:nth-child(#{$i + 1})
-              background-color: hsl(var(--h), var(--s), var(--l))
-       
+              background-color: hsl(var(--h), var(--s), var(--l))       
   .friends
     @extend %list-to-flex
     justify-content: space-between
@@ -177,4 +177,12 @@
         transition-property: filter
         @include mixins.direction(bottom)
         &:hover
-          filter: drop-shadow(0 0 10px var(--brand-primary))        
+          filter: drop-shadow(0 0 10px var(--brand-primary))
+.toolset
+  @extend %list-to-flex
+  li
+    justify-content: space-between
+    flex: 1
+  svg
+    display: block
+    fill: var(--white)

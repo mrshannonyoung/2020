@@ -47,6 +47,10 @@ jekyll-archives:
 
 defaults:
   - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
       type: "posts"
     values:
       permalink: /:categories/:title/
