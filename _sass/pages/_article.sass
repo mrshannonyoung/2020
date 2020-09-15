@@ -1,4 +1,5 @@
 @use '../utility/_mixins'
+@use '../utility/_extends'
 
 .article-meta
   font-size: 1.2em
@@ -12,11 +13,7 @@ body.post
   article
     header
       grid-column: 2/content-main-end
-      padding: 0 0 calc(var(--grid-gap) * 3)
-      h1
-        // Variable font weight
-        @include mixins.fw(980)
-        letter-spacing: -0.1rem
+      padding: 0 0 calc(var(--grid-gap) * 2)
     .article-meta
       div
         padding: 0
@@ -46,8 +43,8 @@ body.post
         writing-mode: vertical-rl
         padding: 0
     .article-content
+      @extend %display_contents
       grid-column: 3/span 8
-      display: contents
       p
         text-indent: calc(var(--grid-gap) * 1.5)      
       blockquote
@@ -81,7 +78,7 @@ body.post
         @media screen and (min-width: 768px)
           grid-column: 3/span 8
     footer
-      display: contents
+      @extend %display_contents
       grid-column: perimeter-start/content-main-end
       > div
         grid-column: 3/span content-main-end

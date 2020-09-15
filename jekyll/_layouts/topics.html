@@ -3,10 +3,8 @@ layout: default
 ---
 <section class="grid-me">
   <div class="topic-highlights-content">
-    <hgroup>
-      <h1>{{page.title}}</h1>
-      <h2>{{site.tags.size}} topics across {{site.posts.size}} articles</h2>
-    </hgroup>
+    <h1>{{page.title}}</h1>
+    <h2>{{site.tags.size}} topics across {{site.posts.size}} articles</h2>
     {{content}}
     <ul>
     {% for tag in site.tags %}

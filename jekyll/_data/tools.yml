@@ -1,11 +1,24 @@
 - name: VSCode
   url: https://code.visualstudio.com/
+  width: 47.75
+  height: 47.5
 
 - name: iTerm2
   url: https://iterm2.com/
+  width: 71
+  height: 62  
 
 - name: Git
   url: https://git-scm.com/
+  paths:
+    - name: icon
+      width: 45
+      height: 45
+    - name: wordmark
+      width: 55.225
+      height: 45
 
 - name: Gulp
   url: https://gulpjs.com/
+  width: 44
+  height: 97.5  

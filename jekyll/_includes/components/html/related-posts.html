@@ -8,7 +8,7 @@
       {% if item.url != page.url %}
         <article class="secondary">
           <a href="{{item.url}}?nav=article-trio">
-            <em>{{ item.categories[0] | capitalize }}<span class="sr-only">.</span></em>
+            <em>{{ item.categories[0] | capitalize }}<span class="screen-reader-only">.</span></em>
             <strong>{{item.title}}</strong>
           </a>
         </article>

@@ -1,6 +1,6 @@
 {%- if page.tags -%}
 <div>
-	<span class="sr-only" id="post-tags-heading">Tagged with</span>
+	<span class="screen-reader-only" id="post-tags-heading">Tagged with</span>
 	<ul id="post-tags" aria-describedby="post-tags-heading">
 		{% for tag in page.tags %}
 		<li><a href="/topics/{{ tag | slugify }}/" class="p-category" rel="tag">{{ tag | slugify }}</a></li>

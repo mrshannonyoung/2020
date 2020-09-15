@@ -6,13 +6,16 @@ date: 2019-01-18T08:48:51+00:00
 url: /digital-dopamine/
 featured_image: "2019/digital-dopamine"
 featured_image_alt: "Restaurant view of xxX"
-categories: design-culture
+categories: technology
 tags:
   - digital
-  - technology
+  - captology
+  - FOMO
+  - gaming
+  - addiction
 ---
 
-I explore the digital interactions that are set up to get our brains to produce dopamine.
+**I explore the digital interactions that are set up to get our brains to produce dopamine.**
 <!--more-->
 
 Dopamine keeps us spending time on apps and websites, from Facebook reactions to stock level indicators.

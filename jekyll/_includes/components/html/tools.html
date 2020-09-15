@@ -2,12 +2,22 @@
 <ul class="toolset">
   {% for item in site.data.tools %}
   <li>
-    <a href="{{item.url}}" rel="noreferrer noopener" target="_blank">
+    <a href="{{item.url}}" class="icon-{{item.name | slugify}}" rel="noreferrer noopener" target="_blank">
+      {% if item.paths %}
+        {% for path in item.paths %}
+          <svg focusable="false" class="{{item.name | slugify}}-{{path.name | slugify}}" aria-hidden="true" width="{{path.width | default: '16'}}" height="{{path.height | default: '16'}}">
+            <title>{{item.name}} {{path.name}}</title>
+            <use xlink:href="#icon-{{item.name | slugify}}--{{path.name}}"></use>
+          </svg>
+          <span class="screen-reader-only">{{item.name}} {{path.name}}</span>
+        {% endfor %}
+      {% else %}
       <svg focusable="false" class="icon-{{item.name | slugify}}" aria-hidden="true" width="{{item.width | default: '16'}}" height="{{item.height | default: '16'}}">
         <title>{{item.name}} icon</title>
         <use xlink:href="#icon-{{item.name | slugify}}"></use>
       </svg>
-      <span class="sr-only">{{item.name}}</span>
+      <span class="screen-reader-only">{{item.name}}</span>
+      {% endif %}
     </a>
   </li>
   {% endfor %}

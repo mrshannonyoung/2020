@@ -35,7 +35,7 @@ layout: default
             {{ post.excerpt }}
           </div>
           <footer>
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string }}</time>
+            {% include /components/html/timestamp.html source=page.layout %}
           </footer>          
         </article>
       </li>

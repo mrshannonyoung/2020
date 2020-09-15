@@ -1,7 +1,9 @@
+@use '../utility/_extends'
+
 .introduction
   grid-row-gap: 2rem
   &-content
-    display: contents
+    @extend %display_contents
     h1
       grid-column: 2/content-main-end
       line-height: 1.2
