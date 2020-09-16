@@ -4,6 +4,27 @@ layout: default
 <div class="grid-me">
   <div class="generic-content">
     <h1>{{page.title}}</h1>
-    {{content}}
+    {{content | markdownify}}
+    <h2>{{page.title}} articles</h2>  
+    <ol class="posts-list">
+      {%- assign posts = site.posts -%}
+      {%- for post in posts %}
+        {% if post.categories contains "accessibility" %}
+        <li>
+          <article aria-describedby="post-{{ post.title | slugify }}">
+            <h3 id="post-{{ post.title | slugify }}">
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </h3>
+            <div>
+              {{ post.excerpt }}
+            </div>
+            <footer>
+              {% include /components/html/timestamp.html source=page.layout %}
+            </footer>          
+          </article>
+        </li>
+        {% endif %}
+      {%- endfor %}
+    </ol>    
   </div>  
 </div>

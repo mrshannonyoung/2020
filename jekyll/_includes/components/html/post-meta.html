@@ -3,7 +3,7 @@
 		<span class="screen-reader-only">Published</span>
 		<time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">
 			<a href="/archive/{{ page.date | date: '%Y' }}/">
-				{{ page.date | date_to_long_string }}
+				{{ page.date | date_to_long_string: 'ordinal' }}
 			</a>
 		</time>		
 	</div>

@@ -8,9 +8,12 @@ layout: default
     {{content}}
     <ul>
     {% for tag in site.tags %}
-      <li>
-        <a href="/topics/{{ tag[0] | slugify }}" {%- if tag[1].size > 1 -%}style='--tag-count: {{ tag[1].size }};'{%- endif -%}>{{ tag[0] }}({{ tag[1].size }})</a>
-      </li>
+    <li id="tagged-{{ tag[0] | slugify }}">
+      <a class="number-display" href="/topics/{{ tag[0] | slugify }}" {%- if tag[1].size > 2 -%}style='--tag-count: {{ tag[1].size }};'{%- endif -%}>
+        <span>{{ tag[0] | upcase }}</span>
+        {% if tag[1].size > 0 %}<em>{{ tag[1].size }}</em>{% endif %}      
+      </a>
+    </li>
     {% endfor %}
     </ul>
   </div>

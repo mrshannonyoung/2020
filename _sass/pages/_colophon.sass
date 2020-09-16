@@ -5,10 +5,10 @@
   display: grid
   margin: var(--grid-gap) 0
   column-gap: var(--grid-gap)
-  row-gap: var(--grid-gap)    
+  row-gap: var(--grid-gap)
   @media screen and (min-width: 768px)
     grid-template-columns: repeat(8, 1fr)
-    grid-template-rows: repeat(5, 1fr)   
+    grid-template-rows: repeat(5, 1fr)
   .specimen
     @extend %display_contents
     h3
@@ -32,7 +32,7 @@
           + p
             align-self: flex-end
             grid-column: 5/span 3
-            grid-row: 3/span 1 
+            grid-row: 3/span 1
     &.monospace-font
       > div
         font-family: var(--mono-font-stack)
@@ -58,7 +58,7 @@
       transition-property: background, color
       ::selection
         color: var(--white)
-        background: var(--black)        
+        background: var(--black)
       &:hover, &:focus
         background-color: #fff
         color: black
@@ -85,15 +85,15 @@
       outline: none
       // &:focus:not(:hover)
       //   outline: solid 2px green
-        
+
     dd
-      display: flex     
-      margin-top: calc(var(--grid-gap) * 1.5) 
+      display: flex
+      margin-top: calc(var(--grid-gap) * 1.5)
     svg
       display: block
       fill: var(--white)
       position: absolute
-      bottom: 0        
+      bottom: 0
     b
       @include mixins.fw(750)
       color: var(--white-light)
@@ -138,22 +138,45 @@
       @for $i from 0 through 200
         @media screen and (min-width: 768px)
           &:nth-child(#{$i + 1})
-            background-color: hsl(var(--h), var(--s), var(--l))       
+            background-color: hsl(var(--h), var(--s), var(--l))
 .friends
-  @extend %list-to-flex
-  justify-content: space-between
-  position: relative
+  margin: var(--grid-gap) 0
+  ul
+    @extend %list-to-flex
+    margin: calc(var(--grid-gap) * 2) 0
+    align-items: flex-start
+    justify-content: space-between
+    position: relative
+    li
+      flex: 1
+      text-align: center
+      display: grid
+      grid-template-rows: 1fr 0.5fr auto
+      align-items: center
+      span
+        font-size: 75%
+        color: var(--white-light)
+      svg
+        display: inline-block
+        fill: var(--twitter)
+        margin: 0 0 0 calc(var(--grid-gap) / 2)
+      img
+        margin: 0 auto
+        font-size: 60%
+        border: solid var(--global-stroke) var(--brand-primary)
+        border-radius: 50%
+        &#james-crockford
+          border-color: var(--james)
 .peers
   list-style: none
   padding: 0
   margin: var(--grid-gap) 0
   display: grid
   column-gap: var(--grid-gap)
-  row-gap: var(--grid-gap) 
+  row-gap: var(--grid-gap)
   grid-template-columns: repeat(6, minmax(min-content, 300px))
   > li
     padding: 2rem 0
-    border: solid 1px red
   li
     text-align: center
     align-items: center
@@ -181,9 +204,9 @@
     li
       justify-content: space-between
       flex: 1
-      @media screen and (min-width: 768px)
-        &:not(:last-of-type)
-          border-right: var(--global-stroke) solid var(--black-lighter)
+      // @media screen and (min-width: 768px)
+      //   &:not(:last-of-type)
+      //     border-right: var(--global-stroke) solid var(--black-lighter)
       a
         width: 100%
         height: 145px
@@ -197,18 +220,18 @@
           &.icon-vscode
             outline-color: var(--vscode)
           &.icon-iterm2
-            outline-color: var(--iterm2)
+            outline-color: var(--iterm)
           &.icon-git
             outline-color: var(--git)
           &.icon-gulp
-            outline-color: var(--gulp)        
+            outline-color: var(--gulp)
           svg
             transition: all .25s ease
-            transition-property: fill          
+            transition-property: fill
             &.icon-vscode
               fill: var(--vscode)
             &.icon-iterm2
-              fill: var(--iterm2)
+              fill: var(--iterm)
             &.git-icon
               fill: var(--git)
             &.icon-gulp

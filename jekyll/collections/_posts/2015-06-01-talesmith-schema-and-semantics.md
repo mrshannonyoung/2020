@@ -7,11 +7,14 @@ url: /talesmith-schema-and-semantics/
 featured_image: "2015/05/blog-cover.jpg"
 categories: projects
 ---
+I think at times it’s nice to talk about what’s going on the behind the scenes of a website: revealing its skeleton or engine, lifting the curtain, however you want to put it. I’ll be honest, it’s not usually something many people get excited about, unless they have an interest in web development. But stick with me! You might learn something…
+<!--more-->
+
+
 > [<img class=" wp-image-9637" src="https://www.mark-making.com/wp-content/uploads/2015/05/blog-cover.jpg" alt="blog-cover"  />][1]
-  
+
 > mark-making* have been working on a new website for Talesmith that puts the work front and centre, and lets their accumulated prestige speak for itself. With such rich content resources at our disposal, it’s a pleasure but almost more of a challenge to let the work guide the design, whilst maintaining a visual sense of the brand at all times.
 
-I think at times it’s nice to talk about what’s going on the behind the scenes of a website: revealing its skeleton or engine, lifting the curtain, however you want to put it. I’ll be honest, it’s not usually something many people get excited about, unless they have an interest in web development. But stick with me! You might learn something…
 
 **Matchstick-jelly fortress**
 

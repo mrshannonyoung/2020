@@ -57,30 +57,7 @@ footer[role="contentinfo"]
         flex-direction: row
         grid-column: 6/span content-main-end
       li
-        position: relative
-        a
-          &:hover, &:focus
-            span
-              text-decoration: underline
-            em
-              border-color: var(--white)
-              transform: translateY(-5px)          
-          text-decoration: none
-          display: flex
-          em
-            @include mixins.fw(750)
-            font-style: normal
-            transition: all .2s linear
-            transition-property: border, transform    
-            padding: 0.3rem
-            margin-left: 0.3rem
-            font-size: 60%
-            border-radius: 1rem
-            line-height: 1
-            color: var(--white-light)
-            min-width: 1.7rem
-            text-align: center
-            border: solid var(--global-stroke) var(--black-lighter)          
+        position: relative          
   address
     font-style: normal
     display: grid
@@ -105,3 +82,28 @@ footer[role="contentinfo"]
         @include mixins.direction(bottom)
         &:hover
           filter: drop-shadow(0 0 10px var(--brand-primary))
+
+a.number-display
+  text-decoration: none
+  display: flex
+  align-items: flex-start
+  &:hover, &:focus
+    span
+      text-decoration: underline
+    em
+      border-color: var(--white)
+      transform: translateY(-5px)          
+  em
+    @include mixins.fw(750)
+    font-style: normal
+    transition: all .2s linear
+    transition-property: border, transform    
+    padding: 0.3rem
+    margin-left: 0.3rem
+    font-size: 60%
+    border-radius: 1rem
+    line-height: 1
+    color: var(--white-light)
+    min-width: 1.7rem
+    text-align: center
+    border: solid var(--global-stroke) var(--black-lighter)          

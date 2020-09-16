@@ -1,34 +1,21 @@
 - name: "James Crockford"
   gender: "male"
   description: ""
-  deathDate: ""
-  social:
-    - platform: Twitter
-      url: https://twitter.com/james_crockford
-    - platform: LinkedIn
-      url: https://www.linkedin.com/in/jmscrckfrd/      
+  birthDate: "1985-07-06"
+  deathDate: "2017-09-30"
 
 - name: "Will Moore"
   gender: "male"
-  url: "http://willmooreweb.com/"
-  social:
-    - platform: Twitter
-      url: https://twitter.com/WillMoor3
-    - platform: LinkedIn
-      url: https://www.linkedin.com/in/will-moore-4a5b5043/      
+  twitter: https://twitter.com/WillMoor3
 
 - name: "Alex Oliver"
   gender: "male"
-  social:
-    - platform: Twitter
-      url: https://twitter.com/alexoliverwd
-    - platform: LinkedIn
-      url: https://www.linkedin.com/in/alex-oliver-a7035743/
+  twitter: https://twitter.com/alexoliverwd
 
 - name: "Gareth Edmunds"
   gender: "male"
-  social:
-    - platform: Twitter
-      url: https://twitter.com/garethedmunds
-    - platform: LinkedIn
-      url: https://www.linkedin.com/in/gareth-edmunds-29236b120/
+  twitter: https://twitter.com/garethedmunds
+
+- name: "David Souch"
+  gender: "male"
+  twitter: https://twitter.com/@MYM_0709
