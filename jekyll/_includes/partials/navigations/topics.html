@@ -5,7 +5,7 @@
       <ul>
         {%- for topic in menu.items -%}
           <li>
-            <a href="/topics/{{ item.label | replace: ' ', '-' }}"><span>{{- topic.label |  replace: '-', ' ' -}}</span></a>            
+            <a href="/topics/{{ topic.label | replace: ' ', '-' | append: '/' }}"><span>{{- topic.label |  replace: '-', ' ' -}}</span></a>            
           </li>           
         {%- endfor -%}
       </ul>

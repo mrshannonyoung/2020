@@ -7,21 +7,19 @@
 
 footer[role="contentinfo"]
   align-items: center
-  color: var(--white)
   padding: calc(var(--grid-gap) * 2) 0
   border-top: var(--global-stroke) solid var(--black-lighter)
   svg
     display: inline-block
     fill: var(--white)
   .legal-stuff
-    *:not(:last-child)
-      margin-right: var(--grid-gap)
+    // *:not(:last-child)
+    //   margin-right: var(--grid-gap)
     color: var(--white-light)
     grid-column: content-main
     display: flex
     flex-direction: column
     margin-top: calc(var(--grid-gap) * 2)
-    // align-items: center
     justify-content: flex-start
     small
       display: block 
