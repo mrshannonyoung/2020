@@ -6,6 +6,22 @@
   50%
     background: none
 
+@keyframes i-cant-feel-my-face-when-im-with-you
+  // https://www.unicode.org/emoji/charts/full-emoji-list.html
+  0%, 100%
+    opacity: 0
+    content: '\01F929'
+    transform: translate3d(0, 0, 0)
+  20%
+    opacity: 1
+    content: '\01F973'
+  60%
+    opacity: 1
+    content: '\01F601'
+  100%
+    transform: translate3d(0, -40vh, 0)
+    transform-origin: center
+
 @keyframes variable-showcase
   0%, 100%
     @include mixins.fw(350)

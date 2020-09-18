@@ -6,21 +6,19 @@ date: 2018-11-27T11:37:50+00:00
 url: /cyborgs-painting-sound-and-dancing-seismic-waves/
 featured_image: "2018/cyborgs-painting-sound-and-dancing-seismic-waves"
 featured_image_alt: "Neil Harbisson, a cyborg artist and trans-species activist"
-categories: fun
+categories: accessibility
 tags:
   - artists
   - cyborgs
 ---
-## What defines a Cyborg?
+Most of us probably associate cyborgs with science fiction, but what does it look like when cyborgs make art?
+
 <!--more-->
+## What defines a Cyborg?
 
 > “[an organism] to which exogenous components have been added for the purpose of adapting to new environments”
   
 – Manfred Clynes, Cyborgs in Space, 1965
-
-Most of us probably associate cyborgs with science fiction, but what does it look like when cyborgs make art?
-
-It’s been happening for a while, and today’s fun stuff post is about the weird and wonderful possibilities that real-live cyborgs have opened up in art and design.
 
 ## Meet Neil
 

@@ -6,7 +6,7 @@ layout: default
 <section class="introduction grid-me pad-me">
   <div class="introduction-content">
     <h1>I'm Shannon, a dev with accessibility and inclusion at the heart of everything I do.</h1>
-    <p>{{site.data.helpers.spinout}}</p>
+    <p>{{site.data.helpers.mini-bio}}</p>
     <div class="hr-link">
       <a href="/about/">My ethos</a>
     </div>
@@ -27,17 +27,7 @@ layout: default
     <ol class="posts-list">
       {%- for post in posts limit: 4 %}
       <li>
-        <article aria-describedby="post-{{ post.title | slugify }}">
-          <h3 id="post-{{ post.title | slugify }}">
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </h3>
-          <div>
-            {{ post.excerpt }}
-          </div>
-          <footer>
-            {% include /components/html/timestamp.html source=page.layout %}
-          </footer>          
-        </article>
+        {% include /components/html/dinky-article.html source=page.layout %}
       </li>
       {%- endfor %}
     </ol>

@@ -10,7 +10,7 @@
 	{%- if page.categories -%}
 	<div>
 		<span class="screen-reader-only">Filed under</span>
-		<a href="/categories/{{page.categories}}/" class="p-category">{{page.categories}}</a>		
+		<a href="/categories/{{page.categories}}/" title="{{page.categories[0] | capitalize}}" class="p-category">{{page.categories}}</a>		
 	</div>
 	{%- endif -%}
 </div>

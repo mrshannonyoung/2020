@@ -2,20 +2,20 @@
   <section class="more-about">
     <address class="h-card">
       <p>For more details, contact:<br>
-        <a href="mailto:js@example.com" class="u-email p-name">{{site.title}}</a>
+        <a href="mailto:{{site.email}}" class="u-email p-name">{{site.title}}</a>
       </p>
-      <a href="/" class="u-url">
+      <a href="/" class="u-url" title="{{site.title | append: '’s'}} homepage">
         <picture>
           <source srcset="/assets/img/shannon-young.webp 600w, /assets/img/shannon-young.webp 300w, /assets/img/shannon-young.webp 150w" sizes="150px" type="image/webp">
           <source srcset="/assets/img/shannon-young.png 600w, /assets/img/shannon-young.png 300w, /assets/img/shannon-young.png 150w" sizes="150px" type="image/jpeg">
           <img loading="eager" class="u-photo" src="/assets/img/shannon-young.png" width="100px" height="100px" alt="A much younger version of my actual face" importance="high">
         </picture>
+        <span class="screen-reader-only">{{site.title | append: '’s'}} homepage</span>
       </a>       
     </address>
     {% include /partials/navigations/footer.html %}
   </section>
   <section class="legal-stuff">
-    <small>&#169; {{ site.time | date: '%Y' }}</small>
     <ul>
       <li>
         <a href="/accessibility/">
@@ -23,18 +23,6 @@
         </a>
       </li>      
     </ul>
+    <small><span>&#169; {{ site.time | date: '%Y' }}</span></small>
   </section>
 </footer>
-<aside>
-  <!-- Idiom ting - English Idioms and Idiomatic Expressions -->
-  <details class="prepare-the-ground">
-    <summary>Literally do not open this</summary>
-    <div>
-      <strong>I can't beleive you've done this</strong>
-      <p>Requires a computer running an operating system. The computer
-      must have some memory and ideally some kind of long-term storage.
-      An input device as well as some form of output device is
-      recommended.</p>      
-    </div>
-  </details>  
-</aside>

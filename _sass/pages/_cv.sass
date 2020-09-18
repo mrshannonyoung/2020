@@ -1,0 +1,44 @@
+@use '../utility/_mixins'
+@use '../utility/_extends'
+
+.cv-in-your-face
+  perspective: 300px
+  position: sticky
+  a
+    will-change: transform
+    transition: all .3s .1s cubic-bezier(0.35, 1.55, 0.65, 1)
+    transition-property: transform filter   
+    transform: skew(-0.05turn, 10deg) rotateY(-10deg) translateY(-20px)
+    transform-origin: bottom right
+    @include mixins.direction(bottom)
+    filter: drop-shadow(2px 5px 0 var(--white))
+    width: 250px
+    height: 300px
+    position: absolute
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    border-radius: 2px
+    z-index: 1
+    &::before, &::after
+      display: block
+      content: ''
+      position: absolute
+      animation-duration: 2s
+      animation-iteration-count: infinite
+      animation-timing-function: linear        
+      backface-visibility: hidden
+      bottom: 1rem
+      left: 0
+      right: 0
+      text-align: center
+      font-size: 4rem
+    &:hover, &:focus
+      transform: skew(0)
+      @include mixins.direction(bottom)
+      filter: drop-shadow(1px 1px var(--black))
+      &::before, &::after
+        animation-name: 'i-cant-feel-my-face-when-im-with-you'
+      &::after
+        animation-delay: 1s

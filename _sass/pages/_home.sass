@@ -5,10 +5,9 @@
   &-content
     @extend %display_contents
     h1
-      grid-column: 2/content-main-end
-      line-height: 1.2
+      grid-column: 2/span 9
     p, .hr-link
-      grid-column: var(--content-span)
+      grid-column: content-main
       @media screen and (min-width: 768px)
         grid-column: 7/content-main-end
     p

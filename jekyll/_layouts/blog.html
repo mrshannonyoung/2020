@@ -9,7 +9,11 @@ layout: default
     <ul>
     {% assign date = currentdate %}
   {% endif %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-  {% if forloop.last %}</ul>{% endif %}
+    <li>
+      {% include /components/html/dinky-article.html source=page.layout %}
+    </li>
+  {% if forloop.last %}
+  </ul>
+  {% endif %}
 {% endfor %}
 

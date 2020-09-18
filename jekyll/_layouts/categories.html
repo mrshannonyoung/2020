@@ -12,7 +12,7 @@ title: "LOLO"
     <li id="category-{{ cat[0] | slugify }}">
       <a class="number-display" href="/categories/{{ cat[0] | slugify }}">
         <span>{{ cat[0] | capitalize }}</span>
-        {% if cat[1].size > 1 %}<em>{{ cat[1].size }}</em>{% endif %}      
+        <em>{{ cat[1].size }}</em>      
       </a>
     </li>
     {% endfor %}

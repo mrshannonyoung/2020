@@ -1,0 +1,11 @@
+<article class="dinky-article" aria-describedby="post-{{ post.title | slugify }}" data-source="{{include.source}}">
+  <h3 id="post-{{ post.title | slugify }}">
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </h3>
+  <div>
+    {{ post.excerpt }}
+  </div>
+  <footer>
+    {% include /components/html/timestamp.html source=page.layout %}
+  </footer>          
+</article>

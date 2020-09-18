@@ -2,7 +2,7 @@
 <html lang="en" id="top">
 <head>
   <title>
-    {{page.title}} - {{post.title}}
+    {{page.title | capitalize}} - {{site.title}}, DEveloPer
   </title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -11,7 +11,7 @@
   {% if page.noindex -%}
   <meta name="robots" content="noindex">
   {% endif -%}  
-  <meta name="description" content="{{ page.introduction }}">
+  <meta name="description" content="{{ page.excerpt | strip_html | rstrip }}">
   <meta name="generator" content="{{ jekyll.version | prepend: 'Jekyll ' }}">
   <link href="/assets/css/main.css" rel="stylesheet">
   <link href="{{page.url | absolute_url}}" rel="canonical">
@@ -23,8 +23,10 @@
 <body {%- if page.collection %} data-collection="{{page.collection}}"{% endif %} class="{{page.layout | slugify}}">
   {%- assign active = page.url | remove:'.html' -%}
   {% include /components/svg/index.html %}
+  {%- unless page.omit-header -%}
   {% include /partials/navigations/skip.html %}
-  {% include /partials/header.html %}
+  {% include /partials/header.html %}     
+  {%- endunless -%}
   {% include /partials/main.html %}
   {% include /partials/footer.html %}
   <div id="current-page">Current page</div>

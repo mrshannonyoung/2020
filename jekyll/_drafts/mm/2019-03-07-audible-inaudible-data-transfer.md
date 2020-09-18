@@ -7,7 +7,7 @@ url: /audible-inaudible-/
 featured_image: "G9LHyxgE3m"
 featured_image_alt: "The world’s most valuable resource is no longer oil, but data"
 highlight: true
-categories: thoughts
+categories: privacy
 tags:
   - SSG
   - Smart Speakers

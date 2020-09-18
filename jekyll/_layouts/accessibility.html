@@ -11,17 +11,7 @@ layout: default
       {%- for post in posts %}
         {% if post.categories contains "accessibility" %}
         <li>
-          <article aria-describedby="post-{{ post.title | slugify }}">
-            <h3 id="post-{{ post.title | slugify }}">
-              <a href="{{ post.url }}">{{ post.title }}</a>
-            </h3>
-            <div>
-              {{ post.excerpt }}
-            </div>
-            <footer>
-              {% include /components/html/timestamp.html source=page.layout %}
-            </footer>          
-          </article>
+          {% include /components/html/dinky-article.html source=page.layout %}
         </li>
         {% endif %}
       {%- endfor %}

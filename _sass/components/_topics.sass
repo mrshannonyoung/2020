@@ -1,5 +1,5 @@
 .topic-highlights-content
-    grid-column: var(--content-span)
+    grid-column: content-main
     @media screen and (min-width: 768px)
       margin: calc(var(--grid-gap) * 2) 0
     ul
@@ -11,12 +11,14 @@
       align-items: center
       li
         margin: 1rem 0
-        padding: 0.5rem .7rem
+        text-transform: uppercase
         border-radius: var(--global-stroke)
         a
-          font-size: calc(1rem * (var(--tag-count) / 2.5))
-          font-variation-settings: "wght" calc(400 * (var(--tag-count) /2.8))
+          font-family: var(--mono-font-stack)
+          font-size: calc(1rem * (var(--tag-count) / 1.5))
         &:target
-          border-bottom: solid 3px var(--brand-primary)          
+          border-bottom: solid 3px var(--brand-primary)
         &:not(:last-child)
-          margin-right: var(--grid-gap)        
+          margin-right: var(--grid-gap)
+        svg
+          display: block

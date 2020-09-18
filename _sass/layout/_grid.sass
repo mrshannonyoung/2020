@@ -4,10 +4,12 @@
     grid-template-columns: var(--grid-layout)
     column-gap: var(--grid-gap)
   &.pad-me
-    padding: 5rem 0
+    margin: calc(2vw + var(--grid-gap)) 0
 
 .posts-list
   @supports (display: grid) and (--prop: value)
+    list-style: none
+    padding: 0
     @media screen and (min-width: 768px)
       display: grid
       grid-template-columns: repeat(2, 1fr)
@@ -16,4 +18,4 @@
       row-gap: var(--grid-gap)
 
 .generic-content
-  grid-column: var(--content-span)
+  grid-column: content-main

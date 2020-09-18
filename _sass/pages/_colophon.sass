@@ -99,7 +99,7 @@
       color: var(--white-light)
       display: block
       margin: 0 0 calc(var(--grid-gap) * 1.5) calc(-1 * var(--grid-gap))
-      letter-spacing: 0.05em
+      letter-spacing: 0.15em
       font-size: 0.7em
       text-transform: uppercase
 .roadmap
@@ -107,7 +107,6 @@
   align-items: flex-start
   margin: calc(var(--grid-gap) * 1) 0
   li
-    padding: calc(var(--grid-gap) / 2) calc(var(--grid-gap) * 1)
     position: relative
     transition: all .5s ease
     transition-property: background, transform, border
@@ -115,7 +114,7 @@
     flex: 1
     &:not(:last-of-type)
       margin-right: 1rem
-    @for $i from 0 through 200
+    @for $i from 0 through 2
       @media screen and (min-width: 768px)
         &:nth-child(#{$i + 1})
           --h: #{270 + ($i * 5)}
@@ -125,6 +124,8 @@
           transition-delay: .1s * $i
     color: var(--white)
     border-radius: calc(var(--global-stroke) * 2)
+    a, p
+      padding: calc(var(--grid-gap) / 3) calc(var(--grid-gap) / 2)
     a
       display: block
       color: inherit
@@ -135,7 +136,7 @@
   &:hover, &:focus
     li
       border: solid var(--global-stroke) var(--white)
-      @for $i from 0 through 200
+      @for $i from 0 through 2
         @media screen and (min-width: 768px)
           &:nth-child(#{$i + 1})
             background-color: hsl(var(--h), var(--s), var(--l))
@@ -153,9 +154,12 @@
       display: grid
       grid-template-rows: 1fr 0.5fr auto
       align-items: center
-      span
-        font-size: 75%
+      span, em
+        font-size: 85%
+        line-height: 2
         color: var(--white-light)
+      em
+        font-style: normal
       svg
         display: inline-block
         fill: var(--twitter)

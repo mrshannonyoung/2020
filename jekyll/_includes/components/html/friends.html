@@ -17,8 +17,11 @@
         {{ friend.name }}
       {% endif %}
     </h3>
+    {% if friend.description %}
+    <em>{{friend.description}}</em>
+    {% endif %}
     {% if friend.deathDate %}
-      <span>{{friend.birthDate | date_to_long_string: 'ordinal' }} – {{friend.deathDate | date_to_long_string: 'ordinal' }}</span>
+    <span title="{{friend.birthDate | date_to_long_string: 'ordinal' }} – {{friend.deathDate | date_to_long_string: 'ordinal' }}">{{friend.birthDate | date: '%Y' }} – {{friend.deathDate | date: '%Y' }}</span>
     {% endif %}
   </li>
 {% endfor %}   

@@ -1,6 +1,6 @@
 - name: "James Crockford"
   gender: "male"
-  description: ""
+  description: "Best man. Best friend. Greatly missed."
   birthDate: "1985-07-06"
   deathDate: "2017-09-30"
 
@@ -16,6 +16,6 @@
   gender: "male"
   twitter: https://twitter.com/garethedmunds
 
-- name: "David Souch"
-  gender: "male"
-  twitter: https://twitter.com/@MYM_0709
+# - name: "David Souch"
+#   gender: "male"
+#   twitter: https://twitter.com/@MYM_0709
