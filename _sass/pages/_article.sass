@@ -48,9 +48,7 @@ body.post
       p
         text-indent: calc(var(--grid-gap) * 1.5)      
       blockquote
-        grid-column: content-main
-        font-family: var(--mono-font-stack)
-        font-style: italic        
+        grid-column: content-main       
         @media screen and (min-width: 768px)
           grid-column: 3/span 7
         *
@@ -77,7 +75,6 @@ body.post
         @media screen and (min-width: 768px)
           grid-column: 3/span 7
       *
-        margin: 0 0 var(--grid-gap)
         grid-column: 2/span 8
         @media screen and (min-width: 768px)
           grid-column: 3/span 8

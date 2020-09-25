@@ -8,47 +8,13 @@ title: "Archive"
     <h1>{{ page.type | capitalize }} {% if page.title %}'{{ page.title }}' {% endif %}{{ page.date | date: '%Y' }}</h1>
   </header>
 
-  <ul class="posts">
-    {% for post in page.posts %}
+  <ol class="posts">
+    {%- for post in page.posts %}
       <li>
-        <article>
-          <header>
-            <h2><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-          </header>
-          <section>
-            {{ post.excerpt }}
-          </section>
-          <footer>
-            <span class="post-date">post:date{{ post.date | date: "%b %-d, %Y" }}</span>
-            {{post.categories}}
-            {% for tag in post.tags %}
-              <a href="/topics/{{ tag | slugify }}">{{ tag }}</a>
-            {% endfor %}
-          </footer>
-        </article>
+        {% include /components/html/dinky-article.html source=page.layout show-categories=true %}
       </li>
-    {% endfor %}
-  </ul>
-
-  <!-- <aside>
-    <ul>
-      {% case page.type %}
-        {% when 'tag' %}
-          {% for tag in site.tags %}
-            <li>
-              <a href="/topics/{{ tag[0] | slugify }}">{{ tag[0] }}({{ tag[1].size }})</a>
-            </li>
-          {% endfor %} 
-        {% when 'category' %}
-          {% for cat in site.categories %}
-            <li>
-              <a href="/categories/{{ cat[0] | slugify }}">{{ cat[0] }}({{ cat[1].size }})</a>
-            </li>
-          {% endfor %}
-      {% endcase %}
-      </li>
-    </ul>
-  </aside> -->
+    {%- endfor %}
+  </ol>
 
 </section>
 

@@ -1,11 +1,15 @@
-<article class="dinky-article" aria-describedby="post-{{ post.title | slugify }}" data-source="{{include.source}}">
-  <h3 id="post-{{ post.title | slugify }}">
+<article class="dinky-article h-entry" aria-describedby="post-{{ post.title | slugify }}" data-source="{{include.source}}">
+  <h3 id="post-{{ post.title | slugify }}" class="p-name">
     <a href="{{ post.url }}">{{ post.title }}</a>
   </h3>
-  <div>
+  <div class="article-content e-content">
     {{ post.excerpt }}
   </div>
   <footer>
     {% include /components/html/timestamp.html source=page.layout %}
+    {% if include.show-categories %}
+		<span class="screen-reader-only">Filed under</span>
+		<a href="/categories/{{post.categories}}/" title="{{post.categories[0] | capitalize}}" class="p-category">{{post.categories}}</a>
+    {% endif %}    
   </footer>          
 </article>

@@ -13,12 +13,12 @@
 
 .dinky-article
   display: grid
-  grid-template-rows: [title] auto [excerpt] auto [footer] 1fr
+  grid-template-rows: [title] auto [excerpt] 2fr [footer] 1fr
   align-self: flex-end
-  *
+  > *
     grid-column: 1/-1
   footer
-    font-size: 85%
+    font-size: 1rem
     text-transform: uppercase
     font-family: var(--mono-font-stack)         
     margin-top: calc(var(--grid-gap) / 2)  

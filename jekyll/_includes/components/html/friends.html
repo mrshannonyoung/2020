@@ -3,7 +3,7 @@
 <ul>
 {% for friend in site.data.friends %}
   <li>
-    <img src="/assets/img/{{ friend.name | slugify }}.jpg" id="{{ friend.name | slugify }}" loading="lazy" importance="low" width="90" height="90" alt="{{- friend.name -}}">
+    <img src="/assets/img/{{ friend.name | slugify }}.jpg" id="{{ friend.name | slugify }}" loading="lazy" importance="low" width="90" height="90" alt="{{ friend.name | append: ' profile picture' }}">
     <h3>
       {% if friend.twitter %}
       <a href="{{ friend.twitter }}" rel="noreferrer noopener" target="_blank">
