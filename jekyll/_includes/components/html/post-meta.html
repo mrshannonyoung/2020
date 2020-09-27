@@ -1,16 +1,16 @@
-<div class="article-meta">	
-	<div>
+<ul class="article-meta">	
+	<li class="article-meta--item">
 		<span class="screen-reader-only">Published</span>
 		<time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">
 			<a href="/archive/{{ page.date | date: '%Y' }}/">
 				{{ page.date | date_to_long_string: 'ordinal' }}
 			</a>
 		</time>		
-	</div>
+	</li>
 	{%- if page.categories -%}
-	<div>
+	<li class="article-meta--item">
 		<span class="screen-reader-only">Filed under</span>
 		<a href="/categories/{{page.categories}}/" title="{{page.categories[0] | capitalize}}" class="p-category">{{page.categories}}</a>		
-	</div>
+	</li>
 	{%- endif -%}
-</div>
+</ul>

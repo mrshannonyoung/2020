@@ -4,9 +4,11 @@
 .article-meta
   font-size: 1.2em
   line-height: 1
+  list-style: none
   letter-spacing: 3px
   color: rgba(255, 255, 255, 0.6)
   text-transform: uppercase
+  padding: 0
   font-family: var(--mono-font-stack)   
 
 body.post
@@ -15,7 +17,7 @@ body.post
       grid-column: 2/content-main-end
       padding: 0 0 calc(var(--grid-gap) * 2)
     .article-meta
-      div
+      &--item
         padding: 0
         @media screen and (min-width: 768px)
           &:not(:last-of-type)
@@ -44,21 +46,18 @@ body.post
         padding: 0
     .article-content
       @extend %display_contents
-      grid-column: 3/span 8
-      p
-        text-indent: calc(var(--grid-gap) * 1.5)      
+      grid-column: 3/span 8    
       blockquote
         grid-column: content-main       
         @media screen and (min-width: 768px)
           grid-column: 3/span 7
         *
           margin: 0
-        p
-          text-indent: 0
       img
         max-width: 100%
       figure
-        grid-column: 3/span content-main-end
+        @media screen and (min-width: 768px)
+          grid-column: 3/span content-main-end
         img
           width: 100%
         figcaption
@@ -67,22 +66,24 @@ body.post
           text-align: center
       > p:first-of-type
         font-size: 1.6em
-        font-variation-settings: "wght" 350
-        text-indent: 0
+        font-variation-settings: "wght" 35
         margin-bottom: calc(var(--grid-gap) * 2)
+        // margin-bottom: calc(var(--base-font-size) * 1.5)
         + p
-          text-indent: 0
-        @media screen and (min-width: 768px)
-          grid-column: 3/span 7
-      *
-        grid-column: 2/span 8
+          margin-top: 0
         @media screen and (min-width: 768px)
           grid-column: 3/span 8
+      *
+        grid-column: content-main
+        @media screen and (min-width: 768px)
+          grid-column: 3/span content-main-end
     footer
       @extend %display_contents
       grid-column: perimeter-start/content-main-end
       > div
-        grid-column: 3/span content-main-end
+        grid-column: content-main
+        @media screen and (min-width: 768px)
+          grid-column: 3/span content-main-end
       #post-tags
         grid-column: content-main
         padding: 0

@@ -3,18 +3,15 @@ layout: default
 title: "Archive"
 ---
 <section class="grid-me">
-
-  <header>
+  <div class="generic-content">
     <h1>{{ page.type | capitalize }} {% if page.title %}'{{ page.title }}' {% endif %}{{ page.date | date: '%Y' }}</h1>
-  </header>
-
-  <ol class="posts">
+    <ol class="posts-list">
     {%- for post in page.posts %}
       <li>
         {% include /components/html/dinky-article.html source=page.layout show-categories=true %}
       </li>
     {%- endfor %}
-  </ol>
-
+    </ol>
+  </div>
 </section>
 

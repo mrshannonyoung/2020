@@ -60,6 +60,8 @@ a
   color: var(--brand-secondary)
   text-decoration: none
   text-decoration-thickness: 2px!important
+  abbr
+    cursor: inherit
   *
     text-decoration-thickness: 2px!important
   transition: color 0.15s linear
@@ -68,11 +70,11 @@ a
     text-decoration: underline
   &:active
     box-shadow: 0
-    outline: 0
+    outline: 0   
 
 pre
   overflow-x: auto
-  padding-bottom: 1rem
+  padding-bottom: var(--grid-gap)
   margin: 0
   scrollbar-color: var(--white) transparent
   scrollbar-width: thin
@@ -85,6 +87,13 @@ pre
   &::-webkit-scrollbar-thumb
     background-color: var(--white)
     border-radius: 1rem
+  code
+    margin-top: calc(var(--grid-gap) / 2)
+    padding: calc(var(--grid-gap) / 2)
+    background-color: var(--black-lighter)
+
+code
+  font-family: inherit
 
 .hr-link
   display: flex

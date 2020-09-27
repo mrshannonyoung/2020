@@ -1,7 +1,7 @@
 - name: VSCode
   url: https://code.visualstudio.com/
-  width: 47.75
-  height: 47.5
+  width: 48.75
+  height: 48.5
 
 - name: iTerm2
   url: https://iterm2.com/
