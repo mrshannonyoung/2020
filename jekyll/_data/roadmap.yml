@@ -11,4 +11,9 @@
 - name: Notes collection
   description: Addition of short post format for notes.
   url: https://jekyllrb.com/docs/collections/
-  priority: 1
+  priority: 2
+
+- name: Sustainable hosting
+  description: Select a web hosting service with least impact on the planet.
+  url: https://www.websitecarbon.com/
+  priority: 1  

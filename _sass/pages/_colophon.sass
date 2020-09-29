@@ -112,7 +112,7 @@
     flex: 1
     &:not(:last-of-type)
       margin-right: 1rem
-    @for $i from 0 through 2
+    @for $i from 0 through 3
       @media screen and (min-width: 768px)
         &:nth-child(#{$i + 1})
           --h: #{270 + ($i * 5)}
@@ -134,7 +134,7 @@
   &:hover, &:focus
     li
       border: solid var(--global-stroke) var(--white)
-      @for $i from 0 through 2
+      @for $i from 0 through 3
         @media screen and (min-width: 768px)
           &:nth-child(#{$i + 1})
             background-color: hsl(var(--h), var(--s), var(--l))
