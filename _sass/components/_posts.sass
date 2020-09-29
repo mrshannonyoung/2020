@@ -17,8 +17,18 @@
   align-self: flex-end
   > *
     grid-column: 1/-1
+  svg
+    display: inline-block
+    stroke: var(--hot-pink)
+    stroke-width: var(--icon-stroke)
+    fill: none    
   footer
     font-size: 1rem
     text-transform: uppercase
     font-family: var(--mono-font-stack)         
-    margin-top: calc(var(--grid-gap) / 2)  
+    margin-top: calc(var(--grid-gap) / 2)
+    a  
+      text-decoration: none
+      &:hover
+        b
+          text-decoration: underline

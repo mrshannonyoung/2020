@@ -1,25 +1,25 @@
 <h2>Peers</h2>
-<p>People who I have seen talk at conferences, or general inspiration.</p>
+<p>People who I have seen talk at conferences, an inspiration or generally wicked <sup>*</sup></p>
 <ul class="peers">
-  {% for peer in site.data.peers %}
+  {% assign peer_count = site.data.peers | size %}
+  {% assign peers = site.data.peers | sample: peer_count %}
+  {% for peer in peers %}
     <li>
-      <img src="{{peer.twitter | prepend:'https://unavatar.now.sh/twitter/'}}" id="{{ peer.name | slugify }}" loading="lazy" importance="low" width="80" height="80" alt="{{ peer.name | append: ' profile picture' }}">
-      <h3>
-        {% if peer.twitter %}
-        <a href="{{peer.twitter | prepend:'https://twitter.com/'}}" rel="noreferrer noopener" target="_blank">
-          <svg aria-hidden="true" focusable="false" width="16" height="13">
-            <title>Twitter icon</title>
-            <use xlink:href="#icon-twitter"></use>
-          </svg>
-          {{- peer.name -}}
-        </a>
-        {% else %}
-          {{ peer.name }}
-        {% endif %}
-      </h3>
+      <a href="{{- peer.url -}}" rel="noopener" target="_blank">
+        <span class="screen-reader-only">{{- peer.name | append: '&apos;s&nbsp;' -}} website</span>
+        <img src="{{peer.twitter | prepend:'https://unavatar.now.sh/twitter/'}}" id="{{ peer.name | slugify }}" loading="lazy" importance="low" width="80" height="80" alt="{{ peer.name | append: ' profile picture' }}">
+      </a>
+      <a href="{{peer.twitter | prepend:'https://twitter.com/'}}" rel="noreferrer noopener" target="_blank">
+        <svg aria-hidden="true" focusable="false" width="13" height="10">
+          <title>Twitter icon</title>
+          <use xlink:href="#icon-twitter"></use>
+        </svg>
+        {{- peer.name -}}
+      </a>
       {% if peer.description %}
-        <em>{{peer.description}}</em>
+        <p><em>{{peer.description}}</em></p>
       {% endif %}
     </li>
   {% endfor %} 
-</ul>  
+</ul>
+<p><sup>*</sup> In no particular order.</p>

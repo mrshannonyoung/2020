@@ -8,8 +8,14 @@
   <footer>
     {% include /components/html/timestamp.html source=page.layout %}
     {% if include.show-categories %}
-		<span class="screen-reader-only">Filed under</span>
-		<a href="/categories/{{post.categories}}/" title="{{post.categories[0] | capitalize}}" class="p-category">{{post.categories}}</a>
+    <span class="screen-reader-only">Filed under</span>
+		<a href="/categories/{{post.categories}}/">
+      <svg aria-hidden="true" focusable="false" width="16" height="13">
+        <title>Category icon</title>
+        <use xlink:href="#icon-category"></use>
+      </svg>
+      <b class="p-category">{{- post.categories -}}</b>
+    </a>
     {% endif %}    
   </footer>          
 </article>

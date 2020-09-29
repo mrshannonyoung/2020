@@ -36,3 +36,18 @@
   gender: "female"
   url: "https://lea.verou.me/"
   twitter: LeaVerou
+
+- name: "Rachel Andrew"
+  gender: "female"
+  url: "https://rachelandrew.co.uk/"
+  twitter: rachelandrew
+
+- name: "Alla Kholmatova"
+  gender: "female"
+  url: "http://www.craftui.com/"
+  twitter: craftui
+
+- name: "Alice Bartlett"
+  gender: "female"
+  url: "https://alicebartlett.co.uk/"
+  twitter: alicebartlett
