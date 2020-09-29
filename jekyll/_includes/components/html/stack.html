@@ -2,8 +2,8 @@
 <dl class="stack">
   {% for item in site.data.stack %}
   <div>
-    <b>{{item.function}}</b>
     <dt>
+      <b>{{item.function}}</b>
       <a href="{{item.url}}" rel="noreferrer noopener" target="_blank">
         <svg focusable="false" class="icon-{{item.name | slugify}}" aria-hidden="true" width="{{item.width | default: '16'}}" height="{{item.height | default: '16'}}">
           <title>{{item.name}} icon</title>

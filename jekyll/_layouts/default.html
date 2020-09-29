@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" id="top">
 <head>
-  <title>
-    {{page.title | capitalize}} - {{site.title}}, DEveloPer
-  </title>
   <meta charset="UTF-8">
+  <title>{{page.title | capitalize}} - {{site.title}}, DEveloPer</title>
+  <link href="{{page.url | absolute_url}}" rel="canonical">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#CF0A2C">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,11 +13,7 @@
   <meta name="description" content="{{ page.excerpt | strip_html | rstrip }}">
   <meta name="generator" content="{{ jekyll.version | prepend: 'Jekyll ' }}">
   <link href="/assets/css/main.css" rel="stylesheet">
-  <link href="{{page.url | absolute_url}}" rel="canonical">
   <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Blog posts">
-  <noscript>
-    <link rel="stylesheet" href="/assets/css/main.css">
-  </noscript>
 </head>
 <body {%- if page.collection %} data-collection="{{page.collection}}"{% endif %} class="{{page.layout | slugify}}">
   {%- assign active = page.url | remove:'.html' -%}

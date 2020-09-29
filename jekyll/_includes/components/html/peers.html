@@ -1,22 +1,25 @@
 <h2>Peers</h2>
 <p>People who I have seen talk at conferences, or general inspiration.</p>
 <ul class="peers">
-{% for peer in site.data.peers %}
-  <li>
-    <ul>
-      <li>
-        {% if peer.url %}<a href="{{ peer.url }}" rel="noopener" target="_blank">{{ peer.name }}</a>{%else%}{{ peer.name }}{% endif %}
-      </li>
-      {% for social in peer.social %}
-      <li>
-        <img src="{{social.handle | prepend:'https://unavatar.now.sh/twitter/'}}" loading="lazy" importance="low" width="80" height"80" alt="{{ peer.name }}">
-        <a href="{{social.handle | prepend:'https://twitter.com/'}}" rel="noreferrer noopener" target="_blank">
-        {{social.platform}}
-        <svg aria-hidden="true" focusable="false" width="16" height="13"><title>{{social.platform}} icon</title><use xlink:href="#icon-twitter"></use></svg>
+  {% for peer in site.data.peers %}
+    <li>
+      <img src="{{peer.twitter | prepend:'https://unavatar.now.sh/twitter/'}}" id="{{ peer.name | slugify }}" loading="lazy" importance="low" width="80" height="80" alt="{{ peer.name | append: ' profile picture' }}">
+      <h3>
+        {% if peer.twitter %}
+        <a href="{{peer.twitter | prepend:'https://twitter.com/'}}" rel="noreferrer noopener" target="_blank">
+          <svg aria-hidden="true" focusable="false" width="16" height="13">
+            <title>Twitter icon</title>
+            <use xlink:href="#icon-twitter"></use>
+          </svg>
+          {{- peer.name -}}
         </a>
-      </li>
-      {% endfor %} 
-    </ul>
-  </li>
-{% endfor %}
-</ul>
+        {% else %}
+          {{ peer.name }}
+        {% endif %}
+      </h3>
+      {% if peer.description %}
+        <em>{{peer.description}}</em>
+      {% endif %}
+    </li>
+  {% endfor %} 
+</ul>  

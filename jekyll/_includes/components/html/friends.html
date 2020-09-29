@@ -1,29 +1,29 @@
 <section class="friends">
-<h2>Friends</h2>
-<ul>
-{% for friend in site.data.friends %}
-  <li>
-    <img src="/assets/img/{{ friend.name | slugify }}.jpg" id="{{ friend.name | slugify }}" loading="lazy" importance="low" width="90" height="90" alt="{{ friend.name | append: ' profile picture' }}">
-    <h3>
-      {% if friend.twitter %}
-      <a href="{{ friend.twitter }}" rel="noreferrer noopener" target="_blank">
-        {{- friend.name -}}
-        <svg aria-hidden="true" focusable="false" width="16" height="13">
-          <title>Twitter icon</title>
-          <use xlink:href="#icon-twitter"></use>
-        </svg>
-      </a>
-      {% else %}
-        {{ friend.name }}
+  <h2>Friends</h2>
+  <ul>
+  {% for friend in site.data.friends %}
+    <li>
+      <img src="/assets/img/{{ friend.name | slugify }}.jpg" id="{{ friend.name | slugify }}" loading="lazy" importance="low" width="90" height="90" alt="{{ friend.name | append: ' profile picture' }}">
+      <h3>
+        {% if friend.twitter %}
+        <a href="{{friend.twitter | prepend:'https://twitter.com/'}}" rel="noreferrer noopener" target="_blank">
+          <svg aria-hidden="true" focusable="false" width="16" height="13">
+            <title>Twitter icon</title>
+            <use xlink:href="#icon-twitter"></use>
+          </svg>
+          {{- friend.name -}}
+        </a>
+        {% else %}
+          {{ friend.name }}
+        {% endif %}
+      </h3>
+      {% if friend.description %}
+      <em>{{friend.description}}</em>
       {% endif %}
-    </h3>
-    {% if friend.description %}
-    <em>{{friend.description}}</em>
-    {% endif %}
-    {% if friend.deathDate %}
-    <span title="{{friend.birthDate | date_to_long_string: 'ordinal' }} – {{friend.deathDate | date_to_long_string: 'ordinal' }}">{{friend.birthDate | date: '%Y' }} – {{friend.deathDate | date: '%Y' }}</span>
-    {% endif %}
-  </li>
-{% endfor %}   
-</ul>
+      {% if friend.deathDate %}
+      <span title="{{friend.birthDate | date_to_long_string: 'ordinal' }} – {{friend.deathDate | date_to_long_string: 'ordinal' }}">{{friend.birthDate | date: '%Y' }} – {{friend.deathDate | date: '%Y' }}</span>
+      {% endif %}
+    </li>
+  {% endfor %}   
+  </ul>
 </section>

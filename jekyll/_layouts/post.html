@@ -10,11 +10,10 @@ layout: default
     {{content}}
   </div>
   <footer>
-	<div>
-		<span>Updated</span>
-		<time datetime="{{ 'now' | date_to_xmlschema }}">{{ "now" | date_to_string }}</time>
-	</div> 
-  {% include /components/html/post-tags.html %}
+    <section>
+    {% include /components/html/post-tags.html %}
+    {% include /components/html/post-updated.html %}
+    </section>
   {% include /components/html/adjacent-posts.html %}
   </footer>
 </article>

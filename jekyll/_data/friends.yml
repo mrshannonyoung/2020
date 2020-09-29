@@ -6,16 +6,16 @@
 
 - name: "Will Moore"
   gender: "male"
-  twitter: https://twitter.com/WillMoor3
+  twitter: WillMoor3
 
 - name: "Alex Oliver"
   gender: "male"
-  twitter: https://twitter.com/alexoliverwd
+  twitter: alexoliverwd
 
 - name: "Gareth Edmunds"
   gender: "male"
-  twitter: https://twitter.com/garethedmunds
+  twitter: garethedmunds
 
 # - name: "David Souch"
 #   gender: "male"
-#   twitter: https://twitter.com/@MYM_0709
+#   twitter: MYM_0709

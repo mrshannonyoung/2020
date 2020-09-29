@@ -80,8 +80,10 @@ body.post
     footer
       @extend %display_contents
       grid-column: perimeter-start/content-main-end
-      > div
+      > section
+        margin-top: calc(var(--grid-gap) * 2)
         grid-column: content-main
+        font-family: var(--mono-font-stack)
         @media screen and (min-width: 768px)
           grid-column: 3/span content-main-end
       #post-tags

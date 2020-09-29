@@ -85,7 +85,6 @@
       outline: none
       // &:focus:not(:hover)
       //   outline: solid 2px green
-
     dd
       display: flex
       margin-top: calc(var(--grid-gap) * 1.5)
@@ -95,12 +94,11 @@
       position: absolute
       bottom: 0
     b
-      @include mixins.fw(750)
       color: var(--white-light)
       display: block
       margin: 0 0 calc(var(--grid-gap) * 1.5) calc(-1 * var(--grid-gap))
       letter-spacing: 0.15em
-      font-size: 0.7em
+      font-family: var(--mono-font-stack)
       text-transform: uppercase
 .roadmap
   @extend %list-to-flex
@@ -163,7 +161,7 @@
       svg
         display: inline-block
         fill: var(--twitter)
-        margin: 0 0 0 calc(var(--grid-gap) / 2)
+        margin: 0 calc(var(--grid-gap) / 2) 0 0
       img
         margin: 0 auto
         font-size: 60%
@@ -189,20 +187,15 @@
     svg
       display: inline-block
       fill: var(--twitter)
+      margin: 0 calc(var(--grid-gap) / 2) 0 0
     *
       padding: 0
       list-style: none
     img
+      margin: 0 auto
       font-size: 60%
-      text-align: center
       border: solid var(--global-stroke) var(--brand-primary)
       border-radius: 50%
-      box-shadow: 0 0 0 calc(var(--global-stroke) * 2) var(--black), 0 0 0 calc(var(--global-stroke) * 3) var(--black-lighter)
-      transition: all .5s linear
-      transition-property: filter
-      @include mixins.direction(bottom)
-      &:hover, &:focus
-        filter: drop-shadow(0 0 10px var(--brand-primary))
 .toolset
     @extend %list-to-flex
     li

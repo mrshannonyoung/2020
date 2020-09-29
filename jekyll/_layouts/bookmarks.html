@@ -1,0 +1,22 @@
+---
+layout: default
+---
+{% assign bookmarks = site.data.bookmarks %}
+<ol>
+{% for bookmark in bookmarks %}
+  {% assign tags = bookmark.item.tags | split: "," %}
+  <li>
+    <time datetime="{{ bookmark.item.time_added | date_to_xmlschema }}">
+      {{ bookmark.item.time_added | date_to_long_string }}
+    </time>
+    <a href="{{bookmark.item.href}}">{{bookmark.item.text}}</a>
+      <ul>
+        {% for tag in tags %}
+        <li>
+          {{ tag }}
+        </li>
+        {% endfor %}
+      </ul>
+  </li>
+{% endfor %}  
+</ol>

@@ -59,5 +59,5 @@ Less CSS is always good CSS :)
 *[CSS]: Cascading Style Sheets
 *[SASS]: Syntactically Awesome Style Sheets
 
-[1]: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column
+[1]: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column#Values
 [2]: https://sass-lang.com/
