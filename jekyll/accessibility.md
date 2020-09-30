@@ -2,7 +2,7 @@
 layout: accessibility
 title: Accessibility
 ---
-## Impact
+## Universal
 
 Accessibility isn't just for people with a disability, impairment or specialised needs.
 
@@ -11,8 +11,6 @@ Everyone has abilities, and limits to those abilities. Designing for people with
 ### Conformance
 
 The website has been tested to [WCAG 2][1]{:target="_blank" rel="noreferrer noopener"}
-
-#### Weee
 
 > Although these guidelines cover a wide range of issues, they are not able to address the needs of people with all types, degrees, and combinations of disability.
 

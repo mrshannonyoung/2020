@@ -4,3 +4,9 @@
 @mixin fw($wght: 400)
   font-weight: 400
   font-variation-settings: "wght" #{$wght}
+
+@mixin clamp($min, $max, $ideal)
+  --minFontSize: #{$min}
+  --maxFontSize: #{$max}
+  --ideal: #{$ideal}
+  font-size: clamp( var(--minFontSize), var(--maxFontSize), var(--ideal) )

@@ -18,17 +18,24 @@
   > *
     grid-column: 1/-1
   svg
-    display: inline-block
+    margin-right: calc(var(--grid-gap) / 4)
+    display: inherit
     stroke: var(--hot-pink)
     stroke-width: var(--icon-stroke)
     fill: none    
   footer
+    display: flex
     font-size: 1rem
     text-transform: uppercase
     font-family: var(--mono-font-stack)         
     margin-top: calc(var(--grid-gap) / 2)
     a  
+      margin-left: var(--grid-gap)
       text-decoration: none
+      display: flex
+      align-items: baseline
       &:hover
         b
           text-decoration: underline
+        svg
+          stroke: var(--white)

@@ -37,7 +37,10 @@ collections:
     output: true
 
 jekyll-archives:
-  enabled: all
+  enabled:
+    - year
+    - categories
+    - tags
   layout: archive
   permalinks:
     year: '/archive/:year/'
