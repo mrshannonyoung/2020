@@ -1,0 +1,10 @@
+<video data-state="paused" playsinline controls preload="metadata" loading="lazy" poster="/assets/video/{{include.reference}}.jpg">
+{%- if include.webm -%}
+<source src="/assets/video/{{include.reference}}.webm" type="video/webm">
+{%- endif -%}
+<source src="/assets/video/{{include.reference}}.mp4" type="video/mp4">
+{%- if include.vtt -%}
+<track default src="/assets/video/{{include.reference}}.vtt" srclang="en" label="English captions" kind="captions">
+{%- endif -%}
+Sorry, your browser doesn't support embedded videos.
+</video>

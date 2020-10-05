@@ -8,7 +8,8 @@ layout: default
       {% assign currentdate = post.date | date: "%Y" %}
       {% if currentdate != date %}
         {% unless forloop.first %}</ol>{% endunless %}
-        <h2 id="{{post.date | date: '%Y'}}"><a href="/archive/{{ currentdate | append: '/' }}">{{ currentdate }}</a></h1>
+        <h2 class="h1" id="{{post.date | date: '%Y'}}"><a href="/archive/{{ currentdate | append: '/' }}">{{ currentdate }}</a></h2>
+        <hr>
         <ol class="posts-list">
         {% assign date = currentdate %}
       {% endif %}

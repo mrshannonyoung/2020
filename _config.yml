@@ -26,6 +26,9 @@ host: 0.0.0.0
 port: 6767
 markdown: kramdown
 
+kramdown:
+  parse_block_html: true
+
 keep_files: [ "assets", "js", "video" ]
 
 include: [ _headers, humans.txt, robots.txt ]
@@ -64,3 +67,7 @@ defaults:
       excerpt_separator: <!--more-->
 
 repository: "https://github.com/mrshannonyoung/2020/"
+
+
+# Links
+# https://web.dev/native-lazy-loading/

@@ -3,12 +3,6 @@
   .posts-list
     padding: 0
     list-style: none
-//     li
-//       display: flex
-//       &:not(:last-of-type)
-//         margin-bottom: var(--grid-gap)
-//         @media screen and (min-width: 768px)
-//           margin: initial
 
 
 .dinky-article
@@ -17,6 +11,8 @@
   align-self: flex-end
   > *
     grid-column: 1/-1
+  .article-content
+    margin-right: calc(var(--grid-gap) / 2)
   svg
     margin-right: calc(var(--grid-gap) / 4)
     display: inherit

@@ -9,7 +9,7 @@
   color: rgba(255, 255, 255, 0.6)
   text-transform: uppercase
   padding: 0
-  font-family: var(--mono-font-stack)   
+  font-family: var(--mono-font-stack)
 
 body.post
   article
@@ -51,19 +51,51 @@ body.post
         grid-column: content-main       
         @media screen and (min-width: 768px)
           grid-column: 3/span 7
-        *
-          margin: 0
+      ul
+        margin: revert
       img
         max-width: 100%
       figure
+        display: grid
+        position: relative
+        align-items: center           
         @media screen and (min-width: 768px)
-          grid-column: 3/span content-main-end
-        img
+          transition: all 1s
+          grid-column: 3/content-main-end
+          grid-template-columns: repeat(4, 1fr)
+        img, video
           width: 100%
+          z-index: 1
+          grid-column: 1 / span 3
+          display: block
+          &:hover, &:focus
+            ~ figcaption
+                transform: translateX(0)
+        @media screen and (min-width: 768px)                
+          video
+            filter: grayscale(1)
+            transition: all .2s ease
+            transition-property: box-shadow, transform, filter, opacity          
+            &[data-state="playing"]
+              filter: none
+              transform: translateY(calc(-.2 * var(--grid-gap)))
+              box-shadow: 0 1rem 1.5rem -5px rgb(0, 0, 0)
+              ~ figcaption
+                  transform: translateX(0)
         figcaption
+          z-index: 2
+          background-color: var(--black-dark)
+          padding: calc(var(--grid-gap) / 2)
           font-family: var(--mono-font-stack)
           font-style: italic
-          text-align: center
+          line-height: 1.5
+          grid-column: 4 / -1
+          @media screen and (min-width: 768px)
+            transition: all .2s ease
+            transition-property: transform
+            transform: translateX(calc(-1 * var(--grid-gap)))
+            border-left: 1px solid var(--white)
+            box-shadow: -0.5rem 0 1rem -10px var(--black)
       > p:first-of-type
         // clamp($min, $max, $ideal)
         @include mixins.clamp(1.75rem,2.5rem,calc(1rem + 1vw))
@@ -77,11 +109,11 @@ body.post
       *
         grid-column: content-main
         @media screen and (min-width: 768px)
-          grid-column: 3/span content-main-end
+          grid-column: 3/span 7
     footer
       @extend %display_contents
       grid-column: perimeter-start/content-main-end
-      > section
+      > div
         margin-top: calc(var(--grid-gap) * 2)
         grid-column: content-main
         font-family: var(--mono-font-stack)
@@ -100,10 +132,12 @@ body.post
           color: var(--brand-primary)
           text-transform: uppercase
           display: flex
-          align-items: flex-end
+          align-items: center
+          margin-bottom: calc(var(--grid-gap) / 2)
           &:not(:last-of-type)
             margin-right: calc(var(--grid-gap) / 2)
-          a
+          a 
+            padding: 0.5rem 0
             font-family: var(--mono-font-stack)
           &::before          
             content: '#'

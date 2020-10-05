@@ -1,0 +1,29 @@
+.peers
+  list-style: none
+  padding: 0
+  margin: var(--grid-gap) 0
+  display: grid
+  column-gap: var(--grid-gap)
+  row-gap: var(--grid-gap)
+  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr))
+  li
+    text-align: center
+    align-items: center
+    display: flex
+    flex-direction: column
+    a
+      margin-bottom: calc(var(--grid-gap) / 2)
+      display: flex
+      align-items: center
+    svg
+      display: inline-block
+      fill: var(--twitter)
+      margin: 0 calc(var(--grid-gap) / 3) 0 0
+    *
+      padding: 0
+      list-style: none
+    img
+      margin: 0 auto  
+      font-size: 60%
+      border: solid var(--global-stroke) var(--brand-primary)
+      border-radius: 50%

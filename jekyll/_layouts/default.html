@@ -25,6 +25,43 @@
   {% include /partials/main.html %}
   {% include /partials/footer.html %}
   <div id="current-page">Current page</div>
+  {% if page.has-video %}
+  <script>
+    window.addEventListener('DOMContentLoaded', e => {
+        let video = document.querySelector('video'),
+            isPaused = false,
+            pipActive = false;
+        video.addEventListener('playing', () => {
+          video.setAttribute('data-state', 'playing');
+        });
+        video.addEventListener('pause', () => {
+          video.setAttribute('data-state', 'paused');
+        });    
+        video.addEventListener('enterpictureinpicture', () => {
+          pipActive = true;
+        });
+        video.addEventListener('leavepictureinpicture', () => {
+          pipActive = false; 
+          video.play();     
+        });
+        let observer = new IntersectionObserver((entries, observer) => { 
+          entries.forEach(entry => {
+            if(entry.intersectionRatio!=1  && !video.paused && pipActive!=true && !document.webkitIsFullScreen){
+              video.pause();
+              isPaused = true;
+              video.setAttribute('data-state', 'paused');
+            }
+            else if(isPaused && pipActive!=true) {
+              video.play();
+              isPaused=false;
+              video.setAttribute('data-state', 'playing');
+            }
+          });
+        }, {threshold: 1});
+        observer.observe(video);
+    });  
+  </script>
+  {% endif %}  
   <script>
     if(navigator.doNotTrack != 0) {
       document.querySelector("html").setAttribute("data-dnt", "true");

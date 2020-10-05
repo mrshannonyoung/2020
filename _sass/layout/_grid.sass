@@ -1,5 +1,5 @@
 .grid-me
-  @supports (display: grid) and (--prop: value)
+  @supports (display: grid)
     display: grid
     grid-template-columns: var(--grid-layout)
     column-gap: var(--grid-gap)
@@ -7,13 +7,13 @@
     margin: calc(2vw + var(--grid-gap)) 0
 
 .posts-list
-  @supports (display: grid) and (--prop: value)
+  @supports (display: grid)
     list-style: none
     padding: 0
     @media screen and (min-width: 768px)
       display: grid
+      grid-auto-flow: dense
       grid-template-columns: repeat(2, 1fr)
-      grid-template-rows: repeat(2, min-content)
       column-gap: var(--grid-gap)
       row-gap: var(--grid-gap)
 

@@ -1,0 +1,11 @@
+{% case include.type %}
+{% when 'figure' %}
+<figure>
+  {%- include /components/html/video-element.html reference=include.reference webm=include.webm vtt=include.vtt -%}
+  <figcaption>
+  {{ include.caption }}
+  </figcaption>
+</figure>
+{% when 'video' %}
+  {%- include /components/html/video-element.html reference=include.reference webm=include.webm vtt=include.vtt -%}  
+{% endcase %}
