@@ -75,8 +75,8 @@ body.post
           video
             filter: grayscale(1)
             transition: all .2s ease
-            transition-property: box-shadow, transform, filter, opacity          
-            &[data-state="playing"]
+            transition-property: box-shadow, transform, filter
+            &:hover, &:focus, &[data-state="playing"]
               filter: none
               transform: translateY(calc(-.2 * var(--grid-gap)))
               box-shadow: 0 1rem 1.5rem -5px rgb(0, 0, 0)

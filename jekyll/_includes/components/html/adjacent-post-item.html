@@ -3,7 +3,7 @@
   <a rel="{{include.rel}}" href="{{page.[include.direction].url | append: '#content'}}">
     <span class="adjacent-label">{{include.direction}}</span>
     <strong class="adjacent-title">{{page.[include.direction].title}}</strong>
-    <p class="adjacent-excerpt">{{page.[include.direction].excerpt | strip_html }}</p>
+    <p class="adjacent-excerpt">{{page.[include.direction].excerpt | strip_html | truncatewords: 20 }}</p>
   </a>
 </li>
 {% else %}

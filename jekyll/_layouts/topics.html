@@ -7,15 +7,19 @@ layout: default
     <h2>{{site.tags.size}} topics across {{site.posts.size}} articles</h2>
     {{content}}
     <ul>
-    {% for tag in site.tags %}
-    <li id="tagged-{{ tag[0] | slugify }}">
-      <a class="number-display" href="/topics/{{ tag[0] | slugify | append: '/' }}" {%- if tag[1].size > 2 -%}style='--tag-count: {{ tag[1].size }};'{%- endif -%}>
+    {% assign sorted_tags = site.tags | sort %}      
+    {% for tag in sorted_tags %}
+    {% assign label = tag | first %}
+    {% assign count = tag | last %}
+    <li id="tagged-{{ label | slugify }}">
+      <a class="number-display" href="/topics/{{ label | slugify | append: '/' }}" {%- if count.size > 1 -%}style='--shift: {{ count.size }}deg;--tag-count: {{ count.size }};'{%- endif -%}>
         <svg aria-hidden="true" focusable="false" width="16" height="16">
           <title>Tag icon</title>
           <use xlink:href="#icon-tag"></use>
         </svg>        
-        <span>{{ tag[0] | upcase }}</span>
-        {% if tag[1].size > 0 %}<em>{{ tag[1].size }}</em>{% endif %}      
+        <span>{{ label | upcase }}</span>
+        <b>({{ count.size }})</b>
+        <!-- {% if count.size > 0 %}<em>{{ count.size }}</em>{% endif %}       -->
       </a>
     </li>
     {% endfor %}

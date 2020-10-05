@@ -14,7 +14,7 @@ layout: default
         {% assign date = currentdate %}
       {% endif %}
         <li>
-          {% include /components/html/dinky-article.html source=page.layout %}
+          {% include /components/html/dinky-article.html source=page.layout show-categories=true %}
         </li>
       {% if forloop.last %}
       </ol>

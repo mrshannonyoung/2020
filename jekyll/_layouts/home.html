@@ -27,7 +27,7 @@ layout: default
     <ol class="posts-list">
       {%- for post in posts limit: 4 %}
       <li>
-        {% include /components/html/dinky-article.html source=page.layout %}
+        {% include /components/html/dinky-article.html source=page.layout show-categories=true %}
       </li>
       {%- endfor %}
     </ol>
