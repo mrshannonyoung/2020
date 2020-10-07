@@ -12,6 +12,7 @@
   {% endif -%}  
   <meta name="description" content="{{ page.excerpt | strip_html | rstrip }}">
   <meta name="generator" content="{{ jekyll.version | prepend: 'Jekyll ' }}">
+  <link href="/assets/img/favicon.svg" type="image/svg+xml" rel="icon">
   <link href="/assets/css/main.css" rel="stylesheet">
   <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Blog posts">
 </head>
@@ -27,20 +28,20 @@
   <div id="current-page">Current page</div>
   {% if page.has-video %}
   <script>
-    window.addEventListener('DOMContentLoaded', e => {
+    window.addEventListener('DOMContentLoaded', (e) => {
         let video = document.querySelector('video'),
             isPaused = false,
             pipActive = false;
-        video.addEventListener('playing', () => {
+        video.addEventListener('playing', (e) => {
           video.setAttribute('data-state', 'playing');
         });
-        video.addEventListener('pause', () => {
+        video.addEventListener('pause', (e) => {
           video.setAttribute('data-state', 'paused');
         });    
-        video.addEventListener('enterpictureinpicture', () => {
+        video.addEventListener('enterpictureinpicture', (e) => {
           pipActive = true;
         });
-        video.addEventListener('leavepictureinpicture', () => {
+        video.addEventListener('leavepictureinpicture', (e) => {
           pipActive = false; 
           video.play();     
         });
@@ -66,6 +67,13 @@
     if(navigator.doNotTrack != 0) {
       document.querySelector("html").setAttribute("data-dnt", "true");
     };
+    let svgFavicon = document.querySelectorAll("[type='image/svg+xml']")[0];
+    window.addEventListener('blur', (e) => {
+      svgFavicon.setAttribute("href", "/assets/img/favicon-blur.svg");
+    });
+    window.addEventListener('focus', (e) => {
+      svgFavicon.setAttribute("href", "/assets/img/favicon.svg");
+    });
   </script>  
 </body>
 </html>
