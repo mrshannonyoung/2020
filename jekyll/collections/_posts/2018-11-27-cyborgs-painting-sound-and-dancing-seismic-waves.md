@@ -6,8 +6,7 @@ date: 2018-11-27T11:37:50+00:00
 url: /cyborgs-painting-sound-and-dancing-seismic-waves/
 categories: futurology
 tags:
-  - color
-  - artists
+  - art
   - cyborgs
 ---
 Most of us probably associate cyborgs with science fiction, but what does it look like when cyborgs make art?
