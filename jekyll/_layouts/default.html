@@ -63,15 +63,17 @@
   </script>
   {% endif %}  
   <script>
-    if(navigator.doNotTrack != 0) {
-      document.querySelector("html").setAttribute("data-dnt", "true");
-    };
-    let svgFavicon = document.querySelectorAll("[type='image/svg+xml']")[0];
-    window.addEventListener('blur', (e) => {
-      svgFavicon.setAttribute("href", "/assets/img/favicon-blur.svg");
-    });
-    window.addEventListener('focus', (e) => {
-      svgFavicon.setAttribute("href", "/assets/img/favicon.svg");
+    window.addEventListener('DOMContentLoaded', (e) => {
+      let svgFavicon = document.querySelectorAll("[type='image/svg+xml']")[0];
+      if(navigator.doNotTrack != 0) {
+        document.querySelector("html").setAttribute("data-dnt", "true");
+      };
+      window.addEventListener('blur', (e) => {
+        svgFavicon.setAttribute("href", "/assets/img/favicon-blur.svg");
+      });
+      window.addEventListener('focus', (e) => {
+        svgFavicon.setAttribute("href", "/assets/img/favicon-focus.svg");
+      });
     });
   </script>  
 </body>
