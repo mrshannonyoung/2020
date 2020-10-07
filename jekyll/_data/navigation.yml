@@ -8,7 +8,7 @@
   items:
     - label: accessibility
     - label: CSS
-    - label: inclusive
+    - label: design
 
 - name: "footer"
   items:

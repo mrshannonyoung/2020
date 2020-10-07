@@ -5,12 +5,12 @@ layout: default
   <div class="generic-content">
     <h1>{{page.title}}</h1>
     {{content | markdownify}}
-    <h2>Related articles</h2>  
+    <h2>Accessibility articles</h2>  
     <ol class="posts-list">
       {%- for post in site.posts %}
         {% if post.categories contains "accessibility" %}
         <li>
-          {% include /components/html/dinky-article.html source=page.layout show-categories=true %}
+          {% include /components/html/dinky-article.html source=page.layout %}
         </li>
         {% endif %}
       {%- endfor %}
