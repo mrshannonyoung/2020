@@ -7,13 +7,11 @@ url: /game-on-the-complete-bbc-games-archive/
 featured_image: "2018/game-on-the-complete-bbc-games-archive"
 categories: fun
 tags:
-  - archives
   - BBC
-  - creativity
   - fun
-  - games
+  - gaming
 ---
-**The gaming world has come a long way since the 1980s, with huge leaps forward in technology (it’s bizarre to think that Pac-Man was once at the cutting edge!). But mind-boggling graphics and sprawling open worlds aren't everything &#8211; and apparently, no-one knows this better than the BBC.**
+The gaming world has come a long way since the 1980s, with huge leaps forward in technology (it’s bizarre to think that Pac-Man was once at the cutting edge!). But mind-boggling graphics and sprawling open worlds aren't everything &#8211; and apparently, no-one knows this better than the BBC.
 <!--more-->
 
 Be prepared for a lot of nostalgia. Now, the [Complete BBC Games Archive][1] has made hundreds of retro games available to be played again in an emulator, on a real BBC Micro, or on the web.

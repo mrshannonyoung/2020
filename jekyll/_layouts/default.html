@@ -12,7 +12,7 @@
   {% endif -%}  
   <meta name="description" content="{{ page.excerpt | strip_html | rstrip }}">
   <meta name="generator" content="{{ jekyll.version | prepend: 'Jekyll ' }}">
-  <link href="/assets/img/favicon.svg" type="image/svg+xml" rel="icon">
+  <link href="/assets/img/favicon-focus.svg" type="image/svg+xml" rel="icon">
   <link href="/assets/css/main.css" rel="stylesheet">
   <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Blog posts">
 </head>
@@ -25,7 +25,6 @@
   {%- endunless -%}
   {% include /partials/main.html %}
   {% include /partials/footer.html %}
-  <div id="current-page">Current page</div>
   {% if page.has-video %}
   <script>
     window.addEventListener('DOMContentLoaded', (e) => {

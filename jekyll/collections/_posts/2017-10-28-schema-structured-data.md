@@ -6,6 +6,9 @@ date: 2017-10-28T10:00:01+00:00
 url: /schema-structured-data/
 featured_image: "2017/10/schema-1000.680.png"
 categories: projects
+tags:
+  - schema
+  - semantics
 ---
 As a brand, product, person or anything that lives on the internet, you are striving to make your content and purpose accessible and discoverable, however possible.
 <!--more-->

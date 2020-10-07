@@ -7,7 +7,7 @@ categories: CSS
 tags:
   - CSS
   - CSS grid
-  - Today I learned
+  - today I learned
 ---
 A clean, simple way to span content across columns with CSS grid and named lines.
 <!--more-->

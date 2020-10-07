@@ -24,6 +24,7 @@ footer[role="contentinfo"]
     small
       display: block 
       margin-top: calc(var(--grid-gap) * 2)
+      font-family: var(--mono-font-stack)
     ul
       @extend %list-to-flex
       li
@@ -35,11 +36,11 @@ footer[role="contentinfo"]
           @include mixins.fw(550)
           text-decoration: none
           color: var(--white)
-          padding: calc(var(--grid-gap) / 4) calc(var(--grid-gap) / 2)
-          border-radius: 6rem
-          border: solid var(--global-stroke) var(--black-lighter)
+          padding: calc(var(--grid-gap) / 4) calc(var(--grid-gap) / 1.5)
+          background-color: var(--black-lighter)
+          border-radius: calc(var(--grid-gap) / .5)
           transition: all .2s linear
-          transition-property: border, background
+          transition-property: background
           svg
             margin-left: calc(var(--grid-gap) / 4)
           &:hover, &:focus

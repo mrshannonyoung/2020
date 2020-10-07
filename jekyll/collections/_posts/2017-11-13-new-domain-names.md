@@ -4,11 +4,11 @@ author:
   - Shannon Young
 date: 2017-11-13T15:57:11+00:00
 url: /new-domain-names/
-featured_image: "2017/11/1000x680_Header-1.jpg"
-categories: fun
+categories: domains
 tags:
-  - domain names
-  - website
+  - domains
+  - ccTLD
+  - gTLD
 ---
 **In this** **article, I want to showcase how brands are using the** **ever-expanding choices of domain names. I will explain what a domain is (the techie boring stuff), then go on to blow your mind and expand your horizons with domain craziness, then end on a serious note for consideration.**
 <!--more-->

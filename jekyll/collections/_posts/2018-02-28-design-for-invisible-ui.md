@@ -6,25 +6,23 @@ date: 2018-02-28T16:56:09+00:00
 url: /design-for-invisible-ui/
 featured_image: "2018/design-for-invisible-ui"
 featured_image_alt: "Soundwave from Smart speakers and virtual assistants"
-categories: fun
+categories: design
 tags:
-  - Brand
+  - brands
   - creativity
   - design
-  - Smart Speakers
+  - smart speakers
   - structured data
   - UI/UX
-  - Virtual Assistant
+  - virtual assistants
   - voice
 ---
-**It’s most likely you have heard of them, or heard stories about them*. Possibly you even own one! (I personally don’t trust them. More on that later.)**
+It’s most likely you have heard of them, or heard stories about them*. Possibly you even own one! (I personally don’t trust them. More on that later.)
 <!--more-->
 
 ## Smart speakers and virtual assistants
 
-
 > Awareness of voice-activated speakers is increasing; over half of GB adults claim to know a little bit about them. However, ownership is still low; 5% currently own a voice activated speaker and just 10% of non owners are likely to buy in the next 12 months.
-  
 > – Source: [Ipsos connect techtracker Q4 2017][1]
 
 They both have one thing in common, they are devices that are always on, always listening, waiting for your voice commands which usually are initiated with ‘wake/action words’ such as “Alexa”, “Ok Google” or anything GCHQ deem to warrant putting you on some list.
@@ -36,9 +34,9 @@ They both have one thing in common, they are devices that are always on, always 
 
 ### Top playas
 
-**Google
+## Google
   
-** Virtual assistant: Google Assistant (now available on fridges)
+### Virtual assistant: Google Assistant (now available on fridges)
   
 Smart speaker: Google Home
 

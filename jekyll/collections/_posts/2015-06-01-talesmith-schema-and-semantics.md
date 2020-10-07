@@ -4,12 +4,13 @@ author:
   - Shannon Young
 date: 2015-06-01T10:04:21+00:00
 url: /talesmith-schema-and-semantics/
-featured_image: "2015/05/blog-cover.jpg"
 categories: projects
+tags:
+  - schema
+  - semantics
 ---
-I think at times it’s nice to talk about what’s going on the behind the scenes of a website: revealing its skeleton or engine, lifting the curtain, however you want to put it. I’ll be honest, it’s not usually something many people get excited about, unless they have an interest in web development. But stick with me! You might learn something…
+I think at times it’s nice to talk about what’s going on the behind the scenes of a website: revealing its skeleton or engine, lifting the curtain, however you want to put it.
 <!--more-->
-
 
 > [<img class=" wp-image-9637" src="https://www.mark-making.com/wp-content/uploads/2015/05/blog-cover.jpg" alt="blog-cover"  />][1]
 

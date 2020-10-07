@@ -4,10 +4,9 @@ author:
   - Shannon Young
 date: 2018-11-27T11:37:50+00:00
 url: /cyborgs-painting-sound-and-dancing-seismic-waves/
-featured_image: "2018/cyborgs-painting-sound-and-dancing-seismic-waves"
-featured_image_alt: "Neil Harbisson, a cyborg artist and trans-species activist"
-categories: accessibility
+categories: futurology
 tags:
+  - color
   - artists
   - cyborgs
 ---

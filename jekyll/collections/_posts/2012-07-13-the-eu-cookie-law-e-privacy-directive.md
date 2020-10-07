@@ -5,11 +5,10 @@ author:
 date: 2012-07-13T16:35:15+00:00
 url: /the-eu-cookie-law-e-privacy-directive/
 featured_image: "2012/the-eu-cookie-law-e-privacy-directive"
-categories: thoughts
+categories: privacy
 tags:
   - legal
   - cookies
-  - privacy
 ---
 Let me explain that for you in real speak. A cookie is a text file that is saved onto your computer when you visit a website that will store certain information about your visit.
 <!--more--> 

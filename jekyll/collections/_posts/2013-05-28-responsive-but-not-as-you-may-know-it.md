@@ -5,7 +5,7 @@ author:
 date: 2013-05-28T09:45:41+00:00
 url: /responsive-but-not-as-you-may-know-it/
 featured_image: "2013/05/shannon@responsiveconference.jpg"
-categories: design-culture
+categories: conferences
 ---
 This blog post is the first part of a series of posts that go through what I learnt and absorbed from <a href="https://responsiveconf.com/" target="_blank">Responsive Day Out &#8211; Brighton</a>, 2013, hosted by <a href="https://adactio.com/" target="_blank">Jeremy Keith</a> (who was fantastic), author of <a href="https://html5forwebdesigners.com/" target="_blank">HTML5 For Web Designers</a>.
 <!--more-->

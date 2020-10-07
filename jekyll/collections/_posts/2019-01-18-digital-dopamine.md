@@ -4,8 +4,6 @@ author:
   - Shannon Young
 date: 2019-01-18T08:48:51+00:00
 url: /digital-dopamine/
-featured_image: "2019/digital-dopamine"
-featured_image_alt: "Restaurant view of xxX"
 categories: technology
 tags:
   - digital

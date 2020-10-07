@@ -5,7 +5,7 @@ author:
 date: 2013-07-25T06:17:58+00:00
 url: /dont-deflate-just-yet-flat-design-its-the-in-thing/
 featured_image: "2013/07/ios7_mini.jpg"
-categories: thoughts
+categories: design
 noindex: true
 ---
 All the big companies like Apple, Google, and Microsoft are doing it, so you should be too right, right?

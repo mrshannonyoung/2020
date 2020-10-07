@@ -4,15 +4,12 @@ author:
   - Shannon Young
 date: 2019-03-07T10:38:56+00:00
 url: /audible-inaudible-/
-featured_image: "G9LHyxgE3m"
-featured_image_alt: "The world’s most valuable resource is no longer oil, but data"
 highlight: true
 categories: privacy
 tags:
-  - SSG
-  - Smart Speakers
+  - smart speakers
   - technology
-  - digital
+  - data
   - voice
 ---
 I can get behind the accessibility and practical benefits of voice-enabled smart technology.

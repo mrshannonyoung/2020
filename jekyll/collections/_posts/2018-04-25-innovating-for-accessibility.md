@@ -2,7 +2,6 @@
 title: Innovating for accessibility
 date: 2018-04-25T16:44:36+00:00
 url: /innovating-for-accessibility/
-featured_image: "2018/innovating-for-accessibility"
 categories: accessibility
 tags:
   - a11y

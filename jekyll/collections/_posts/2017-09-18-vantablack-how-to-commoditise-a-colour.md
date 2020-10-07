@@ -4,12 +4,10 @@ author:
   - Shannon Young
 date: 2017-09-18T14:27:02+00:00
 url: /vantablack-how-to-commoditise-a-colour/
-featured_image: "2017/09/1000x680_Header-1.jpg"
-categories: fun
+categories: design
 tags:
   - colour
   - design
-  - studio
 ---
 **Only a century or two ago, before industrialised ways of working brought down the price of practically everything, the colour of a material could have a dramatic impact on its price, because some dyes and pigments were much more costly to manufacture than others.**
 <!--more-->
