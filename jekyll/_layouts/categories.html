@@ -9,7 +9,11 @@ layout: default
     <ul class="categories-tiles">
     {% for cat in site.categories %}
     <li id="category-{{ cat[0] | slugify }}">
-      <a class="number-display" href="/categories/{{ cat[0] | slugify }}">
+      <a href="/categories/{{ cat[0] | slugify }}">
+        <svg aria-hidden="true" focusable="false" width="32" height="26">
+          <title>Category icon</title>
+          <use xlink:href="#icon-category"></use>
+        </svg>      
         <span>{{ cat[0] | upcase }}</span>
         <em>{{ cat[1].size }}</em>      
       </a>
