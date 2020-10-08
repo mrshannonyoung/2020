@@ -2,16 +2,26 @@
 layout: default
 title: "Archive"
 ---
+{% comment %} Don't show category on single category pages {% endcomment %}
+{%- assign layout = page.layout | slugify -%}
+{%- assign url = page.url | slugify -%}
+{%- if layout == 'archive' and url contains "categories-" -%}
+  {%- assign exclude_categories = true -%}
+{%- endif -%}
+
 <section class="grid-me">
   <div class="generic-content">
     <h1>{{ page.type | capitalize }} {% if page.title %}– <em>{{ page.title }}</em>{% endif %} {{ page.date | date: '%Y' }}</h1>
     <ol class="posts-list">
     {%- for post in page.posts %}
       <li>
-        {% include /components/html/dinky-article.html source=page.layout show-categories=true %}
+        {%- if exclude_categories -%}
+          {% include /components/html/dinky-article.html source=page.layout show-tags=true %}
+        {%- else -%}
+          {% include /components/html/dinky-article.html source=page.layout show-categories=true %}
+        {%- endif -%}
       </li>
     {%- endfor %}
     </ol>
   </div>
 </section>
-

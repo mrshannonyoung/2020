@@ -99,7 +99,7 @@ body.post
       > p:first-of-type
         // clamp($min, $max, $ideal)
         @include mixins.clamp(1.75rem,2.5rem,calc(1rem + 1vw))
-        font-variation-settings: "wght" 35
+        @include mixins.fw(150)
         margin-bottom: calc(var(--grid-gap) * 2)
         // margin-bottom: calc(var(--base-font-size) * 1.5)
         + p

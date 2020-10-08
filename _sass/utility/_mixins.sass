@@ -2,11 +2,13 @@
   background: linear-gradient(to #{$dir}, var(--#{$start}) min(20vw, 45%), var(--#{$end}))
 
 @mixin fw($wght)
+  font-weight: initial
+  font-weight: #{$wght}
   font-variation-settings: "wght" #{$wght}
 
 @mixin clamp($min, $max, $ideal)
   --minFontSize: #{$min}
   --maxFontSize: #{$max}
   --ideal: #{$ideal}
-  font-size: var(--ideal)
+  font-size: var(--maxFontSize)
   font-size: clamp( var(--minFontSize), var(--maxFontSize), var(--ideal) )

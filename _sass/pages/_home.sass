@@ -1,3 +1,4 @@
+@use '../utility/_mixins'
 @use '../utility/_extends'
 
 .introduction
@@ -13,8 +14,6 @@
     p
       margin: 0
       color: var(--white-light)
-      font-variation-settings: 'wght' 350
-      --minFontSize: 1.2rem
-      --maxFontSize: 2rem
-      --scaler: 1.2vw
-      font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize))
+      @include mixins.fw(350)
+      // Font size mixin using clamp ($min, $max, $ideal)
+      @include mixins.clamp(1.2rem,2rem,1.2vw)

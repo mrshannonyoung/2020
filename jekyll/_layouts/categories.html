@@ -7,15 +7,20 @@ layout: default
     <h2>{{site.categories.size}} categories across {{site.posts.size}} articles</h2>
     {{content}}
     <ul class="categories-tiles">
-    {% for cat in site.categories %}
-    <li id="category-{{ cat[0] | slugify }}">
-      <a href="/categories/{{ cat[0] | slugify }}">
-        <svg aria-hidden="true" focusable="false" width="32" height="26">
-          <title>Category icon</title>
-          <use xlink:href="#icon-category"></use>
-        </svg>      
-        <span>{{ cat[0] | upcase }}</span>
-        <em>{{ cat[1].size }}</em>      
+    {% assign sorted_tags = site.categories | sort %}      
+    {% for tag in sorted_tags %}
+    {% assign label = tag | first %}
+    {% assign count = tag | last %}    
+    <li id="category-{{ label | slugify }}">
+      <a href="/categories/{{ label | slugify }}" {%- if count.size > 1 -%}class="shifty"{%- endif -%} style="--tag-count: {{ count.size }}; {%- if count.size > 1 -%}--shift: {{ count.size }}deg;{%- endif -%}">
+        <div {% if count.size >= 2 -%}class="stacked"{%- endif -%}>
+          <svg aria-hidden="true" focusable="false" width="24" height="19.5">
+            <title>Category icon</title>
+            <use xlink:href="#icon-category"></use>
+          </svg>
+        </div>        
+        <span>{{ label | upcase }}</span>
+        <b>({{ count.size }})</b>     
       </a>
     </li>
     {% endfor %}
