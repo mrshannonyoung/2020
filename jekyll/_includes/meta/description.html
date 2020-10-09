@@ -1,0 +1,9 @@
+<meta
+name="description"
+content="
+{%- if page.excerpt -%}
+{{ page.excerpt | strip_html | rstrip }}
+{%- else -%}
+{{- page.description | strip_html | rstrip -}}
+{%- endif -%}
+">
