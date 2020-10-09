@@ -1,0 +1,9 @@
+- name: "Manrope.woff2"
+  importance: low
+  as: font
+  type: "font/woff2"
+
+- name: "CourierPrime-Regular.woff2"
+  importance: low
+  as: font
+  type: "font/woff2"

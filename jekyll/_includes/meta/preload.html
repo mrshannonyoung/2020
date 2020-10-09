@@ -1,0 +1,13 @@
+{%- assign preloads = site.data.preloads -%}
+{% for preload in preloads %}
+<link
+href="/assets/fonts/{{preload.name}}"
+rel="preload"
+importance="{{preload.importance}}"
+as="{{preload.as}}"
+type="{{preload.type}}"
+{%- if preload.as == "font" -%}  
+crossorigin
+{%- endif -%}
+>
+{% endfor %}
