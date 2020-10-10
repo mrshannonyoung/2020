@@ -6,9 +6,19 @@
       </p>
       <a href="/" class="u-url" title="{{site.title | append: '’s'}} homepage">
         <picture>
-          <source srcset="/assets/img/shannon-young.webp 600w, /assets/img/shannon-young.webp 300w, /assets/img/shannon-young.webp 150w" sizes="150px" type="image/webp">
-          <source srcset="/assets/img/shannon-young.png 600w, /assets/img/shannon-young.png 300w, /assets/img/shannon-young.png 150w" sizes="150px" type="image/jpeg">
-          <img loading="eager" class="u-photo" src="/assets/img/shannon-young.png" width="100px" height="100px" alt="A much younger version of my actual face" importance="high">
+          <source
+          srcset="/assets/img/shannon-young@3x.webp 300w,
+                  /assets/img/shannon-young@2x.webp 200w,
+                  /assets/img/shannon-young.webp 100w"
+          sizes="100px"
+          type="image/webp">
+          <source
+          srcset="/assets/img/shannon-young@3x.png 300w,
+                  /assets/img/shannon-young@2x.png 200w,
+                  /assets/img/shannon-young.png 100w"
+          sizes="100px"
+          type="image/jpeg">
+          <img class="u-photo" src="/assets/img/shannon-young.png" width="100" height="100" alt="A much younger version of my actual face" loading="eager" importance="high">
         </picture>
         <span class="screen-reader-only">{{site.title | append: '’s'}} homepage</span>
       </a>       
