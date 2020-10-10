@@ -81,6 +81,7 @@ footer[role="contentinfo"]
         box-shadow: 0 0 0 calc(var(--global-stroke) * 2) var(--black), 0 0 0 calc(var(--global-stroke) * 3) var(--black-lighter)
         transition: all .5s linear
         transition-property: filter
+        box-sizing: content-box
         @include mixins.direction(bottom)
         &:hover
           filter: drop-shadow(0 0 10px var(--brand-primary))
