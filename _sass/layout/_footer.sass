@@ -1,6 +1,13 @@
 @use '../utility/_mixins'
 @use '../utility/_extends'
 
+
+#icon-validate path
+  &:first-of-type    
+    transform-origin: center
+    animation: rotation 2s infinite linear
+    animation-play-state: paused
+
 [aria-current]
   @include mixins.fw(650)
   color: var(--white)
@@ -52,8 +59,10 @@ footer[role="contentinfo"]
           &:hover, &:focus
             border-color: var(--white)
             background-color: var(--brand-primary)
-            // @include mixins.direction(right)
-
+            #icon-validate path#icon-validate-wheel
+              animation-play-state: running
+              ~ path
+                stroke: var(--brand-primary)
   .more-about
     @extend %display_contents
     address
@@ -117,4 +126,6 @@ a.number-display
     color: var(--white-light)
     min-width: var(--grid-gap)
     text-align: center
-    border: solid var(--global-stroke) var(--black-lighter)          
+    border: solid var(--global-stroke) var(--black-lighter)
+
+   
