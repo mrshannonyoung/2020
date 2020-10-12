@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>{{page.title | capitalize}} - {{site.title}}, Developer</title>
+  <meta name="apple-mobile-web-app-title" content="{{site.title}}">
+  {%- include /meta/preload.html %}
   <link href="{% if page.url =='/' %}{{site.url | append: '/'}}{% else %}{{page.url | absolute_url}}{% endif %}" rel="canonical">
-  {% include /meta/preload.html %}
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#CF0A2C">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -13,6 +14,7 @@
   {% endif -%}  
   {% include /meta/description.html %}
   <meta name="generator" content="{{ jekyll.version | prepend: 'Jekyll ' }}">
+  {% include /meta/device-favicons.html %}
   <link href="/assets/img/favicon-focus.svg" rel="icon" type="image/svg+xml">
   <link href="/assets/css/main.css" rel="stylesheet">
   <link href="/feed.xml" rel="alternate" type="application/atom+xml" title="Blog posts">

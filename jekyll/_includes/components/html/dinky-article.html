@@ -6,7 +6,9 @@
     {{ post.excerpt | strip_html | truncatewords: 30 }}
   </div>
   <footer>
+    {% unless include.hide-timestamp %}
     {% include /components/html/timestamp.html source=page.layout %}
+    {% endunless %}
     {% if include.show-categories %}
     <b class="screen-reader-only">Filed under</b>
 		<a href="/categories/{{post.categories}}/">

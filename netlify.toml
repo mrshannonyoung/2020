@@ -23,4 +23,4 @@ ID = "217a2fa5-3d65-416c-afe7-e1137687af31"
 
   [headers.values]
     X-XSS-Protection = "1; mode=block"
-    Content-Security-Policy = "base-uri 'self'; frame-ancestors 'self'; default-src 'self' https://cloudinary.com https://api.github.com; img-src 'self' data: https://res.cloudinary.com *.mark-making.com; object-src 'self' *.cloudinary.com; media-src 'self' *.cloudinary.com; script-src 'unsafe-inline' 'unsafe-eval' 'self' *.netlify.com *.cloudinary.com *.api.github.com https://unpkg.com; style-src 'self' 'unsafe-inline' *.netlify.com;"
+    Content-Security-Policy = "base-uri 'self'; frame-ancestors 'self'; default-src 'self' https://cloudinary.com https://api.github.com; img-src 'self' data: https://res.cloudinary.com *.mark-making.com unavatar.now.sh; object-src 'self' *.cloudinary.com; media-src 'self' *.cloudinary.com; script-src 'unsafe-inline' 'unsafe-eval' 'self' *.netlify.com *.cloudinary.com *.api.github.com https://unpkg.com; style-src 'self' 'unsafe-inline' *.netlify.com;"

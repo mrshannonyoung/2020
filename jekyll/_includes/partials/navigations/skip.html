@@ -1,12 +1,12 @@
 {%- for menu in site.data.navigation -%}
-  {% if menu.name == 'jump' %}
-      <nav aria-label="page">
-        <strong>Skip links:</strong>
-        {% for item in menu.items %}
-          <a href="{{ item.label | prepend: '#' }}">
-            {{ item.label }}
-          </a>
-        {% endfor %}
-      </nav>
-  {% endif %}
+{% if menu.name == 'jump' %}
+  <nav aria-label="page">
+    <strong>Skip links:</strong>
+    {%- for item in menu.items %}
+      <a href="{{ item.label | prepend: '#' }}">
+        {{- item.label -}}
+      </a>
+    {%- endfor %}
+  </nav>
+{% endif -%}
 {%- endfor -%}

@@ -1,5 +1,5 @@
 <footer role="contentinfo" id="footer" class="grid-me" aria-label="footer">
-  <section class="more-about">
+  <div class="more-about">
     <address class="h-card">
       <p>For more details, contact:<br>
         <a href="{{site.email}}" class="u-email p-name">{{site.title}}</a>
@@ -24,8 +24,8 @@
       </a>       
     </address>
     {% include /partials/navigations/footer.html %}
-  </section>
-  <section class="legal-stuff">
+  </div>
+  <div class="legal-stuff">
     <ul>
       <li>
         <a href="/accessibility/">
@@ -34,6 +34,6 @@
       </li>      
     </ul>
     <small><span>&#169; {{ site.time | date: '%Y' }}</span></small>
-  </section>
+  </div>
 </footer>
 <b id="current-page">Current page</b>
