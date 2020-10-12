@@ -12,6 +12,7 @@ footer[role="contentinfo"]
   svg
     display: inline-block
     fill: var(--white)
+    margin-left: calc(var(--grid-gap) / 4)    
   .legal-stuff
     // *:not(:last-child)
     //   margin-right: var(--grid-gap)
@@ -29,11 +30,12 @@ footer[role="contentinfo"]
       @extend %list-to-flex
       li
         display: inline-block
+        &:not(:last-of-type)
+          margin-right: var(--grid-gap)        
         a
+          @include mixins.fw(550)
           display: flex
           align-items: center
-        [href="/accessibility/"]
-          @include mixins.fw(550)
           text-decoration: none
           color: var(--white)
           padding: calc(var(--grid-gap) / 4) calc(var(--grid-gap) / 1.5)
@@ -41,11 +43,17 @@ footer[role="contentinfo"]
           border-radius: calc(var(--grid-gap) / .5)
           transition: all .2s linear
           transition-property: background
-          svg
-            margin-left: calc(var(--grid-gap) / 4)
+        [href="/accessibility/"]
           &:hover, &:focus
             border-color: var(--white)
             background-color: var(--zx-spectrum)
+            // @include mixins.direction(right)
+        .validate
+          &:hover, &:focus
+            border-color: var(--white)
+            background-color: var(--brand-primary)
+            // @include mixins.direction(right)
+
   .more-about
     @extend %display_contents
     address
