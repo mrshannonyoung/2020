@@ -19,7 +19,7 @@
   <link href="/assets/css/main.css" rel="stylesheet">
   <link href="/feed.xml" rel="alternate" type="application/atom+xml" title="Blog posts">
 </head>
-<body {%- if page.collection %} data-collection="{{page.collection}}"{% endif %} class="{{page.layout | slugify}}">
+<body {%- if page.collection %} data-collection="{{page.collection}}"{% endif %} class="{{page.layout | slugify}} {{jekyll.environment}}">
   {%- assign active = page.url | remove:'.html' -%}
   {% include /components/svg/index.html %}
   {%- unless page.omit-header -%}

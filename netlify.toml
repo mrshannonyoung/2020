@@ -17,6 +17,10 @@ ID = "217a2fa5-3d65-416c-afe7-e1137687af31"
 
 [context.production]
 
+[context.staging]
+
+  command = "yarn run staging"
+
 [[headers]]
 
   for = "/*"

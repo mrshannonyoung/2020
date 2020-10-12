@@ -11,6 +11,7 @@
   "scripts": {
     "serve": "bundle exec jekyll s & gulp dev",
     "serve--q": "bundle exec jekyll s --q & gulp dev",
+    "staging": "bundle exec jekyll clean && JEKYLL_ENV=staging bundle exec jekyll b --config _config.yml,_staging.yml && gulp",
     "build": "bundle exec jekyll clean && bundle exec jekyll b && gulp"
   },
   "dependencies": {
