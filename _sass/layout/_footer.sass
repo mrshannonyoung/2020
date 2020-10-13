@@ -1,13 +1,6 @@
 @use '../utility/_mixins'
 @use '../utility/_extends'
 
-
-#icon-validate path
-  &:first-of-type    
-    transform-origin: center
-    animation: rotation 2s infinite linear
-    animation-play-state: paused
-
 [aria-current]
   @include mixins.fw(650)
   color: var(--white)
@@ -54,8 +47,11 @@ footer[role="contentinfo"]
           &:hover, &:focus
             border-color: var(--white)
             background-color: var(--zx-spectrum)
-            // @include mixins.direction(right)
         .validate
+          #icon-validate path#icon-validate-wheel   
+            transform-origin: center
+            animation: rotation 5s infinite linear
+            animation-play-state: paused
           &:hover, &:focus
             border-color: var(--white)
             background-color: var(--brand-primary)
