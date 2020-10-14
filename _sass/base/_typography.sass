@@ -27,10 +27,12 @@ body
   font-family: var(--body-font-stack)
   letter-spacing: calc(var(--base-font-size) * 0.0125)
 
-p
+p, .paragraph
   line-height: calc(var(--base-font-size) * 1.5)
   overflow-wrap: anywhere
-  + p
+  font-size: inherit
+  + p, .paragraph
+    font-size: inherit
     margin-top: var(--grid-gap)
 
 strong.stand-out
@@ -40,7 +42,7 @@ strong.stand-out
   @include mixins.fw(560)
   font-size: 105%
 
-code, blockquote
+code, blockquote, .mono-font-stack
   font-family: var(--mono-font-stack)
 
 blockquote, figure

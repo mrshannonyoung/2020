@@ -26,10 +26,12 @@ body
 hr
   outline: none
   border: none
-  height: 1px
+  height: var(--global-stroke)
   background-color: #282828
-  background: radial-gradient(circle at bottom left,var(--white), var(--white-light))  
-  margin: 1rem 0
+  // background: radial-gradient(circle at bottom left,var(--white), var(--white-light))  
+  border-radius: 6px
+  @include mixins.direction(right)  
+  margin: var(--grid-gap) 0
   padding: 0  
 
 img
