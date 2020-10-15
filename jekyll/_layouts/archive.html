@@ -11,7 +11,7 @@ title: "Archive"
 
 <section class="grid-me">
   <div class="generic-content">
-    <h1>{{ page.type | capitalize }} {% if page.title %}– <em>{{ page.title }}</em>{% endif %} – <em>{{ page.date | date: '%Y' }}</em></h1>
+    <h1>{{ page.type | capitalize }} {% if page.title %}– <em>{{ page.title }}</em>{% endif %} {% if page.date %}– <em>{{ page.date | date: '%Y' }}</em>{% endif %}</h1>
     <ol class="posts-list">
     {%- for post in page.posts %}
       <li>

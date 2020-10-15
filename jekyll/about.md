@@ -3,11 +3,11 @@ layout: about
 title: About
 alt-header: true
 ---
-## Hello
+# The human
 
 Introduction
 
-### Working mentality
+## Working mentality
 
 * I have good aesthetic sensibilities as well an understanding of back-end development that allows close collaboration with the team.
 * Learning emerging techniques and technologies and pushing for the appropriate levels of adoption.
@@ -19,7 +19,7 @@ Introduction
 * Identifying problems in wireframes and designs to mitigate rework down the line
 * Working with Design, UX and Back-end to deliver projects in HTML, CSS and JavaScript following a Progressive Enhancement strategy.
 
-### What I stand for
+## What I stand for
 
 * Open/Collaborative working
 * Semantics / Interop (schema, microdata)  
@@ -30,7 +30,7 @@ Introduction
 * https://cssstats.com/
 * https://observatory.mozilla.org/
 
-### What I'm about
+## What I'm about
 
 * Users first
 * People don't come to 'navigate' a site
@@ -40,7 +40,7 @@ Introduction
 * Fun – A smile in the mind. Source code cheekiness.
 * That
 
-### What I'm not about
+## What I'm not about
 
 * Overly complicated
 * JS in CSS (fuck that)

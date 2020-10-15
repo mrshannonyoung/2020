@@ -1,0 +1,14 @@
+{%- capture svg_paths -%}
+	<circle cx="1" cy="12" r="1" fill="black"/>
+	<circle cx="1" cy="15" r="1" fill="black"/>
+	<path d="M1 9L1 5C1.16667 3.33333 2.4 1 6 1C9.6 1 10.8333 3.66667 11 5V11L11 15M11 15L15 10.5M11 15L7 10.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+{%- endcapture -%}
+{%- if include.symbol == false -%}
+	<g id="icon-arrow">
+	{{svg_paths}}
+	</g>
+{%- else -%}
+	<symbol id="icon-arrow">
+	{{svg_paths}}
+	</symbol>
+{%- endif -%}
