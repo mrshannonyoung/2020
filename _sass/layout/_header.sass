@@ -1,7 +1,12 @@
 header[role="banner"]
-  padding: calc(var(--grid-gap) * 2) 0
+  margin: calc(var(--grid-gap) * 2) 0
   .logo
     grid-column: content-main-start/auto
+  &.middleman
+    .logo
+      grid-column: 6/span 2
+      display: flex
+      justify-content: center
 
 symbol#logo-spud
   *

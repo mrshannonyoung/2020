@@ -1,26 +1,40 @@
 @use '../utility/_mixins'
 @use '../utility/_extends'
 
-[aria-current]
-  @include mixins.fw(650)
-  color: var(--white)
+#icon-accessibility
+  path
+    fill: var(--white)
+    stroke: var(--white)
+#icon-validate
+  path
+    &.icon-validate-wheel
+      fill: var(--white)
+      transform-origin: center
+      animation: rotation 5s infinite linear
+      animation-play-state: paused      
+    &.icon-validate-tick
+      stroke: var(--black-lighter)
 
 footer[role="contentinfo"]
-  align-items: center
   padding: calc(var(--grid-gap) * 2) 0
   border-top: var(--global-stroke) solid var(--black-lighter)
+  ul
+    @extend %list-to-flex
+    grid-column: content-main
+    flex-direction: column
+    justify-content: space-between
+    @media screen and (min-width: 768px)
+      flex-direction: row
+      grid-column: 6/span content-main-end  
   svg
     display: inline-block
-    fill: var(--white)
-    margin-left: calc(var(--grid-gap) / 4)    
+    margin-left: calc(var(--grid-gap) / 4)
   .legal-stuff
-    // *:not(:last-child)
-    //   margin-right: var(--grid-gap)
     color: var(--white-light)
     grid-column: content-main
     display: flex
     flex-direction: column
-    margin-top: calc(var(--grid-gap) * 2)
+    margin-top: calc(var(--grid-gap) * 6)
     justify-content: flex-start
     small
       display: block 
@@ -28,6 +42,7 @@ footer[role="contentinfo"]
       font-family: var(--mono-font-stack)
     ul
       @extend %list-to-flex
+      justify-content: flex-start
       li
         display: inline-block
         &:not(:last-of-type)
@@ -48,41 +63,25 @@ footer[role="contentinfo"]
             border-color: var(--white)
             background-color: var(--zx-spectrum)
         .validate
-          #icon-validate path#icon-validate-wheel   
-            transform-origin: center
-            animation: rotation 5s infinite linear
-            animation-play-state: paused
           &:hover, &:focus
             border-color: var(--white)
             background-color: var(--brand-primary)
-            #icon-validate path#icon-validate-wheel
-              animation-play-state: running
-              ~ path
-                stroke: var(--brand-primary)
-  .more-about
-    @extend %display_contents
-    address
-      grid-column: content-main
-      @media screen and (min-width: 768px)
-        grid-column: content-main-start/span 4
-    ul
-      @extend %list-to-flex
-      grid-column: content-main
-      flex-direction: column
-      justify-content: space-between
-      @media screen and (min-width: 768px)
-        flex-direction: row
-        grid-column: 6/span content-main-end          
+            #icon-validate
+              path.icon-validate-wheel
+                animation-play-state: running
+                ~ path
+                  stroke: var(--brand-primary)          
   address
-    font-style: normal
     display: grid
     grid-template-columns: repeat(4, 1fr)
+    grid-column: content-main
     column-gap: var(--grid-gap)
     align-items: center
     justify-items: center
-    border-radius: 6px
+    font-style: normal
+    @media screen and (min-width: 768px)
+      grid-column: content-main-start/span 4    
     p
-      text-align: left
       grid-column: 1/span 2
     a
       grid-column: 3/-1

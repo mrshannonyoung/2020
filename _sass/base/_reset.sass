@@ -9,6 +9,10 @@
   margin: 0
   outline-offset: 0
 
+[aria-current]
+  @include mixins.fw(650)
+  color: var(--white)  
+
 body
   @supports (scroll-behavior: smooth)
     @media (prefers-reduced-motion: no-preference)
@@ -28,11 +32,14 @@ hr
   border: none
   height: var(--global-stroke)
   background-color: #282828
-  // background: radial-gradient(circle at bottom left,var(--white), var(--white-light))  
   border-radius: 6px
-  @include mixins.direction(right)  
-  margin: var(--grid-gap) 0
+  grid-column: content-main
+  // @include mixins.direction(right) 
+  margin: calc(var(--grid-gap) * 2) 0
   padding: 0  
+
+img, video, object, iframe
+  max-width: 100%
 
 img
   image-rendering: -webkit-optimize-contrast

@@ -1,7 +1,7 @@
 ---
 layout: about
 title: About
-omit-header: true
+alt-header: true
 ---
 ## Hello
 
@@ -9,8 +9,6 @@ Introduction
 
 ### Working mentality
 
-* This
-* That
 * I have good aesthetic sensibilities as well an understanding of back-end development that allows close collaboration with the team.
 * Learning emerging techniques and technologies and pushing for the appropriate levels of adoption.
 * Support consistency between projects by maintaining coding standards documentation.
