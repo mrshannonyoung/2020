@@ -108,8 +108,20 @@ code
   font-family: inherit
   display: inline-block
 
-abbr
-  cursor: help
+@media (hover: hover)
+  abbr
+    position: relative
+    cursor: help
+    text-decoration: none
+    &::after
+      content: ""
+      position: absolute
+      bottom: 3px
+      left: 0
+      width: auto
+      right: 0
+      height: 1px
+      border-bottom: dotted 1px currentColor
 
 video::backdrop
   background: linear-gradient(to bottom, rgb(25,25,25) 45%, rgb(35,35,35))
