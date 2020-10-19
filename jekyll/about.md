@@ -5,14 +5,24 @@ alt-header: true
 ---
 # The human
 
-Introduction
+Hi, welcome to a badly written section about me.
 
+I'm well into accessibility and user experience. I have worked as a front-end designer and developer for 13 years. As lines blur between job titles and role responsibilities 
+
+I have deep interests in anything related to the web and development, mainly based around Front-end techniques and best practices.
+
+- Accessible.
+- Semantic.
+- Inclusive.
+- Performant.
+
+During that time span I have 
 
 ## What I stand for
 
+* Accessiblity and Inclusivity
 * Open/Collaborative working
 * Semantics / Interop (schema, microdata)  
-* Accessiblity and Inclusivity
 * Performance - webpagetest
 * Privacy security
 * https://yellowlab.tools/

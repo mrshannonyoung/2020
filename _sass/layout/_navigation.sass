@@ -21,25 +21,30 @@ nav
         // @extend %a11y-outline
         transform: translate(100vw)
   &[aria-label="topics"]
-    display: flex
-    align-items: center
     margin: calc(var(--grid-gap) * 2) 0 0
+    @media screen and (min-width: 768px)
+      display: flex
+      align-items: center
     ul
       padding: 0
       margin: 0
-      display: flex
-      flex-wrap: wrap
-      flex: 1
-      align-items: center
+      @media screen and (min-width: 768px)
+        display: flex
+        flex-wrap: wrap
+        flex: 1
+        align-items: center
       &::after
         content: ""
+        display: block
         flex: 1
         height: var(--global-stroke)
         border-radius: 6px
         background-color: var(--brand-primary)
         transition: background 1s ease
+        margin: 1rem 0
         @include mixins.direction(right)
-        margin: 0 1rem
+        @media screen and (min-width: 768px)
+          margin: 0 1rem
       li
         font-size: 22px
         a

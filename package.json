@@ -10,7 +10,7 @@
   },
   "scripts": {
     "serve": "bundle exec jekyll s & gulp dev",
-    "serve-quiet": "bundle exec jekyll s --quiet & gulp dev",
+    "✨": "bundle exec jekyll s --quiet & gulp dev",
     "staging": "bundle exec jekyll clean && JEKYLL_ENV=staging bundle exec jekyll b --config _config.yml,_staging.yml && gulp",
     "build": "bundle exec jekyll clean && bundle exec jekyll b && gulp"
   },

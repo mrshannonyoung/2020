@@ -18,7 +18,6 @@ body.about
       display: flex
       display: grid
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
-      column-gap: calc(var(--grid-gap) * 4)
       height: calc(100vh - calc(var(--grid-gap) * 2))
 
 .juxtaposition
@@ -26,7 +25,6 @@ body.about
   flex: 1
   height: inherit
   flex-direction: column
-  padding: var(--grid-gap)
   @media screen and (min-width: 768px)
     align-content: center
     justify-content: center
@@ -35,15 +33,16 @@ body.about
     display: inline-block    
   &--text
     color: var(--white-light)
+    padding: var(--grid-gap)
     @include mixins.fw(550)
     // Font size mixin using clamp ($min, $max, $ideal)
     @include mixins.clamp(1.2rem,2rem,calc(0.1rem + 1.2vw))
   &--graphic
+    @include mixins.direction(right)
+    mix-blend-mode: screen
     img
-      object-fit: contain
+      object-fit: cover
       width: 100%
       height: 100%
-    @media screen and (min-width: 768px)
-      grid-column: 2
-      mix-blend-mode: exclusion
+      mix-blend-mode: luminosity
       

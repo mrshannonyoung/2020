@@ -11,6 +11,7 @@ tags:
   - technology
   - screen-readers
   - semantics
+  - CSS
 ---
 An introduction to users who rely on assistive technologies and how screen readers interpret a webpage, or not in the worst case.
 <!--more-->

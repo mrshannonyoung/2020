@@ -17,15 +17,20 @@
   url: "https://ethanmarcotte.com/"
   twitter: beep
 
-- name: "Brad Frost"
+- name: "Scott O'Hara"
   gender: "male"
-  url: "https://bradfrost.com/"
-  twitter: brad_frost
+  url: "https://www.scottohara.me/"
+  twitter: scottohara
 
 - name: "Heydon Pickering"
   gender: "male"
   url: "https://heydonworks.com/"
   twitter: heydonworks
+
+- name: "Brad Frost"
+  gender: "male"
+  url: "https://bradfrost.com/"
+  twitter: brad_frost
 
 - name: "Sara Soueidan"
   gender: "female"
