@@ -1,5 +1,0 @@
-- name: PageSpeed Insights
-  url: https://developers.google.com/speed/pagespeed/insights?
-
-- name: Mozilla Observatory
-  url: https://observatory.mozilla.org/analyze/

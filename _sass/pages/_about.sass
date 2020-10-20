@@ -10,19 +10,20 @@ body.about
   .color-splash
     background-color: var(--black-lighter)
   .introduction
-    background: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='white' fill-opacity='0.07' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E")
-    background-blend-mode: overlay
-    margin: var(--grid-gap)
-    scroll-margin-top: var(--grid-gap)
+    // background: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='white' fill-opacity='0.07' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E")
+    // background-blend-mode: overlay
+    // margin: var(--grid-gap)
+    // scroll-margin-top: var(--grid-gap)
     @media screen and (min-width: 768px)
       display: flex
       display: grid
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
-      height: calc(100vh - calc(var(--grid-gap) * 2))
+      grid-gap: var(--grid-gap)
+      // height: calc(100vh - calc(var(--grid-gap) * 2))
+      height: 100vh
 
 .juxtaposition
   display: flex
-  flex: 1
   height: inherit
   flex-direction: column
   @media screen and (min-width: 768px)
@@ -33,16 +34,56 @@ body.about
     display: inline-block    
   &--text
     color: var(--white-light)
-    padding: var(--grid-gap)
-    @include mixins.fw(550)
-    // Font size mixin using clamp ($min, $max, $ideal)
-    @include mixins.clamp(1.2rem,2rem,calc(0.1rem + 1.2vw))
+    padding: calc(var(--grid-gap) * 4) var(--grid-gap)
+    max-width: 40rem
+    @media screen and (min-width: 768px)
+      padding: 0 var(--grid-gap) 0 0
+    p
+      @include mixins.fw(350)
+      // Font size mixin using clamp ($min, $max, $ideal)
+      @include mixins.clamp(1.2rem,2rem,calc(0.01vw + 1.4rem))
   &--graphic
-    @include mixins.direction(right)
-    mix-blend-mode: screen
+    mix-blend-mode: lighten
+    justify-content: flex-end
     img
       object-fit: cover
+      object-position: right
       width: 100%
       height: 100%
-      mix-blend-mode: luminosity
-      
+      @media screen and (min-width: 768px)
+        opacity: .85
+        transition: opacity .2s .15s linear
+        &:hover, &:focus
+          opacity: 1
+
+#human.grid-me
+  *
+    grid-column: content-main  
+  .lead
+    padding: calc(var(--grid-gap) * 4) 0
+    p
+      // Font size mixin using clamp ($min, $max, $ideal)
+      @include mixins.clamp(1.2rem,2rem,calc(0.01vw + 1.3rem))      
+    @media screen and (min-width: 768px)
+      grid-column: 2/span 6
+
+.emoji-cv
+  position: relative
+  &::before, &::after
+    display: block
+    content: ''
+    position: absolute
+    animation-duration: 2s
+    animation-iteration-count: infinite
+    animation-timing-function: linear        
+    backface-visibility: hidden
+    bottom: 1rem
+    left: 0
+    right: 0
+    text-align: center
+    font-size: 4rem
+  &:hover, &:focus
+    &::before, &::after
+      animation-name: i-cant-feel-my-face-when-im-with-you
+    &::after
+      animation-delay: 1s  

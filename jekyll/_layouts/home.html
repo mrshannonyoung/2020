@@ -6,7 +6,7 @@ layout: default
 <section class="introduction grid-me pad-me">
   <div class="introduction-content">
     <h1>I'm Shannon, a dev with accessibility and inclusion at the heart of everything I do.</h1>
-    <p>{{site.data.helpers.mini-bio}}</p>
+    <p>{{site.data.helpers.mini_bio}}</p>
     <div class="hr-link">
       <a href="/about/#ethos">My ethos</a>
     </div>
@@ -15,15 +15,14 @@ layout: default
 
 <section class="topic-highlights grid-me pad-me">
   <div class="topic-highlights-content">
-    <h2>Talking points</h2>    
-    <p>I like to note down, and write about most topics, but these areas are what peak my interests most.</p>
+    <h2>Talking points</h2>
     {% include /partials/navigations/topics.html %}
   </div>
 </section>
 
 <section class="article-listing grid-me pad-me">
   <div class="article-listing-content">
-    <h2>Recent articles</h2>  
+    <h2>Recent articles</h2>
     <ol class="posts-list">
       {%- for post in posts limit: 4 %}
       <li>

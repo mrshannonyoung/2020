@@ -3,53 +3,48 @@ layout: about
 title: About
 alt-header: true
 ---
-# The human
-
-Hi, welcome to a badly written section about me.
-
-I'm well into accessibility and user experience. I have worked as a front-end designer and developer for 13 years. As lines blur between job titles and role responsibilities 
-
-I have deep interests in anything related to the web and development, mainly based around Front-end techniques and best practices.
-
-- Accessible.
-- Semantic.
-- Inclusive.
-- Performant.
-
-During that time span I have 
-
 ## What I stand for
 
-* Accessiblity and Inclusivity
-* Open/Collaborative working
-* Semantics / Interop (schema, microdata)  
+* https://keirwhitaker.com/about/
+* https://benward.uk/about
+* https://jina.design/about/
+
+### Accessiblity and Inclusivity
+
+* sds
+* sds
+
+### Semantics / Interop (schema, microdata)
+
+* sds
+* sds
+
 * Performance - webpagetest
+  * https://yellowlab.tools/
+  * https://cssstats.com/
 * Privacy security
-* https://yellowlab.tools/
-* https://cssstats.com/
-* https://observatory.mozilla.org/
+  * https://observatory.mozilla.org/
 
 ## What I'm about
 
+I enjoy attending conferences, keeping informed with industry news articles and from [peers][1] that relate to web development, web design, userexperience and the broader digital industry.
+
 * Users first
+* Open/Collaborative working
+* Share what you learn
 * People don't come to 'navigate' a site
 * Content is King
 * There is no web without HTML
 * empower and enable
 * Fun – A smile in the mind. Source code cheekiness.
-* That
 
 ## What I'm not about
 
 * Overly complicated
 * CSS-in-JS 🤢
-* Client rendered JS SPA's
+* Client-side rendered JS SPA's 
 
-* https://jina.design/cv/
-* https://benward.uk/cv
-* https://keirwhitaker.com/about/
-
-## Working mentality
+## Working mentality (can go in cv)
 
 * I have good aesthetic sensibilities as well an understanding of back-end development that allows close collaboration with the team.
 * Learning emerging techniques and technologies and pushing for the appropriate levels of adoption.
@@ -61,6 +56,4 @@ During that time span I have
 * Identifying problems in wireframes and designs to mitigate rework down the line
 * Working with Design, UX and Back-end to deliver projects in HTML, CSS and JavaScript following a Progressive Enhancement strategy.
 
-## Brag sheet
-
-I was told by my hairdresser that these are a good idea.
+[1]: /colophon/#peers

@@ -2,7 +2,29 @@
 layout: default
 ---
 <section class="grid-me pad-me">
-  <div class="introduction-content">
-    <h1>Curriculum Vitae</h1>
+  <div class="cv-introduction-masthead">
+    <h1>{{site.title}}</h1>
+    {%- assign dob = site.data.helpers.dob | date_to_xmlschema -%}
+    {%- assign now = site.time | date_to_xmlschema  -%}
+    {%- assign cake_day = now | minus: dob -%}
+    <p>
+      {{cake_day}}
+    </p>  
+    <ul>
+      <li>web (you are here)</li>
+      <li>email</li>
+      <li>phone Available upon request. </li>
+    </ul>
+  </div>
+  <div>
+    <h2>Experience</h2>
+    <h3>mm</h3>
+    <h3>redeleven</h3>
+    <h2>Skill</h2>
+    <ul>
+      <li>web (you are here)</li>
+      <li>email</li>
+      <li>phone Available upon request. </li>
+    </ul>    
   </div>  
 </section>

@@ -1,6 +1,21 @@
 @use '../utility/_mixins'
 @use '../utility/_extends'
 
+.cv-introduction 
+  &-masthead
+    @extend %display_contents
+    h1, ul, p
+      grid-column: content-main
+      text-align: center
+      grid-column: content-main
+    ul
+      @extend %list-to-flex
+      justify-content: space-between
+      li
+        flex: 1
+    ~ div 
+        grid-column: content-main
+
 .cv-in-your-face
   perspective: 300px
   position: sticky
