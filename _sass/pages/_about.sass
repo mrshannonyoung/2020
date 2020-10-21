@@ -41,7 +41,7 @@ body.about
     p
       @include mixins.fw(350)
       // Font size mixin using clamp ($min, $max, $ideal)
-      @include mixins.clamp(1.2rem,2rem,calc(0.01vw + 1.4rem))
+      @include mixins.clamp(1.2rem,2rem,calc(0.1vw + 1.25rem))
   &--graphic
     mix-blend-mode: lighten
     justify-content: flex-end
@@ -63,7 +63,7 @@ body.about
     padding: calc(var(--grid-gap) * 4) 0
     p
       // Font size mixin using clamp ($min, $max, $ideal)
-      @include mixins.clamp(1.2rem,2rem,calc(0.01vw + 1.3rem))      
+      @include mixins.clamp(1.2rem,2rem,calc(0.01vw + 1.25rem))      
     @media screen and (min-width: 768px)
       grid-column: 2/span 6
 
