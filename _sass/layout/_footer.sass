@@ -40,7 +40,7 @@ footer[role="contentinfo"]
     small
       display: block 
       margin-top: calc(var(--grid-gap) * 2)
-      font-family: var(--mono-font-stack)
+      font-family: var(--mono-font)
     ul
       @extend %list-to-flex
       justify-content: flex-start
@@ -111,7 +111,7 @@ a.number-display
       transform: translateY(-5px)          
   em
     @include mixins.fw(750)
-    font-family: var(--body-font-stack)
+    font-family: var(--body-font)
     font-style: normal
     transition: all .2s linear
     transition-property: border, transform

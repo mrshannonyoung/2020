@@ -5,23 +5,28 @@ alt-header: true
 ---
 ## What I stand for
 
-* https://keirwhitaker.com/about/
+<!-- * https://keirwhitaker.com/about/
 * https://benward.uk/about
-* https://jina.design/about/
+* https://jina.design/about/ -->
 
 ### Accessiblity and Inclusivity
 
-* sds
-* sds
+* Accessiblity should never be an after thought.
+* When we think inclusive, beyond our own capabilities the outcome is beneficial for all.
+* Needing a 'business case' for accessibility is a huge Red flag.
+* Tim Cook at Apple nailed this one. _"When we work on making our devices accessible by the blind, I don't consider the bloody ROI,"_
 
 ### Semantics / Interop (schema, microdata)
 
 * sds
 * sds
 
-* Performance - webpagetest
-  * https://yellowlab.tools/
-  * https://cssstats.com/
+### Performance
+
+* webpagetest
+* https://yellowlab.tools/
+* https://cssstats.com/
+
 * Privacy security
   * https://observatory.mozilla.org/
 
@@ -29,7 +34,7 @@ alt-header: true
 
 I enjoy attending conferences, keeping informed with industry news articles and from [peers][1] that relate to web development, web design, userexperience and the broader digital industry.
 
-* Users first
+
 * Open/Collaborative working
 * Share what you learn
 * People don't come to 'navigate' a site

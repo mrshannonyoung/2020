@@ -38,6 +38,12 @@ function stylesDev() {
     .pipe(gulp.dest(paths.styles.dest));
 };
 
+function stylesDist() {
+  return gulp.src(paths.styles.src)
+    .pipe(plugins.dartSass({outputStyle: 'compressed'}))
+    .pipe(gulp.dest(paths.styles.dest));
+};
+
 function reloadSite() {
   browserSync.init({
     port: 6768,
@@ -74,11 +80,12 @@ function watch() {
 }
 
 exports.stylesDev = stylesDev;
+exports.stylesDist = stylesDist;
 exports.watch = watch;
 
 const
     dev = gulp.parallel(gulp.series(stylesDev), watch),
-    dist = gulp.parallel(stylesDev);
+    dist = gulp.parallel(stylesDist);
 
 gulp.task('dev', dev),
 gulp.task('default', dist);

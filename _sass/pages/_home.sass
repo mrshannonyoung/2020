@@ -3,15 +3,15 @@
 
 body.home  
   .introduction
-    grid-row-gap: 2rem
-    h1
-      grid-column: 2/span 8
-    p, .hr-link
+    grid-row-gap: calc(var(--grid-gap) * 2)
+    *
       grid-column: content-main
       @media screen and (min-width: 768px)
-        grid-column: 7/content-main-end
+        grid-column: 7/content-main-end      
+    h1
+      @media screen and (min-width: 768px)
+        grid-column: 2/span 8
     p
-      margin: 0
       color: var(--white-light)
       @include mixins.fw(350)
       // Font size mixin using clamp ($min, $max, $ideal)

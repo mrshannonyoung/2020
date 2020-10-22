@@ -9,7 +9,7 @@
   color: rgba(255, 255, 255, 0.6)
   text-transform: uppercase
   padding: 0
-  font-family: var(--mono-font-stack)
+  font-family: var(--mono-font)
 
 body.post
   article
@@ -85,7 +85,7 @@ body.post
           z-index: 2
           background-color: var(--black-dark)
           padding: calc(var(--grid-gap) / 2)
-          font-family: var(--mono-font-stack)
+          font-family: var(--mono-font)
           font-style: italic
           line-height: 1.5
           grid-column: 4 / -1
@@ -115,7 +115,7 @@ body.post
       > div
         margin-top: calc(var(--grid-gap) * 2)
         grid-column: content-main
-        font-family: var(--mono-font-stack)
+        font-family: var(--mono-font)
         @media screen and (min-width: 768px)
           grid-column: 3/span content-main-end
       #post-tags
@@ -137,7 +137,7 @@ body.post
             margin-right: calc(var(--grid-gap) / 2)
           a 
             padding: 0.5rem 0
-            font-family: var(--mono-font-stack)
+            font-family: var(--mono-font)
           &::before          
             content: '#'
             position: static

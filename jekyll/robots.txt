@@ -1,4 +1,4 @@
 # In case you were wondering: Yes. I'm still a potato. Go away. – GLaDOS 
 
 User-agent: *
-Disallow: /
+Allow: /

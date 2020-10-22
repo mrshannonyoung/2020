@@ -24,7 +24,7 @@
   
 body
   font-family: sans-serif
-  font-family: var(--body-font-stack)
+  font-family: var(--body-font)
   letter-spacing: calc(var(--base-font-size) * 0.0125)
 
 p, .paragraph
@@ -45,8 +45,8 @@ strong.stand-out
 strong
   @include mixins.fw(560)
 
-code, blockquote, .mono-font-stack
-  font-family: var(--mono-font-stack)
+code, blockquote, .mono-font
+  font-family: var(--mono-font)
 
 blockquote, figure
   font-variant-ligatures: none
@@ -75,7 +75,7 @@ h1, h2, h3, h4
   line-height: 1.5
   @include mixins.fw(600)
   em
-    font-family: var(--mono-font-stack)
+    font-family: var(--mono-font)
   @media screen and (min-width: 768px)
     @include mixins.fw(610)  
 
@@ -97,7 +97,7 @@ h4, .h4
 // Captions/Subtitles
 // https://developer.mozilla.org/en-US/docs/Web/CSS/::cue
 ::cue
-  font-family: var(--mono-font-stack)
+  font-family: var(--mono-font)
   font-style: italic
   color: var(--white)
   background-color: rgba(0, 0, 0, 0.8)  
