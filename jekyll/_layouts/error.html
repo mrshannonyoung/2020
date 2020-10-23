@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<section class="grid">
+  <div class="generic-content">
+    {{content}}
+    <hr>
+    <h3>Here are some probably helpful links.</h3>
+    <ul>
+    {%- for page in site.pages %}
+      {%- unless page.layout == 'error' or page.noindex or page.url contains '/archive/' %}
+        <li>
+          <a href="{{ page.url | absolute_url }}">
+            {%- if page.type -%}{{ page.type | capitalize }} – {% endif -%}{{page.title}}
+          </a>
+        </li>
+      {%- endunless %}
+    {% endfor %}  
+    </ul>
+  </div>
+</section>  

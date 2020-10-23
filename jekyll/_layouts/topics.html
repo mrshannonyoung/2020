@@ -12,7 +12,7 @@ layout: default
     {% assign label = tag | first %}
     {% assign count = tag | last %}
     <li id="tagged-{{ label | slugify }}">
-      <a class="number-display" href="/topics/{{ label | slugify | append: '/' }}" {%- if count.size > 1 -%}style='--shift: {{ count.size }}deg;--tag-count: {{ count.size }};'{%- endif -%}>
+      <a class="number-display" href="/topics/{{ label | slugify | append: '/' }}" {%- if count.size > 1 -%}style='--shift: {{ count.size }}deg; --tag-count: {{ count.size }};'{%- endif -%}>
         <svg aria-hidden="true" focusable="false" width="16" height="16">
           <title>Tag icon</title>
           <use xlink:href="#icon-tag"></use>

@@ -31,7 +31,7 @@
         </a>
       </li>      
       <li>
-        <a href="https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc={{page.url | absolute_url | url_encode}}" class="validate" rel="noreferrer noopener" target="_blank">
+        <a href="https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc={{page.url | absolute_url | url_encode}}" class="validate" rel="noreferrer noopener" target="_blank" aria-describedby="external-link">
           Validate {% include /components/svg/raw.html title="Validate" desc="A checkmark" width="17" height="16" %}
         </a>
       </li>      
@@ -40,3 +40,4 @@
   </div>
 </footer>
 <b id="current-page">Current page</b>
+<span id="external-link" hidden>Opens an external site in a new window</span>

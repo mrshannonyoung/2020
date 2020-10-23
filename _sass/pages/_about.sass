@@ -1,10 +1,12 @@
 @use '../utility/_mixins'
-@use '../utility/_extends'
+@use '../utility/_extends'   
 
 #icon-arrow
   path
     fill: none
-    stroke: var(--brand-primary)  
+    stroke: var(--brand-primary)
+  circle
+    fill: var(--brand-primary)
 
 body.about
   .color-splash
@@ -57,15 +59,17 @@ body.about
           opacity: 1
 
 #human.grid
+  padding: calc(var(--grid-gap) * 4) 0
   *
     grid-column: content-main  
   .lead
-    padding: calc(var(--grid-gap) * 4) 0
     p
       // Font size mixin using clamp ($min, $max, $ideal)
-      @include mixins.clamp(1.2rem,2rem,calc(0.01vw + 1.25rem))      
+      @include mixins.clamp(1.2rem,2rem,calc(0.01vw + 1.25rem))
     @media screen and (min-width: 768px)
-      grid-column: 2/span 6
+      grid-column: 2/span 7
+      // column-count: 2
+      // column-gap: var(--grid-gap)
 
 .emoji-cv
   position: relative

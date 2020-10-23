@@ -1,6 +1,6 @@
 ---
 has-video: true
-title: Temporarily enabled
+title: Temporarily-abled
 author: Shannon Young
 date: 2019-09-17T17:44:11+01:00
 categories: accessibility
