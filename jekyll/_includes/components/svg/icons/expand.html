@@ -1,0 +1,12 @@
+{%- capture svg_paths -%}
+	<path d="M1 1.04918C1 1.04918 5 0.218483 5 5.38545C5 10.5524 5 10.8664 5 10.8664L5 15M5 15L9 10.8664M5 15L1 10.8664" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+{%- endcapture -%}
+{%- if include.symbol == false -%}
+	<g class="icon-expand">
+	{{svg_paths}}
+	</g>
+{%- else -%}
+	<symbol id="icon-expand" class="{{page.layout}}" viewBox="0 0 10 16">
+	{{svg_paths}}
+	</symbol>
+{%- endif -%}

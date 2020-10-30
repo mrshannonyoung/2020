@@ -39,30 +39,29 @@ layout: default
     <p>
       I have worked as a front-end designer and developer for almost 13 years.<br>
       From a young age I've always been intrigued how things worked.<br>
-      Pandemics aside, I attend conferences and beleive in <a href="/blog/">sharing</a> what you learn.
+      Pandemics aside, I attend conferences and beleive in <a href="/blog/">sharing</a> what you learn.<br>
     </p>
     <p>
       <a href="/cv/" class="emoji-cv">View my CV</a>
     </p>
-  </div>
-  <div>
-    <h2>Around the web</h2>
+  </div> 
+  <aside>
+  <details class="social-haunts">
+    <summary>
+      <strong>Around the web</strong>
+      {% include /components/svg/raw.html title="Expand" width="10" height="16" %}
+    </summary>
     <ul>
-      <li><b>Venting</b><a href="#">Twitter</a></li>
-      <li><b>Helping</b><a href="#">Stack Overflow</a></li>
-      <li><b>Listening</b><a href="#">Bandcamp</a></li>
+      {% assign social = site.data.social %}
+      {% for item in social %}
+      <li><b>{{item.doing}} – </b><a href="{{item.url}}" rel="noreferrer noopener" target="_blank" aria-describedby="external-link">{{item.name}}</a></li>
+      {% endfor %}
     </ul>
-  </div>
+  </details>
+  </aside>  
 </div>
 <div class="grid">
   <div class="generic-content">
     {{content}}
-    <!-- <div class="cv-in-your-face">
-      <a href="/cv/">
-        <strong>Shannon Young</strong>
-        <br>
-        <b>CV</b>
-      </a>
-    </div>   -->
-  </div>
+  </div>  
 </div>

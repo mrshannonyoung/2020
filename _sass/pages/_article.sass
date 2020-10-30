@@ -15,7 +15,8 @@ body.post
   article
     header
       grid-column: 2/content-main-end
-      padding: 0 0 calc(var(--grid-gap) * 2)
+      @media screen and (min-width: 768px)
+        padding: 0 0 calc(var(--grid-gap) * 2)
     .article-meta
       &--item
         padding: 0
@@ -25,18 +26,20 @@ body.post
       &::before
         content: ""
         @include mixins.direction(right)
-        // width: calc(var(--grid-gap) * 4)
         height: var(--global-stroke)
         border-radius: 6px
         background-color: var(--brand-primary)
+        margin: var(--grid-gap) 0
         transition: background 1s ease
         @media screen and (min-width: 768px)
           width: var(--global-stroke)
           height: calc(var(--grid-gap) * 4)
+          margin: 0
           @include mixins.direction(bottom)
       grid-column: content-main
       display: flex
       flex-direction: column
+      margin: 0 0 calc(var(--grid-gap) * 2) 0
       @media screen and (min-width: 768px)
         flex-direction: initial
         align-items: center

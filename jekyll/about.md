@@ -29,10 +29,12 @@ alt-header: true
 * https://cssstats.com/
 * https://observatory.mozilla.org/
 
-## What I can't stand
+### The user
 
-* Overly complicated
-* CSS-in-JS-JS-in-CSS
+* webpagetest
+* https://yellowlab.tools/
+* https://cssstats.com/
+* https://observatory.mozilla.org/
 
 
 [1]: /accessibility/temporarily-abled/
