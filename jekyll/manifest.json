@@ -1,0 +1,14 @@
+---
+layout: null
+---
+{
+  "lang": "en-GB",
+  "short_name": "{{site.title}}",
+  "name": "shannonyoung.co.uk",
+  "dir": "ltr",
+  "display": "standalone",
+  "orientation": "natural",
+  "start_url": "/",
+  "theme_color": "#0a669f",
+  "background_color": "#fefefe"
+}

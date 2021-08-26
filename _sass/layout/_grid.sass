@@ -6,6 +6,27 @@
   &.space-me
     margin: calc(2vw + var(--grid-gap)) 0
 
+.blog .posts-list
+  @supports (display: grid)
+    list-style: none
+    padding: 0
+    @media screen and (min-width: 768px)
+      display: grid
+      grid-auto-flow: dense
+      grid-template-columns: repeat(4, 1fr)
+      grid-template-rows: repeat(2, 1fr)
+      column-gap: var(--grid-gap)
+      row-gap: var(--grid-gap)
+      li
+        display: flex
+        flex-direction: column
+        justify-content: center
+        &:first-child
+          padding: 3rem
+          grid-column: 2/4
+          grid-row: 1/span 2
+
+
 .posts-list
   @supports (display: grid)
     list-style: none

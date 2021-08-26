@@ -44,22 +44,22 @@ layout: default
     <p>
       <a href="/cv/" class="emoji-cv">View my CV</a>
     </p>
-  </div> 
-  <aside>
-  <details class="social-haunts">
-    <summary>
-      <strong>Around the web</strong>
-      {% include /components/svg/raw.html title="Expand" width="10" height="16" %}
-    </summary>
-    <ul>
-      {% assign social = site.data.social %}
-      {% for item in social %}
-      <li><b>{{item.doing}} – </b><a href="{{item.url}}" rel="noreferrer noopener" target="_blank" aria-describedby="external-link">{{item.name}}</a></li>
-      {% endfor %}
-    </ul>
-  </details>
-  </aside>  
+  </div>  
 </div>
+<aside class="grid">
+<details class="social-haunts">
+  <summary>
+    {% include /components/svg/raw.html title="Expand" width="10" height="16" %}
+    <strong>Around the web</strong>
+  </summary>
+  <ul>
+    {% assign social = site.data.social %}
+    {% for item in social %}
+    <li><b>{{item.doing}} – </b><a href="{{item.url}}" rel="noreferrer noopener" target="_blank" aria-describedby="external-link">{{item.name}}</a></li>
+    {% endfor %}
+  </ul>
+</details>
+</aside> 
 <div class="grid">
   <div class="generic-content">
     {{content}}

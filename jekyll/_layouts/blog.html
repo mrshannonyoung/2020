@@ -4,21 +4,16 @@ layout: default
 <section class="grid">
   <div class="generic-content"> 
     <h1>{{page.title}}</h1>  
-    {% for post in site.posts %}
-      {% assign currentdate = post.date | date: "%Y" %}
-      {% if currentdate != date %}
-        {% unless forloop.first %}</ol>{% endunless %}
-        <h2 class="h1" id="{{post.date | date: '%Y'}}"><a href="/archive/{{ currentdate | append: '/' }}">{{ currentdate }}</a></h2>
-        <hr>
-        <ol class="posts-list">
-        {% assign date = currentdate %}
-      {% endif %}
+    <ol class="posts-list">
+    {% for post in site.posts limit:5 %}
         <li>
           {% include /components/html/dinky-article.html source=page.layout show-categories=true %}
         </li>
-      {% if forloop.last %}
-      </ol>
-      {% endif %}
+    {% endfor %}
+    </ol>
+    <h2>More posts</h2>
+    {% for post in site.posts offset:5 %}
+    {% include /components/html/dinky-article.html source=page.layout show-categories=true %}
     {% endfor %}
   </div>
 </section>

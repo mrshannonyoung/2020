@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-GB" id="top">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{{page.title | capitalize}} - {{site.title}}, Developer</title>
   <meta name="apple-mobile-web-app-title" content="{{site.title}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   {%- include /meta/preload.html %}
-  <link href="{% if page.url =='/' %}{{site.url | append: '/'}}{% else %}{{page.url | absolute_url}}{% endif %}" rel="canonical">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#CF0A2C">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="canonical" href="{% if page.url =='/' %}{{site.url | append: '/'}}{% else %}{{page.url | absolute_url}}{% endif %}">
   {% if jekyll.environment == 'staging' -%}
-  <meta name="robots" content="noindex" />
+  <meta name="robots" content="noindex">
   {% endif -%}
   {% if page.noindex -%}
   <meta name="robots" content="noindex">
   {% endif -%}  
   {% include /meta/description.html %}
+  <meta name="twitter:dnt" content="on">
   <meta name="generator" content="{{ jekyll.version | prepend: 'Jekyll ' }}">
   {% include /meta/device-favicons.html %}
-  <link href="/assets/img/favicon-focus.svg" rel="icon" type="image/svg+xml">
-  <link href="/assets/css/main.css" rel="stylesheet">
-  <link href="/feed.xml" rel="alternate" type="application/atom+xml" title="Blog posts">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon-focus.svg">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="alternate" type="application/atom+xml" title="Blog posts" href="/feed.xml">
 </head>
 <body {%- if page.collection %} data-collection="{{page.collection}}"{% endif %} class="{{page.layout | slugify}} {{jekyll.environment}}">
   {%- assign active = page.url | remove:'.html' -%}
